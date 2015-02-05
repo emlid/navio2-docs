@@ -1,0 +1,6 @@
+site_name: Emlid
+theme: readthedocs
+pages:
+- ['index.md', 'Introduction']
+- ['apm/building-from-sources.md', 'APM']
+- ['real-time-kernel.md', 'Real-time kernel']
