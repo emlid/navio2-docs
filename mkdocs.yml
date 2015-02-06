@@ -2,5 +2,10 @@ site_name: Emlid
 theme: readthedocs
 pages:
 - ['index.md', 'Introduction']
-- ['apm/building-from-sources.md', 'APM']
-- ['real-time-kernel.md', 'Real-time kernel']
+- ['Navio-APM/installation-and-running.md', 'Navio APM']
+- ['Navio-APM/building-from-sources.md', 'Navio APM']
+- ['RT-Linux/real-time-kernel.md', 'Real-time Linux']
+- ['RTKLIB/rtklib-base-setup.md', 'RTK with NEO6-T']
+- ['Navio-dev/getting-started.md', 'Navio for developers']
+
+
