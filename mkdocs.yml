@@ -1,5 +1,7 @@
 site_name: Emlid
 theme: readthedocs
+site_favicon: favicon.ico
+repo_url: https://github.com/emlid
 pages:
 - ['index.md', 'Introduction']
 - ['Navio-APM/installation-and-running.md', 'Navio APM']
