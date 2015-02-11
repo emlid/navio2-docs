@@ -9,5 +9,5 @@ pages:
 - ['RT-Linux/real-time-kernel.md', 'Real-time Linux']
 - ['RTKLIB/rtklib-base-setup.md', 'RTK with NEO6-T']
 - ['Navio-dev/getting-started.md', 'Navio for developers']
-
+- ['Downloads.md', 'Downloads']
 
