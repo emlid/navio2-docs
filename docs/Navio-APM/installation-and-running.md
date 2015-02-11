@@ -1,10 +1,9 @@
-# Installation and running
+#### APM
 
-<a><img class="alignnone size-full wp-image-2661" src="http://www.emlid.com/wp-content/uploads/2014/10/APM.png" alt="APM" width="240" height="240" /></a>
+![apm](http://www.emlid.com/wp-content/uploads/2014/10/APM.png)
 
-It is possible to run APM (ArduPilot) on Raspberry Pi with Navio. The autopilot's code works directly on Raspberry Pi using the APM's Linux HAL. Even though it is possible to run APM on standard Raspbian distribution it won't work properly as it requires lower latency. Please use Raspbian with real time kernel for running APM, you can get it <a href="http://www.emlid.com/raspberry-pi-real-time-kernel/" target="_blank" >here</a>.
+You can run APM (ArduPilot) on Raspberry Pi with Navio or Navio+. The autopilot's code works directly on Raspberry Pi using the APM's Linux HAL. Even though it is possible to run APM on standard Raspbian distribution it won't work properly as it requires lower latency. Please use Raspbian with real time kernel for running APM, you can get it in download section.
 
-<!--more-->
 Important! Keep in mind that the code for Navio is in the experimental state. Use it with caution!
 
 ####State of the APM port to Raspberry Pi with Navio
@@ -23,9 +22,8 @@ What has been added:
 * RCInput - uses pigpio daemon to sample GPIOs with 1MHz rate, should be rewritten to work without pigpio
 * RGB LED
 * MPU9250 built-in compass driver
-* U-blox GPS SPI driver - ready, but requires some rework
-* ADC based on ADS1115 - ready, needs reworking 
-(**available in navio-experimental branch only**)
+* U-blox GPS SPI driver
+* ADC based on ADS1115 
 
 ####Installing APM
 Log in to your Raspberry Pi using SSH or other method and download one of the ready to use APM binaries using wget.
@@ -48,7 +46,6 @@ wget emlid.com/files/APM/NavioRaw/APMrover2.elf
 wget emlid.com/files/APM/NavioRaw/ArduCopter.elf
 wget emlid.com/files/APM/NavioRaw/ArduPlane.elf
 ```
-
 
 
 If you'd like to build the binary yourself please proceed to the Building from sources.
@@ -81,12 +78,16 @@ To automatically start APM on boot add the following (change -A and -C options t
 sudo /home/pi/APMrover2.elf -A udp:192.168.1.2:14550 -C /dev/ttyAMA0 > /home/pi/startup_log &
 ```
 
-###Connecting to Navio from the GCS
-####APM Planner
-APM Planner is a ground station software for APM. It can be downloaded from the <a href="http://ardupilot.com/downloads/?category=35" target="_blank"> ardupilot.com</a>
+####Connecting to the GCS
+**APM Planner**
+
+APM Planner is a ground station software for APM. It can be downloaded from the 
+[ardupilot.com](http://ardupilot.com/downloads/?category=35)
 
 APM Planner listens on UDP port 14550, so it should catch telemetry from the drone automatically.
-####MAVProxy
+
+**MAVProxy**
+
 MAVProxy is a console-oriented ground station software written in Python that can be used standalone or together with APM Planner. It’s well suited for advanced users and developers. MAVProxy can be installed with pip:
 
 ```bash

@@ -33,7 +33,9 @@ Connect 5V 1A power adapter to the Raspberry Pi’s microUSB port. Raspberry Pi 
 
 ***In a drone:***
 
-Navio+ should be powered by a power module connected to the “POWER” port on Navio+. Navio+ will provide the power to the Raspberry Pi.
+Navio+ should be powered by a power module connected to the “POWER” port on Navio+. Navio+ will provide power to the Raspberry Pi.
+![power-module](img/navio-plus-power-module.png)
+
 
 ***Redundancy:***
 
@@ -41,4 +43,4 @@ In case of power module failure Navio+ will switch to the power from the servo r
 
 ####Powering servo rail
 
-Power module does not power the servos. To provide power to the servo rail plug your drone’s BEC into any free channel on the servo rail. Use BECs that provide voltage in a range of 4.8-5.3V. If you’d like to use high voltage servos, use a power separation board.
+Power module does not power servos. To provide power to the servo rail plug your drone’s BEC into any free channel on the servo rail. Use BECs that provide voltage in a range of 4.8-5.3V. If you’d like to use high voltage servos, use a power separation board.
