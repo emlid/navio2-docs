@@ -1,4 +1,4 @@
-# RTK GPS
+####RTK GPS
 
 GPS RTK is technique that allows to determine centimeter-level coordinates using two GPS receivers - rover that is able to move and base station that stays static on the same position. Simple way to get acquainted with RTK is to use RTKLIB software that is able to perform GPS RTK processing on a computer using GUI or console version. In order to begin the following is required:
 
@@ -25,44 +25,43 @@ Adding a big ground plane to the antenna can be a good idea - simply place it on
 Full skyview is necessary. Base station antenna should be located in a place with an open sky such as a roof.
 Noise sources should be absent. Keep antenna away from other antennas.
 
-####Download RTKLIB
-
-RTKLIB software package is available for download from it’s official [website](http://www.rtklib.com/prog/rtklib_2.4.2_bin.zip). 
-
 ####Install RTKLIB
 
-Simply unpack the downloaded archive somewhere on your drive.
+RTKLIB software package is available for download from it’s official [website](http://www.rtklib.com/prog/rtklib_2.4.2_bin.zip). To install simply unpack the downloaded archive somewhere on your drive.
 
 ####Run STRSVR
 
 Navigate to the RTKLIB directory, enter the \bin subdirectory and then run strsvr.exe.
+![run-strsvr](img/run-strsvr.png)
 
 
-
-####Set up rover input stream
+####Set up input stream
 
 Specify where RTKLIB should be getting the raw data from. For U-blox NEO-6T dongle set Input as “Serial”.
 
-####Open serial options
+![rover-input](img/rover-input.png)
+
+**Open serial options**
 
 Click on the “Opt” button in the Rover row to open serial port options.
 
+![serial-options](img/serial-options.png)
 
 
-####Specify serial port options
+**Specify serial port options**
 
 Pick the COM port of the U-blox receiver from the list. If you have no other devices connected, it probably would be the only available port in the list. Another option to figure out which port is it is to open the Device manager, find “U-blox AG receiver” and check the COM port assigned to it. If the U-blox receiver is connected directly over USB (without USB-to-UART adapter) the baud rate does not matter, otherwise the default one is 9600.
 Click OK to get back to the Input Streams window.
 
- 
+![set-serial-port](img/set-serial-port.png) 
 
-####Open receiver configuration
+####Receiver configuration
 
 Click on the “Cmd” button in the Rover row to open receiver configuration.
+![reciever-configuration](img/receiver-configuration.png)
 
 
-
-####Specify receiver configuration commands
+**Specify receiver configuration commands**
 
 RTKLIB requires raw data messages in order to obtain the necessary information. The messages are: RXM-RAW - provides observations, RXM-SFRB - provides nav data such as ephemeris and other. Also, for moving rovers it’s better to set a higher rate.
 
@@ -71,27 +70,31 @@ Check “Commands at startup” and paste the following commands into the text b
 !UBX CFG-MSG 2 16 0 1 0 1 0 0 
 !UBX CFG-MSG 2 17 0 1 0 1 0 0
 
+![startup](img/commands-startup.png)
+
 Click OK to get back to the Input Streams window.
 
 
+####Set up output stream type
+**Choose output stream type**
 
-####Choose output stream type
+![stream-type](img/choose-output.png)
 
+**Open output stream options**
 
+![output-options](img/output-options.png)
 
-####Open output stream options
+**Specify TCP server port**
 
+![tcp-port](img/tcp-port.png)
 
+**Open data conversion options**
 
-####Specify TCP server port
+![conv-options](img/conversion-options.png)
 
+**Specify conversion options**
 
-
-####Open data conversion options
-
-
-
-####Specify conversion options
+![conv-options-2](img/conversion-options-2.png)
 
 1002 GPS L1 observations, extended information
 1006 ARP station coordinates, ECEF XYZ and extended information (antenna height)
@@ -100,15 +103,18 @@ Click OK to get back to the Input Streams window.
 
 
 
-###Open Options
+####Set base station position
 
 
+![antenna](img/antenna-position.png)
 
-###Specify base station antenna position
+**Specify base station antenna position**
 
+![antenna-2](img/antenna-position-2.png)
 
+####Start STRSRV
 
-###Start
+![start-strsvr](img/start-strsvr.png)
 
 
 
