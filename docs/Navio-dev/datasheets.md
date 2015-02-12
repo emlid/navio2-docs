@@ -1,11 +1,4 @@
 
-###Linux
-
-###APM binaries
-
-
-###Datasheets
-
 * [MPU-9250](http://www.invensense.com/mems/gyro/documents/PS-MPU-9250A-01.pdf)
 
 * [MS5611](http://www.meas-spec.com/downloads/MS5611-01BA03.pdf)
@@ -23,6 +16,3 @@
 * [MB85RC04](http://www.fujitsu.com/downloads/MICRO/fsa/pdf/products/memory/fram/MB85RC04V-DS501-00016-2v0-E.pdf)
 
 * [ANT101 - GPSGLONASS PCB Active Antenna](http://emlid.com/files/ANT101-PCB-Antenna-Datasheet.pdf)
-
-###Source code
-Source code is available on [GitHub](http://github.com/emlid)
