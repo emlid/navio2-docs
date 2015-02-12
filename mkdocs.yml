@@ -7,6 +7,7 @@ pages:
 - ['Navio-APM/power-up-navio-plus.md', 'Navio APM', 'Power up Navio+']
 - ['Navio-APM/hardware-setup-navio-plus.md', 'Navio APM', 'Hardware setup Navio+']
 - ['Navio-APM/power-up-navio.md', 'Navio APM', 'Power up Navio']
+- ['Navio-APM/hardware-setup-navio.md', 'Navio APM', 'Hardware setup Navio']
 - ['Navio-APM/configuring-raspberry-pi.md', 'Navio APM', 'Configuring Raspberry Pi']
 - ['Navio-APM/installation-and-running.md', 'Navio APM']
 - ['Navio-APM/building-from-sources.md', 'Navio APM']
