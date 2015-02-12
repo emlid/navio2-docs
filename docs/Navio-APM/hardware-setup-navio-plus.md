@@ -1,5 +1,5 @@
 ####GNSS antenna
-![antenna](img/Navio+GNSSantenna.png)
+![antenna](Navio-APM/img/Navio+GNSSantenna.png)
 ####RC input
 Navio+ is a PPM only autopilot. That means that you will have to use receiver with PPM output, PPM decoder or SBUS to PPM converter.
 
