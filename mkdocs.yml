@@ -12,6 +12,7 @@ pages:
 - ['Navio-APM/installation-and-running.md', 'Navio APM']
 - ['Navio-APM/building-from-sources.md', 'Navio APM']
 - ['Navio-dev/AHRS.md', 'Navio for developers']
+- ['Navio-dev/GPS-ucenter.md', 'Navio for developers', 'U-center GPS']
 - ['Navio-dev/rtklib.md', 'Navio for developers', 'Navio Raw RTKLib']
 - ['Navio-dev/using-default-raspbian.md', 'Navio for developers', 'Using default Raspbian']
 - ['Navio-dev/datasheets.md', 'Navio for developers', 'Datasheets']
