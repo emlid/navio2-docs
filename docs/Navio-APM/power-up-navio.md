@@ -15,13 +15,13 @@ In case you want to control servos, motors or other high power loads it is neces
 
 ***Voltage levels on ports and headers***
 
-Servo rail power pins – 5V
-Servo rail PWM pins – 5V
-PPM input pin – 5V
-UART, SPI, I2C port power pins – 5V
-UART, SPI, I2C signal pins – 3.3V (**CAUTION!** connecting 5V logic device to these pins may damage your Raspberry Pi!)
-ADC power pin – 3.3V output
-ADC signal pins – 0V-3.3V input
+* Servo rail power pins – 5V
+* Servo rail PWM pins – 5V
+* PPM input pin – 5V
+* UART, SPI, I2C port power pins – 5V
+* UART, SPI, I2C signal pins – 3.3V (**CAUTION!** connecting 5V logic device to these pins may damage your Raspberry Pi!)
+* ADC power pin – 3.3V output
+* ADC signal pins – 0V-3.3V input
 
 
 
