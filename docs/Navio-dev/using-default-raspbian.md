@@ -58,7 +58,7 @@ The result should look like this:
 20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 40: 40 -- -- -- -- -- -- -- 48 -- -- -- -- -- -- --
-50: 50 51 -- -- -- -- -- -- -- -- -- -- -- -- -- --
+50: 50 -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 70: 70 -- -- -- -- -- -- 77
 ```
@@ -68,7 +68,7 @@ I2C devices:
 
 * ADS1115 - 0x48
 * MS5611 - 0x77
-* MB85R - 0x50, 0x51
+* MB85R - 0x50
 * PCA9685 - 0x40, 0x70 (allcall address)
 
 SPI devices:
@@ -77,17 +77,10 @@ SPI devices:
 * MPU9250 - /dev/spidev0.1
 
 #####Using UART port
-By default UART on Raspberry Pi is used for serial console. To use UART for custom data serial console has to be disabled. It can be done by using the rpi-serial-console tool. To install it run:
+By default UART on Raspberry Pi is used for serial console. To use UART for custom data serial console has to be disabled. It can be done by using the raspi-config utility:
 
 ```bash
-git clone https://github.com/lurch/rpi-serial-console
-cd rpi-serial-console
-make
-make install
+sudo raspi-config
 ```
-Then run it with 'disable' argument:
-
-```bash
-rpi-serial-console disable
-```
+Open "Advanced options" -> "Serial console" and disable it. 
 Now you can use /dev/ttyAMA0 as a UART.
