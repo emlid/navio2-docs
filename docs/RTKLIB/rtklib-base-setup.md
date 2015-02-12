@@ -16,16 +16,18 @@ For instructions how to set up a rover please follow to this tutorial.
 In order to achieve proper RTK performance the following conditions should satisfied:
 
 Good antenna with stable phase center. Recommended models are:
-Tallysman TW1421 - compact antenna without case, best for integrating
-Tallysman TW4320 - compact antenna with case, would be great as a rover
-Tallysman TW3400 - fixed mount, would fit great as a roof base station
+
+* [Tallysman TW1421](http://www.tallysman.com/TW1421.php) - compact antenna without case, best for integrating
+* [Tallysman TW4320](http://www.tallysman.com/TW432X.php) - compact antenna with case, would be great as a rover
+* [Tallysman TW3400](http://www.tallysman.com/TW3400.php) - fixed mount, would fit great as a roof base station
+ 
 Adding a big ground plane to the antenna can be a good idea - simply place it on a piece of metal >70cm.
 Full skyview is necessary. Base station antenna should be located in a place with an open sky such as a roof.
 Noise sources should be absent. Keep antenna away from other antennas.
 
 ####Download RTKLIB
 
-RTKLIB software package is available for the download from it’s official website by the following link - http://www.rtklib.com/prog/rtklib_2.4.2_bin.zip 
+RTKLIB software package is available for download from it’s official [website](http://www.rtklib.com/prog/rtklib_2.4.2_bin.zip). 
 
 ####Install RTKLIB
 
