@@ -32,20 +32,20 @@ RTKLIB software package is available for download from it’s official [website]
 ####Run STRSVR
 
 Navigate to the RTKLIB directory, enter the \bin subdirectory and then run strsvr.exe.
-![run-strsvr](img/run-strsvr.png)
+![run-strsvr](RTKLIB/img/run-strsvr.png)
 
 
 ####Set up input stream
 
 Specify where RTKLIB should be getting the raw data from. For U-blox NEO-6T dongle set Input as “Serial”.
 
-![rover-input](img/rover-input.png)
+![rover-input](RTKLIB/img/rover-input.png)
 
 **Open serial options**
 
 Click on the “Opt” button in the Rover row to open serial port options.
 
-![serial-options](img/serial-options.png)
+![serial-options](RTKLIB/img/serial-options.png)
 
 
 **Specify serial port options**
@@ -53,12 +53,12 @@ Click on the “Opt” button in the Rover row to open serial port options.
 Pick the COM port of the U-blox receiver from the list. If you have no other devices connected, it probably would be the only available port in the list. Another option to figure out which port is it is to open the Device manager, find “U-blox AG receiver” and check the COM port assigned to it. If the U-blox receiver is connected directly over USB (without USB-to-UART adapter) the baud rate does not matter, otherwise the default one is 9600.
 Click OK to get back to the Input Streams window.
 
-![set-serial-port](img/set-serial-port.png) 
+![set-serial-port](RTKLIB/img/set-serial-port.png) 
 
 ####Receiver configuration
 
 Click on the “Cmd” button in the Rover row to open receiver configuration.
-![reciever-configuration](img/receiver-configuration.png)
+![reciever-configuration](RTKLIB/img/receiver-configuration.png)
 
 
 **Specify receiver configuration commands**
@@ -72,7 +72,7 @@ Check “Commands at startup” and paste the following commands into the text b
 !UBX CFG-MSG 2 17 0 1 0 1 0 0
 ```
 
-![startup](img/commands-startup.png)
+![startup](RTKLIB/img/commands-startup.png)
 
 Click OK to get back to the Input Streams window.
 
@@ -80,23 +80,23 @@ Click OK to get back to the Input Streams window.
 ####Set up output stream type
 **Choose output stream type**
 
-![stream-type](img/choose-output.png)
+![stream-type](RTKLIB/img/choose-output.png)
 
 **Open output stream options**
 
-![output-options](img/output-options.png)
+![output-options](RTKLIB/img/output-options.png)
 
 **Specify TCP server port**
 
-![tcp-port](img/tcp-port.png)
+![tcp-port](RTKLIB/img/tcp-port.png)
 
 **Open data conversion options**
 
-![conv-options](img/conversion-options.png)
+![conv-options](RTKLIB/img/conversion-options.png)
 
 **Specify conversion options**
 
-![conv-options-2](img/conversion-options-2.png)
+![conv-options-2](RTKLIB/img/conversion-options-2.png)
 
 1002 GPS L1 observations, extended information
 1006 ARP station coordinates, ECEF XYZ and extended information (antenna height)
@@ -108,15 +108,15 @@ Click OK to get back to the Input Streams window.
 ####Set base station position
 
 
-![antenna](img/antenna-position.png)
+![antenna](RTKLIB/img/antenna-position.png)
 
 **Specify base station antenna position**
 
-![antenna-2](img/antenna-position-2.png)
+![antenna-2](RTKLIB/img/antenna-position-2.png)
 
 ####Start STRSRV
 
-![start-strsvr](img/start-strsvr.png)
+![start-strsvr](RTKLIB/img/start-strsvr.png)
 
 
 

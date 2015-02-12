@@ -3,17 +3,17 @@
 ####RC input
 Navio+ is a PPM only autopilot. That means that you will have to use receiver with PPM output, PPM decoder or SBUS to PPM converter.
 
-![rcin](img/Navio+RCInput.png)
+![rcin](Navio-APM/img/Navio+RCInput.png)
 ####RC output
 
 Power module does not provide power to servos so a BEC should be present. BEC would serve as back-up power supply to Navio+.
 
-![escservos](img/Navio+RCOutputESCandServos.png)
+![escservos](Navio-APM/img/Navio+RCOutputESCandServos.png)
 
 Only one ESC central wire should be connected to Navio+ otherwise BECs built in ESCs will heat each other.
 
-![esc](img/Navio+RCOutputESCs.png)
+![esc](Navio-APM/img/Navio+RCOutputESCs.png)
 #### Telemetry modem
-![uartradio](img/Navio+UARTradiomodem.png)
+![uartradio](Navio-APM/img/Navio+UARTradiomodem.png)
 
-![usbradio](img/Navio+USBradiomodem.png)
+![usbradio](Navio-APM/img/Navio+USBradiomodem.png)

@@ -34,7 +34,7 @@ Connect 5V 1A power adapter to the Raspberry Pi’s microUSB port. Raspberry Pi 
 ***In a drone:***
 
 Navio+ should be powered by a power module connected to the “POWER” port on Navio+. Navio+ will provide power to the Raspberry Pi.
-![power-module](img/navio-plus-power-module.png)
+![power-module](Navio-APM/img/navio-plus-power-module.png)
 
 
 ***Redundancy:***
