@@ -103,4 +103,7 @@ To run it specify the --master port, which can be serial, TCP or UDP. It also ca
 
 Where 192.168.1.2 is the IP address of the GCS, not RPi.
 
+####Skip board voltage check
+
+As Raspberry has no data about Navio board voltage, prearm check should be disabled as shown [here](http://copter.ardupilot.com/wiki/flying-arducopter/prearm_safety_check/). Pick "Skip Voltage".
 
