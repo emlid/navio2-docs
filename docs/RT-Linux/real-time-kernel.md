@@ -1,53 +1,47 @@
 # Real-Time kernel 
 ![](http://www.emlid.com/wp-content/uploads/2014/05/RT-Tests.png)
-Linux kernel has configuration options that affect it's real-time capabilities. Default Raspbian kernel is compiled with CONFIG_PREEMPT option that allows all kernel code outside of spinlock-protected regions and interrupt handlers to be preempted by higher priority kernel threads. Real-time patch from Ingo Molnar adds CONFIG_PREEMPT_RT option that allows nearly all of the kernel code to be preempted, except for a few raw spinlock critical regions.
+This is a release of the new SD card image of default Raspberry Pi distribution Raspbian with real-time kernel. It is based on 2014-12-24-wheezy-raspbian with default kernel replaced to new 3.12.36-rt50+ kernel and a few additional tunings.
 
+Default Raspbian kernel is configured with PREEMPT option and provides worst case latency around single digit milliseconds. Real-time demanding applications require lower latencies than that. Real-time patch and PREEMPT_RT option lowers the worst case latency to tens of microseconds, allowing for real-time applications such as autopilots to be run on Linux.
 
-The histogram shows latency comparison between the default Raspbian kernel and the kernel with real-time patch.
-
-
-We've used cyclictest program to obtain data with the following parameters:
+Results of testing with 
 
 ```
-cyclictest -l10000000 -m -n -a0 -t1 -p99 -i400 -h400 -q ```
+sudo cyclictest -l1000000 -m -n -a0 -t1 -p99 -i400 -h400 -q</i>”:
+```
 
-Latencies for default Raspbian kernel (PREEMPT) in uS: Min: 00014 Avg: 00028 Max: 01247
+PREEMPT        #Min: 00013uS #Avg: 00023uS #Max: 01153uS
 
-Latency results for PREEMPT_RT patched kernel in uS: Min: 00012  Avg: 00027 Max: 00077
-
-
-The most important characteristic here is the max latency which indicates the longest time it might take your Raspberry Pi to respond to an event. As it can be observed PREEMPT_RT kernel provides much lower latency thus making it more suitable for usage in time-sensitive embedded systems. It is important to remember that to make full use of real time capabilities of the kernel it is necessary to do proper prioritizing.
+PREEMPT_RT #Min: 00011uS #Avg: 00023uS #Max: 00066uS
 
 
-You can compile PREEMPT_RT real time kernel for Raspberry Pi by yourself or you can download modified 
- Raspbian SD card image that we prepared. The image was tested for compatibility with Raspberry Pi Model B and Raspberry Pi Model B+. The image is not intended for general purpose use but rather for embedded electronics projects.
+Histogram values are on the plot above.
 
+List of changes includes:
 
-~~UPDATE (10 SEP 2014) - Raspbian with RT-kernel for Raspberry Pi Model B+ (also compatible with Model B)~~
-
-UPDATE (25 NOV 2014) - Raspbian with RT-kernel for Raspberry Pi Model A/B/A+/B+. The list of changes includes:
-
-* Added RT_PREEMPT kernel(/boot/kernel-rt.img)
-* Placed kernel source patched with rt-patch in /usr/src/
+* Replaced default kernel with PREEMPT_RT kernel 3.12.36-rt50+
+* Processor frequency set to 800MHz (can be changed in /boot/config.txt)
 * Enabled SPI
-* Enabled I2C
-* Increased I2C speed to 400KHz
-* Disabled serial console on UART port (/dev/ttyAMA0) so it can be used for telemetry
-* Installed I2C-tools
-* Installed pigpio (https://github.com/joan2937/pigpio)
-* Installed rpi-serial-console (https://github.com/lurch/rpi-serial-console)
-* Installed socat
-* Installed screen
-* Installed WiringPi
-* Installed python-smbus
-* Installed py-spidev
+* Enabled I2C and set speed to 1MHz (if you’d like to connect a sensor with lower clock speed, edit the baudrate option in /etc/modprobe.d/i2c.conf)
+* Enabled camera
+* Installed pigpio, screen, socat, python-smbus, python-spi, cmake, cyclictest
+* Disabled serial console, so /dev/ttyAMA0 UART can be used for radio (to enable back use raspi-config or edit /boot/cmdline.txt)
+* Disabled extra ttys
+* Removed wolfram and sonic-pi for extra space (to reinstall simply use apt-get)
+* Added sdhci_bcm2708.enable_llm=0 to boot/cmdline.txt
+* Default WiFi network: ssid “emlidltd”, psk “emlidltd”, key_mgmt=WPA-PSK
 
 Known issues:
 
-* Due to the required options some USB keyboards may not work<
+* Due to the required options some USB keyboards may not work
 
-Download links:
 
-* <a href="http://www.emlid.com/files/Raspbian-RTkernel-2014-NOV.torrent" target="_blank">Raspbian-RTkernel-2014-NOV torrent</a>
-* <a href="https://mega.co.nz/#!9Z4AlBoY!3_tou_JdQ-vflGiaYSUG3xixlhfEB0upNp19PvBSHds" target="_blank">Raspbian-RTkernel-2014-NOV on MEGA</a>
 
+Patched and configured source code for Raspberry Pi real-time kernel:
+
+* [github.com/emlid/linux-rt-rpi](https://github.com/emlid/linux-rt-rpi)
+
+SD card image downloads:
+
+* [Emlid-Raspbian-RT-JAN-2015.img.xz on MEGA](https://mega.co.nz/#!UMZRkJ6Z!4uJF3UTsaBFxIcCq_BKsKMJNteHCAIUBBwIW7Q9WlSc)
+* [Emlid-Raspbian-RT-JAN-2015.imz.xz torrent](http://www.emlid.com/files/Emlid-Raspbian-RT-JAN-2015.img.xz.torrent)
