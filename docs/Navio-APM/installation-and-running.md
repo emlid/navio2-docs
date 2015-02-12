@@ -48,7 +48,7 @@ wget emlid.com/files/APM/NavioRaw/ArduPlane.elf
 ```
 
 
-If you'd like to build the binary yourself please proceed to the Building from sources.
+If you'd like to build the binary yourself please proceed to the [Building from sources](building-from-sources.md).
 ####Running APM
 To run APM binary type the following in your RPi's console (change APMrover2.elf to ArduCopter.elf or ArduPlane.elf if needed):
 

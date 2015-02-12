@@ -39,7 +39,7 @@ Navio+ should be powered by a power module connected to the “POWER” port on 
 
 ***Redundancy:***
 
-In case of power module failure Navio+ will switch to the power from the servo rail.
+In case of power module failure Navio+ will switch to power from the servo rail.
 
 ####Powering servo rail
 
