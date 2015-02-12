@@ -13,5 +13,6 @@ pages:
 - ['Navio-dev/using-default-raspbian.md', 'Navio for developers', 'Using default Raspbian']
 - ['RT-Linux/real-time-kernel.md', 'Real-time Linux']
 - ['RTKLIB/rtklib-base-setup.md', 'RTK with NEO6-T']
+- ['RTKLIB/RTKGPS+.md', 'RTK with NEO6-T']
 - ['Downloads.md', 'Downloads', 'Downloads']
 
