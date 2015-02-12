@@ -2,10 +2,10 @@
 
 GPS RTK is technique that allows to determine centimeter-level coordinates using two GPS receivers - rover that is able to move and base station that stays static on the same position. Simple way to get acquainted with RTK is to use RTKLIB software that is able to perform GPS RTK processing on a computer using GUI or console version. In order to begin the following is required:
 
-Computer to run RTKLIB on
-GPS receiver capable of providing raw data such as U-blox NEO-6T dongle and connected to the computer.
-Proper GPS antenna. Patch or big helix will do, pcb or chip antennas won’t work.
-Access to the corrections from a base station in close range OR a second raw data GPS receiver and antenna to set up your own base station.
+* Computer to run RTKLIB on
+* GPS receiver capable of providing raw data such as U-blox NEO-6T dongle and connected to the computer.
+* Proper GPS antenna. Patch or big helix will do, pcb or chip antennas won’t work.
+* Access to the corrections from a base station in close range OR a second raw data GPS receiver and antenna to set up your own base station.
 
 This tutorial shows how to set up your own base station using STRSVR program from RTKLIB software package on a PC and U-blox NEO-6T receiver.
 
@@ -66,9 +66,11 @@ Click on the “Cmd” button in the Rover row to open receiver configuration.
 RTKLIB requires raw data messages in order to obtain the necessary information. The messages are: RXM-RAW - provides observations, RXM-SFRB - provides nav data such as ephemeris and other. Also, for moving rovers it’s better to set a higher rate.
 
 Check “Commands at startup” and paste the following commands into the text box:
+```
 !UBX CFG-RATE 200 1 1
 !UBX CFG-MSG 2 16 0 1 0 1 0 0 
 !UBX CFG-MSG 2 17 0 1 0 1 0 0
+```
 
 ![startup](img/commands-startup.png)
 
