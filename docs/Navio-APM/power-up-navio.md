@@ -23,5 +23,9 @@ In case you want to control servos, motors or other high power loads it is neces
 * ADC power pin – 3.3V output
 * ADC signal pins – 0V-3.3V input
 
+####Connection map
+![map](http://www.emlid.com/wp-content/uploads/2014/10/NavioMap1-1000x563.png)
+
+
 
 
