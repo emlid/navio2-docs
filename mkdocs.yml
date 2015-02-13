@@ -13,6 +13,7 @@ pages:
 - ['Navio-APM/building-from-sources.md', 'Navio APM']
 - ['Navio-dev/mpu9250-imu.md', 'Navio for developers', '9DOF IMU']
 - ['Navio-dev/AHRS.md', 'Navio for developers']
+- ['Navio-dev/ms5611-barometer.md', 'Navio for developers', 'Barometer']
 - ['Navio-dev/GPS-ucenter.md', 'Navio for developers', 'U-center GPS']
 - ['Navio-dev/servo-and-rgb-led.md', 'Navio for developers', 'Control servos and RGB LED']
 - ['Navio-dev/rc-input.md', 'Navio for developers', 'PPM RC input']
