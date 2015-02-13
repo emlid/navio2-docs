@@ -21,7 +21,7 @@ You should immediately see 9 values, updated in real time. Try to move the devic
 ####MPU9250 driver
 Let's see the example code:
 
-```C++
+```c
 #include "Navio/MPU9250.h"
 
 int main()
@@ -45,7 +45,7 @@ int main()
 
 The first thing we should pay attention to is the line ***imu.initialize()***, as it does an important job of setting internal device parameters:
 
-```C++
+```c
 bool MPU9250::initialize(int sample_rate_div, int low_pass_filter)
 {
     uint8_t i = 0;
@@ -62,24 +62,20 @@ bool MPU9250::initialize(int sample_rate_div, int low_pass_filter)
         //{0x20, MPUREG_USER_CTRL},      // Enable AUX
         {0x20, MPUREG_USER_CTRL},       // I2C Master mode
         {0x0D, MPUREG_I2C_MST_CTRL}, //  I2C configuration multi-master  IIC 400KHz
-
         {AK8963_I2C_ADDR, MPUREG_I2C_SLV0_ADDR},  //Set the I2C slave address of AK8963 and set for write.
         //{0x09, MPUREG_I2C_SLV4_CTRL},
         //{0x81, MPUREG_I2C_MST_DELAY_CTRL}, //Enable I2C delay
-
         {AK8963_CNTL2, MPUREG_I2C_SLV0_REG}, //I2C slave 0 register address from where to begin data transfer
         {0x01, MPUREG_I2C_SLV0_DO}, // Reset AK8963
         {0x81, MPUREG_I2C_SLV0_CTRL},  //Enable I2C and set 1 byte
-
         {AK8963_CNTL1, MPUREG_I2C_SLV0_REG}, //I2C slave 0 register address from where to begin data transfer
         {0x12, MPUREG_I2C_SLV0_DO}, // Register value to continuous measurement in 16bit
         {0x81, MPUREG_I2C_SLV0_CTRL}  //Enable I2C and set 1 byte
-
     };
 
 for(i=0; i &lt; MPU_InitRegNum; i++) {
 WriteReg(MPU_Init_Data[i][1], MPU_Init_Data[i][0]);
-usleep(10000); //I2C must slow down the write speed, otherwise it won't work
+usleep(10000); //I2C must slow down the write speed, otherwise it would not work
 }
 
 set_acc_scale(BITS_FS_16G);
@@ -88,11 +84,12 @@ set_gyro_scale(BITS_FS_2000DPS);
 calib_mag();
 return 0;
 }
+
 ```
 
 Note that this function also sets scales for both Accelerometer and Gyroscope:
 
-```C++
+```c
 {0x18, MPUREG_GYRO_CONFIG},    // +-2000dps
 {0x08, MPUREG_ACCEL_CONFIG},   // +-4G
 ```
