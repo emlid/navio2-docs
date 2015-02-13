@@ -1,4 +1,4 @@
-# Real-Time kernel 
+
 ![](http://www.emlid.com/wp-content/uploads/2014/05/RT-Tests.png)
 This is a release of the new SD card image of default Raspberry Pi distribution Raspbian with real-time kernel. It is based on 2014-12-24-wheezy-raspbian with default kernel replaced to new 3.12.36-rt50+ kernel and a few additional tunings.
 
