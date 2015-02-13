@@ -11,6 +11,7 @@ pages:
 - ['Navio-APM/configuring-raspberry-pi.md', 'Navio APM', 'Configuring Raspberry Pi']
 - ['Navio-APM/installation-and-running.md', 'Navio APM']
 - ['Navio-APM/building-from-sources.md', 'Navio APM']
+- ['Navio-dev/mpu9250-imu.md', 'Navio for developers', '9DOF IMU']
 - ['Navio-dev/AHRS.md', 'Navio for developers']
 - ['Navio-dev/GPS-ucenter.md', 'Navio for developers', 'U-center GPS']
 - ['Navio-dev/servo-and-rgb-led.md', 'Navio for developers', 'Control servos and RGB LED']
