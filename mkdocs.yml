@@ -18,6 +18,7 @@ pages:
 - ['Navio-dev/GPS-ucenter.md', 'Navio for developers', 'U-center GPS']
 - ['Navio-dev/servo-and-rgb-led.md', 'Navio for developers', 'Control servos and RGB LED']
 - ['Navio-dev/rc-input.md', 'Navio for developers', 'PPM RC input']
+- ['Navio-dev/ads1115-adc.md', 'Navio for developers', 'ADC']
 - ['Navio-dev/rtklib.md', 'Navio for developers', 'Navio Raw RTKLib']
 - ['Navio-dev/using-default-raspbian.md', 'Navio for developers', 'Using default Raspbian']
 - ['Navio-dev/datasheets.md', 'Navio for developers', 'Datasheets']
