@@ -7,7 +7,7 @@
         
 ##Collaboration
 
-This document can be edited on GitHub in markdown. If you find any mistakes, typos or  pieces that are not documented well enough please send pull requests.
+This document can be edited on GitHub in markdown. If you find any mistakes, typos or  pieces that are not documented well enough simply open an issue or contribute by sending a pull request.
 
 ##Discussion
 
