@@ -29,7 +29,7 @@ sudo ./LED
 In this example channels values for RGB LED are slowly decreased and increased creating a mix of different colors.
 
 
-```C++
+```c
 #include "Navio/PCA9685.h"
 
 int main()
@@ -101,7 +101,7 @@ In this example we perform the following:
 
 To set the pulse range appropriate for your servo you can change the SERVO_MIN and SERVO_MAX values.
 
-```C++
+```c
 #define NAVIO_RCOUTPUT_1 3
 #define SERVO_MIN 1.250 /*mS*/
 #define SERVO_MAX 1.750 /*mS*/
@@ -165,7 +165,7 @@ Here’s a short description of the registers:
 
 **Channel control registers:**
 
-```python
+```c
 0x06 - LED0_ON_L - low byte of 12-bit word for rising edge of channel 0
 
 0x07 - LED0_ON_H - high byte of 12-bit word for rising edge of channel 0
@@ -177,7 +177,7 @@ Here’s a short description of the registers:
 
 Registers for other channels are similar and their addresses are shifted by 4 per channel, for example, channels for LED1 are:
 
-```python
+```c
 0x0A - LED1_ON_L
 
 0x0B - LED1_ON_H
@@ -189,7 +189,7 @@ Registers for other channels are similar and their addresses are shifted by 4 pe
 
 To control all channels at once it is possible to use ALL_LED registers:
 
-```python
+```c
 0xFA - ALL_LED_ON_L
 
 0xFB - ALL_LED_ON_H
@@ -201,7 +201,7 @@ To control all channels at once it is possible to use ALL_LED registers:
 
 To set the frequency use the following register:
 
-```python
+```c
 0xFE - PRE_SCALE 
 ```
 minimal value is 3
