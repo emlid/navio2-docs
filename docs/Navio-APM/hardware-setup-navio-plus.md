@@ -1,7 +1,17 @@
 ####GNSS antenna
 ![antenna](Navio-APM/img/Navio+GNSSantenna.png)
 ####RC input
-Navio+ is a PPM only autopilot. That means that you will have to use receiver with PPM output, PPM decoder or SBUS to PPM converter.
+Navio+ is a PPM only autopilot. That means that you will have to use receiver with PPM output, PPM decoder or SBUS to PPM converter. Here is a list of receivers with PPM output:
+
+**For ACCST (most FrSky transmitters):**
+
+* FrSky D4R-II 4ch 2.4Ghz ACCST Receiver
+* FrSKY V8R7-SP ACCST 7 Channel RX with composite PPM
+* FrSKY D8R-XP
+
+**For FASST (Futaba & some FrSky trasmitters):**
+
+FrSky TFR4 4ch 2.4Ghz Surface/Air Receiver FASST Compatible
 
 ![rcin](Navio-APM/img/Navio+RCInput.png)
 ####RC output
