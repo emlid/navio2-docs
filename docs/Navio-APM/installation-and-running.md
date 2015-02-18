@@ -46,7 +46,11 @@ wget emlid.com/files/APM/NavioRaw/APMrover2.elf
 wget emlid.com/files/APM/NavioRaw/ArduCopter.elf
 wget emlid.com/files/APM/NavioRaw/ArduPlane.elf
 ```
+Make the file executable (if needed replace APMrover2.elf with ArduCopter.elf or ArduPlane.elf):
 
+```bash
+sudo chmod +x APMrover2.elf
+```
 
 If you'd like to build the binary yourself please proceed to the [Building from sources](building-from-sources.md).
 ####Running APM
