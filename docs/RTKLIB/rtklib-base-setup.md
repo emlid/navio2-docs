@@ -9,7 +9,7 @@ GPS RTK is technique that allows to determine centimeter-level coordinates using
 
 This tutorial shows how to set up your own base station using STRSVR program from RTKLIB software package on a PC and U-blox NEO-6T receiver.
 
-For instructions how to set up a rover please follow to this tutorial.
+For instructions how to set up a rover please follow to this [tutorial](RTKLIB/rtklib-rover-setup/).
 
 ####Prerequisites for good RTK performance
 
