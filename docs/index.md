@@ -11,5 +11,5 @@ This document can be edited on GitHub in markdown. If you find any mistakes, typ
 
 ##Discussion
 
-We are happy to answer any questions at [community.emlid.com](community.emlid.com)
+We are happy to answer any questions at [community.emlid.com](http://community.emlid.com)
  
