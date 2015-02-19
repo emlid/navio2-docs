@@ -1,7 +1,7 @@
 site_name: Emlid
 theme: readthedocs
 site_favicon: favicon.ico
-repo_url: https://github.com/emlid/Docs
+repo_url: https://github.com/emlid
 pages:
 - ['index.md', 'Introduction']
 - ['Navio-APM/power-up-navio-plus.md', 'Navio APM', 'Power up Navio+']
@@ -25,6 +25,7 @@ pages:
 - ['Navio-dev/datasheets.md', 'Navio for developers', 'Datasheets']
 - ['real-time-linux/raspberry-real-time-kernel.md', 'Real-time Linux', 'Raspberry Pi A+/B+']
 - ['RTKLIB/rtklib-base-setup.md', 'RTK with NEO6-T']
+- ['RTKLIB/rtklib-rover-setup.md', 'RTK with NEO6-T']
 - ['RTKLIB/RTKGPS+.md', 'RTK with NEO6-T']
 - ['Downloads/Real-time-Linux.md', 'Downloads', 'Real-time Linux']
 - ['Downloads/APM-binaries.md', 'Downloads', 'APM binaries']
