@@ -65,6 +65,26 @@ cd ardupilot/APMrover2
 make configure
 make navio
 ```
+Build  for quadcopter:
+
+```bash
+cd ardupilot/ArduCopter
+make configure
+make navio
+```
+
+Build for hexacopter:
+
+```bash
+cd ardupilot/ArduCopter
+make configure
+make navio-hexa
+```
+To build for other frame types replace hexa with one of the following options:
+
+```bash
+quad tri hexa y6 octa octa-quad heli single obc nologging
+```
 
 Executable file will be placed in /tmp/APMrover2.build directory.
 
