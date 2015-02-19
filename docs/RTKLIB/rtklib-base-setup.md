@@ -57,8 +57,8 @@ Click OK to get back to the Input Streams window.
 
 ####Receiver configuration
 
-Click on the “Cmd” button in the Rover row to open receiver configuration.
-![reciever-configuration](RTKLIB/img/receiver-configuration.png)
+Click on the “Cmd” button to open receiver configuration.
+![reciever-configuration](RTKLIB/img/cmd-button.png)
 
 
 **Specify receiver configuration commands**
