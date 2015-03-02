@@ -60,3 +60,7 @@ As Raspberry Pi only has one UART interface in case you would like to use an e
 ![Navio-current-and-voltage-sense](http://www.emlid.com/wp-content/uploads/2014/11/Navio-current-and-voltage-sense.jpg)
 
 To measure battery's voltage and current use sense boards that provide measurements scaled to 3.3V. Series of AttoPilot voltage and current sense boards rated for different currents can be used for these purposes. Connect A0 and A1 channels of ADC to the voltage and current sense correspondingly.
+
+#### Barometer UV protection
+
+MS5611 barometer (steel cap IC) is sensitive to UV light and might report sudden jumps in altitude under sunlight. It is very important to cover it with a piece of cloth (something like microphone fabric) or put autopilot in a protective case to protect it both from sunlight and airstreams. 
