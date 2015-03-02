@@ -111,3 +111,23 @@ Where 192.168.1.2 is the IP address of the GCS, not RPi.
 
 As Raspberry has no data about Navio board voltage, prearm check should be disabled as shown [here](http://copter.ardupilot.com/wiki/flying-arducopter/prearm_safety_check/). Pick "Skip Voltage".
 
+####Voltage and current sensing
+
+If you have original power module connected to Navio+, you can get battery voltage and curent readings from it. Simply press on the "Pixhawk Power Module 90A" in APM Planner to setup voltage and current measurement for APM:
+![PM](Navio-APM/img/Navio+PM.png)
+
+After that you can check in full parameter list that:
+
+```bash
+BATT_CURR_PIN 3
+BATT_VOLT_PIN 2
+```
+
+CTRL+C to kill ArduCopter and run again using:
+
+```bash
+sudo ./ArduCopter.elf -A udp:192.168.1.2:14550
+```
+
+You should see voltage and current values. After that it works everytime.
+
