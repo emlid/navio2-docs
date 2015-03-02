@@ -131,3 +131,9 @@ sudo ./ArduCopter.elf -A udp:192.168.1.2:14550
 
 You should see voltage and current values. After that it works everytime.
 
+####Further configuration
+
+Please follow procedures from [APM wiki](http://copter.ardupilot.com/wiki/initial-setup/) to perform calibrations and finish setup.
+
+Do not forget to enable [RC Failsafe](http://copter.ardupilot.com/wiki/configuration/throttle-failsafe/)!
+
