@@ -4,12 +4,10 @@ site_favicon: favicon.ico
 repo_url: https://github.com/emlid
 pages:
 - ['index.md', 'Introduction']
-- ['Navio-APM/power-up-navio-plus.md', 'Navio APM', 'Power up Navio+']
 - ['Navio-APM/hardware-setup-navio-plus.md', 'Navio APM', 'Hardware setup Navio+']
-- ['Navio-APM/power-up-navio.md', 'Navio APM', 'Power up Navio']
 - ['Navio-APM/hardware-setup-navio.md', 'Navio APM', 'Hardware setup Navio']
 - ['Navio-APM/configuring-raspberry-pi.md', 'Navio APM', 'Configuring Raspberry Pi']
-- ['Navio-APM/installation-and-running.md', 'Navio APM']
+- ['Navio-APM/installation-and-running.md', 'Navio APM', 'APM installation and running']
 - ['Navio-APM/building-from-sources.md', 'Navio APM']
 - ['Navio-dev/mpu9250-imu.md', 'Navio for developers', '9DOF IMU']
 - ['Navio-dev/AHRS.md', 'Navio for developers']
