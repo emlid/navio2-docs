@@ -7,7 +7,7 @@ Default Raspbian kernel is configured with PREEMPT option and provides worst cas
 Results of testing with 
 
 ```
-sudo cyclictest -l1000000 -m -n -a0 -t1 -p99 -i400 -h400 -q</i>”:
+sudo cyclictest -l1000000 -m -n -a0 -t1 -p99 -i400 -h400 -q
 ```
 
 PREEMPT        #Min: 00013uS #Avg: 00023uS #Max: 01153uS
