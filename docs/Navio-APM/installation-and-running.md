@@ -32,11 +32,9 @@ Log in to your Raspberry Pi using SSH or other method and download one of the re
 For Navio or Navio+ pick one of the following corresponding to the type of your drone:
 
 ```bash
-wget emlid.com/files/APM/Navio/APMrover2.elf
-wget emlid.com/files/APM/Navio/ArduCopter.elf
-wget emlid.com/files/APM/Navio/ArduPlane.elf
+wget http://emlid.com/files/apm.deb
+sudo dpkg -i apm.deb
 ```
-
 
 
 For Navio Raw pick one of the following corresponding to the type of your drone:
@@ -45,19 +43,30 @@ For Navio Raw pick one of the following corresponding to the type of your drone:
 wget emlid.com/files/APM/NavioRaw/APMrover2.elf
 wget emlid.com/files/APM/NavioRaw/ArduCopter.elf
 wget emlid.com/files/APM/NavioRaw/ArduPlane.elf
+#Make the file executable (if needed replace APMrover2.elf with ArduCopter.elf or ArduPlane.elf):
+sudo chmod +x APMrover2.elf ArduCopter.elf ArduPlane.elf
 ```
-Make the file executable (if needed replace APMrover2.elf with ArduCopter.elf or ArduPlane.elf):
 
-```bash
-sudo chmod +x APMrover2.elf
-```
 
 If you'd like to build the binary yourself please proceed to the [Building from sources](building-from-sources.md).
 ####Running APM
-To run APM binary type the following in your RPi's console (change APMrover2.elf to ArduCopter.elf or ArduPlane.elf if needed):
+
+Supported vehicle types are:
+* APMrover2
+* ArduPlane
+* ArduCopter-quad
+* ArduCopter-tri
+* ArduCopter-hexa
+* ArduCopter-y6
+* ArduCopter-octa
+* ArduCopter-octa-quad
+* ArduCopter-heli
+* ArduCopter-single
+
+To run APM binary type the following in your RPi's console (change ArduCopter-quad to your vehicle type):
 
 ```bash
-sudo ./APMrover2.elf -A udp:192.168.1.2:14550
+sudo ArduCopter-quad -A udp:192.168.1.2:14550
 ```
 
 Where 192.168.1.2 is the IP address of the device with the Ground Control Station - your laptop, smartphone etc.
@@ -71,7 +80,7 @@ Arguments specify serial ports (TCP or UDP can be used instead of serial ports) 
 If you would like to transfer secondary telemetry over the UART port on Navio you can specify it like this:
 
 ```bash
-sudo ./APMrover2.elf -A udp:192.168.1.2:14550 -C /dev/ttyAMA0
+sudo ArduCopter-quad -A udp:192.168.1.2:14550 -C /dev/ttyAMA0
 ```
 
 
@@ -79,7 +88,7 @@ sudo ./APMrover2.elf -A udp:192.168.1.2:14550 -C /dev/ttyAMA0
 To automatically start APM on boot add the following (change -A and -C options to suit your setup) to /etc/rc.local file on your Raspberry Pi:
 
 ```bash
-sudo /home/pi/APMrover2.elf -A udp:192.168.1.2:14550 -C /dev/ttyAMA0 > /home/pi/startup_log &
+sudo ArduCopter-quad -A udp:192.168.1.2:14550 -C /dev/ttyAMA0 > /home/pi/startup_log &
 ```
 
 ####Connecting to the GCS
@@ -126,7 +135,7 @@ BATT_VOLT_PIN 2
 CTRL+C to kill ArduCopter and run again using:
 
 ```bash
-sudo ./ArduCopter.elf -A udp:192.168.1.2:14550
+sudo ArduCopter-quad -A udp:192.168.1.2:14550
 ```
 
 You should see voltage and current values. After that it works everytime.
