@@ -1,7 +1,7 @@
 site_name: Emlid
 theme: readthedocs
 site_favicon: favicon.ico
-repo_url: https://github.com/emlid
+repo_url: https://github.com/emlid/Docs
 pages:
 - ['index.md', 'Introduction']
 - ['Navio-APM/hardware-setup-navio-plus.md', 'Navio APM', 'Hardware setup Navio+']
