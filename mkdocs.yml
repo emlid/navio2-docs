@@ -1,5 +1,5 @@
 site_name: Emlid
-theme: readthedocs
+theme: docstheme
 site_favicon: favicon.ico
 repo_url: https://github.com/emlid/Docs
 pages:
