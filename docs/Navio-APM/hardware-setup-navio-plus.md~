@@ -71,15 +71,9 @@ Power module does not provide power to servos so a BEC should be present. BEC wo
 Only one ESC central wire should be connected to Navio+ otherwise BECs built in ESCs will heat each other.
 
 ![esc](Navio-APM/img/NavioPlus-RCOutputESCs.png)
-
 #### Telemetry modem
-
-Radio modems can be connected either over UART or over USB. 
-
-Use /dev/ttyAMA0 serial port for UART.
 ![uartradio](Navio-APM/img/NavioPlus-UARTradiomodem.png)
 
-Use /dev/ttyUSB0 virtual serial port for USB.
 ![usbradio](Navio-APM/img/NavioPlus-USBradiomodem.png)
 
 #### Barometer UV protection

@@ -51,11 +51,11 @@ GNSS antenna for Navio's onboard GNSS receiver should be connected to the u.fl s
 ####Radio modem
 Radio modems that work over UART interface can be connected to the Navio's UART port. Please note that power on UART port is 5V and it is powered by the 'BEC' power input.
 
-####External compass 
+####External compass
 MPU9250 sensor onboard of Navio contains magnetometer, but optionally it is possible to use external compass. There are a lot of HMC5883L breakout boards, but for such board to be compatible it is required that the board can be powered by 5V.
 [This one](https://store.3drobotics.com/products/hmc5883l-triple-axis-magnetometer) is compatible.
 
-####External GPS
+####External GPS + compass 
 Optionally it it is possible to connect external GPS and compass, but not necessary as Navio already contains an onboard GNSS receiver and compass. As UART and I2C ports on Navio have the same pinouts as on Pixhawk it is possible to connect any Pixhawk-compatible GNSS modules with their provided wires, they usually have an external compass built-in which can be used too by connecting over I2C DF13 wire. Older modules such as ones for APM 2.5 could be used with proper wiring.
 
 ####Radio over USB
