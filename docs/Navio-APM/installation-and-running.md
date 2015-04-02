@@ -26,27 +26,13 @@ What has been added:
 * ADC based on ADS1115 
 
 ####Installing APM
-Log in to your Raspberry Pi using SSH or other method and download one of the ready to use APM binaries using wget.
 
-
-For Navio or Navio+ pick one of the following corresponding to the type of your drone:
+Log in to your Raspberry Pi using SSH or other method, download the deb package with APM binaries using wget and install it. Deb package contains binaries that are compatible with Navio, Navio Raw or Navio+:
 
 ```bash
 wget http://emlid.com/files/apm.deb
 sudo dpkg -i apm.deb
 ```
-
-
-For Navio Raw pick one of the following corresponding to the type of your drone:
-
-```bash
-wget emlid.com/files/APM/NavioRaw/APMrover2.elf
-wget emlid.com/files/APM/NavioRaw/ArduCopter.elf
-wget emlid.com/files/APM/NavioRaw/ArduPlane.elf
-#Make the file executable (if needed replace APMrover2.elf with ArduCopter.elf or ArduPlane.elf):
-sudo chmod +x APMrover2.elf ArduCopter.elf ArduPlane.elf
-```
-
 
 If you'd like to build the binary yourself please proceed to the [Building from sources](building-from-sources.md).
 ####Running APM
