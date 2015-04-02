@@ -11,10 +11,10 @@ Results of testing with
 sudo cyclictest -l1000000 -m -n -a0 -t1 -p99 -i400 -h400 -q
 ```
 
-PREEMPT        #Min: 00013uS #Avg: 00023uS #Max: 01153uS
-
+```
+PREEMPT    #Min: 00013uS #Avg: 00023uS #Max: 01153uS
 PREEMPT_RT #Min: 00011uS #Avg: 00023uS #Max: 00066uS
-
+```
 
 Histogram values are on the plot above.
 
@@ -35,6 +35,6 @@ List of changes includes:
 
 ####SD card image
 
-* [Emlid-Raspbian-RT-FEB-2015.img.xz on MEGA](https://mega.co.nz/#!RVJxHJpI!QVPTZaNY0AiuPbcxQjOTmZ2un6d0j7W3g1jwheuotUc)
+* [emlid-raspberrypi1-raspbian-rt-2015feb.img.xz on MEGA](https://mega.co.nz/#!RVJxHJpI!QVPTZaNY0AiuPbcxQjOTmZ2un6d0j7W3g1jwheuotUc)
 
 To flash the SD card refer to this [tutorial](http://elinux.org/RPi_Easy_SD_Card_Setup#Flashing_the_SD_Card_using_Windows)
