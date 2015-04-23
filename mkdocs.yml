@@ -8,6 +8,7 @@ pages:
 - ['Navio-APM/hardware-setup-navio.md', 'Navio APM', 'Hardware setup Navio']
 - ['Navio-APM/configuring-raspberry-pi.md', 'Navio APM', 'Configuring Raspberry Pi']
 - ['Navio-APM/installation-and-running.md', 'Navio APM', 'APM installation and running']
+- ['Navio-APM/video-streaming.md', 'Navio APM', 'Video Streaming']
 - ['Navio-APM/building-from-sources.md', 'Navio APM']
 - ['Downloads/Real-time-Linux-RPi1.md', 'Downloads', 'Real-time Linux for RPi1']
 - ['Downloads/Real-time-Linux-RPi2.md', 'Downloads', 'Real-time Linux for RPi2']
