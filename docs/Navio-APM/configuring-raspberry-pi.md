@@ -22,7 +22,7 @@ Unmount SD card partitions if they were mounted.
 Run
  
 ```
-sudo dd bs=1M if=Emlid-Raspbian-RT-JAN-2015.img of=/dev/mmcblk0 
+sudo dd bs=1m if=Emlid-Raspbian-RT-JAN-2015.img of=/dev/mmcblk0 
 ```
 
 in a console, where /dev/mmcblk0 is your sd card drive.
