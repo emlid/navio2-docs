@@ -20,9 +20,15 @@ We provide an SD card image of Raspbian with fully preemptive real-time Linux ke
 Extract an image.
 Unmount SD card partitions if they were mounted.
 Run
- 
+
+For Ubuntu\Linux:
 ```
-sudo dd bs=1m if=Emlid-Raspbian-RT-JAN-2015.img of=/dev/mmcblk0 
+sudo dd bs=1M if=emlid-raspberrypi2-raspbian-rt-20150401.img of=/dev/mmcblk0 
+```
+
+For Mac OS:
+```
+sudo dd bs=1m if=emlid-raspberrypi2-raspbian-rt-20150401.img of=/dev/mmcblk0 
 ```
 
 in a console, where /dev/mmcblk0 is your sd card drive.
