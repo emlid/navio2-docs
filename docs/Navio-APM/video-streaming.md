@@ -23,7 +23,7 @@ sudo apt-get install gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreame
 #### Android
 
 Download and install QtGStreamerHUD:
-[QtGStreamerHUD.apk](https://www.dropbox.com/s/qqeatfpbqu1olcb/QtGStreamerHUD.apk?dl=0). Find out your IP address in the Preferences. You'll need it in order to connect to the phone from your RPi2. Please ensure Unknown sources is enabled in settings before installing. After completing the installation , hit the gears icon on the top right and set the pipeline to "udpscrc port=9000 buffer-size=600....." the second option in the pipeline dropdown menu.
+[QtGStreamerHUD.apk](http://www.emlid.com/files/android/QtGStreamerHUD.apk). Find out your IP address in the Preferences. You'll need it in order to connect to the phone from your RPi2. Please ensure Unknown sources is enabled in settings before installing. After completing the installation , hit the gears icon on the top right and set the pipeline to "udpscrc port=9000 buffer-size=600....." the second option in the pipeline dropdown menu.
 
 Use our [our](http://docs.emlid.com/Navio-APM/installation-and-running/) tutorial to run APM using the IP you just found out.
 
