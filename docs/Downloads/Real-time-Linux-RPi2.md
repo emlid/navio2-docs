@@ -35,7 +35,11 @@ List of changes includes:
 
 * Patched and configured source code for Raspberry Pi real-time kernel is available on [GitHub](https://github.com/emlid/linux-rt-rpi)
 
-####SD card image
+**Issues**
+
+* **IMPORTANT: Do NOT overclock Raspberry Pi 2 as SPI driver doesn't calculate clock frequency correctly when core is overclocked. This should be fixed in the future.**
+
+####SD card image download
 
 * [emlid-raspberrypi2-raspbian-rt-20150401.img.xz on MEGA](https://mega.co.nz/#!0VZFzbwC!6tTzWFKl8jdR4Q52A9A03wYyAPghIDKtxGpavNMBKn4)
 
