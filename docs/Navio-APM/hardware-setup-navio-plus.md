@@ -76,7 +76,8 @@ Only one ESC central wire should be connected to Navio+ otherwise BECs built in 
 
 Radio modems can be connected either over UART or over USB. 
 
-Use /dev/ttyAMA0 serial port for UART.
+For UART port use /dev/ttyAMA0 serial. 
+Please do not connect CTS line when using 3DR Radio as RPi does not handle hardware flow control properly.
 ![uartradio](Navio-APM/img/NavioPlus-UARTradiomodem.png)
 
 Use /dev/ttyUSB0 virtual serial port for USB.
