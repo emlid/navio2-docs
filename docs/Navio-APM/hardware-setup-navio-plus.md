@@ -49,7 +49,9 @@ Power module does not power servos. To provide power to the servo rail plug your
 ![antenna](Navio-APM/img/NavioPlus-GNSSantenna.png)
 
 ####RC input
-Navio+ is a PPM only autopilot. That means that you will have to use receiver with PPM output, PPM decoder or SBUS to PPM converter. Here is a list of receivers with PPM output:
+Navio+ only supports PPM signal as an input. To connect receivers that do not support PPM output you can use PPM decoder or SBUS to PPM converter. PPM receiver is powered from a servo rail, so BEC should be present.
+
+Receivers with PPM output:
 
 **For ACCST (most FrSky transmitters):**
 
