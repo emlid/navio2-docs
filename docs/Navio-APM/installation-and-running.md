@@ -59,16 +59,26 @@ Where 192.168.1.2 is the IP address of the device with the Ground Control Statio
 
 Arguments specify serial ports (TCP or UDP can be used instead of serial ports) :
 
-* -A is for telemetry
+* -A is for primary telemetry
 * -B is for external GPS
-* -C is for secondary telemetry
+* -C is for secondary telemetry (it can be used without primary telemetry)
+* -E is for secondary external GPS
 
-If you would like to transfer secondary telemetry over the UART port on Navio you can specify it like this:
+When using UART for telemetry please note that default baud rates are:
+115200 for primary (-A)
+57600 for secondary (-C)
+3DR Radios are configured for 57600 by default, so te simplest way to connect over them is to run with -C option.
+If you would like to transfer telemetry over the UART port on Navio you can specify it like this:
+
+```bash
+sudo ArduCopter-quad -C /dev/ttyAMA0
+```
+
+UDP and serial telemetry can be used simultaneously like this:
 
 ```bash
 sudo ArduCopter-quad -A udp:192.168.1.2:14550 -C /dev/ttyAMA0
 ```
-
 
 ####Autostarting APM on boot
 To automatically start APM on boot add the following (change -A and -C options to suit your setup) to /etc/rc.local file on your Raspberry Pi:
