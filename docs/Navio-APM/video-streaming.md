@@ -1,6 +1,11 @@
 #### Video Streaming with Navio
 
-Streaming real-time video from a drone powered by a Raspberry Pi 2 has never been easier.  There is only only a handful of actions that you need to make to get a drone streaming real-time video to a remote PC, tablet, phone or whatnot.
+Streaming real-time video from a drone powered by a Raspberry Pi 2 has never been easier.  There is only only a handful of actions that you need to make to get a drone streaming real-time video to a remote PC, tablet, phone or whatnot. 
+
+#### Hardware
+
+This instructions are for Raspberry Pi Camera Module. 
+Please note that Raspberry Pi Camera Module emits a lot of RF noise which may affect GPS performance. To workaround that wrap Camera Module and its cable using tape and alumnium\copper foil (use tape to keep foil from short curcuiting Camera Module pcb). 
 
 #### Raspberry PI2
 
