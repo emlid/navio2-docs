@@ -92,12 +92,14 @@ MS5611 barometer (steel cap IC) is sensitive to UV light and might report sudden
 #### 3D cases
 
 A couple of 3D printable cases are available for Navio+\RPi2 made by Navio+ users:
+
 * [NAVIO+ RPi2 Case by Pedro Alves](http://www.thingiverse.com/thing:872991)
 * [NAVIO+ plus Raspberry Pi2 case by Mauricio Cancino](http://www.thingiverse.com/thing:868826)
 
 #### Available GPIO pins
 
 GPIO pins not connected to anything on Navio+:
+
 * 29 - GPIO5
 * 31 - GPIO6
 * 33 - GPIO13
