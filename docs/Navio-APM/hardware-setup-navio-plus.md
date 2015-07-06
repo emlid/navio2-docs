@@ -88,3 +88,12 @@ Use /dev/ttyUSB0 virtual serial port for USB.
 #### Barometer UV protection
 
 MS5611 barometer (steel cap IC) is sensitive to UV light and might report sudden jumps in altitude under sunlight. It is very important to cover it with a piece of cloth (something like microphone fabric) or put autopilot in a protective case to protect it both from sunlight and airstreams. 
+
+#### Available GPIO pins
+
+GPIO pins not connected to anything on Navio+:
+* 29 - GPIO5
+* 31 - GPIO6
+* 33 - GPIO13
+* 35 - GPIO19
+* 36 - GPIO16
