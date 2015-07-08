@@ -89,12 +89,21 @@ Use /dev/ttyUSB0 virtual serial port for USB.
 
 MS5611 barometer (steel cap IC) is sensitive to UV light and might report sudden jumps in altitude under sunlight. It is very important to cover it with a piece of cloth (something like microphone fabric) or put autopilot in a protective case to protect it both from sunlight and airstreams. 
 
+![barouvprotection](Navio-APM/img/NavioPlus-BaroUVProtection.jpg)
+
 #### 3D cases
 
 A couple of 3D printable cases are available for Navio+\RPi2 made by Navio+ users:
 
-* [NAVIO+ RPi2 Case by Pedro Alves](http://www.thingiverse.com/thing:872991)
-* [NAVIO+ plus Raspberry Pi2 case by Mauricio Cancino](http://www.thingiverse.com/thing:868826)
+[NAVIO+ RPi2 Case by Pedro Alves](http://www.thingiverse.com/thing:872991)
+
+![naviopluscasebypedroalves1](Navio-APM/img/NavioPlus-CaseBPedroAlves1.jpg)
+![naviopluscasebypedroalves2](Navio-APM/img/NavioPlus-CaseBPedroAlves2.jpg)
+
+[NAVIO+ plus Raspberry Pi2 case by Mauricio Cancino](http://www.thingiverse.com/thing:868826)
+
+![naviopluscasebymauriciocancino1](Navio-APM/img/NavioPlus-CaseByMauricioCancino1.jpg)
+![naviopluscasebymauriciocancino2](Navio-APM/img/NavioPlus-CaseByMauricioCancino2.jpg)
 
 #### Available GPIO pins
 
