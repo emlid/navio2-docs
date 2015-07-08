@@ -114,3 +114,4 @@ GPIO pins not connected to anything on Navio+:
 * 33 - GPIO13
 * 35 - GPIO19
 * 36 - GPIO16
+* 32 - GPIO12 available on AUX connector, 5V logic level tolerant
