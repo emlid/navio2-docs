@@ -115,3 +115,7 @@ GPIO pins not connected to anything on Navio+:
 * 35 - GPIO19
 * 36 - GPIO16
 * 32 - GPIO12 available on AUX connector, 5V logic level tolerant
+
+###ADC pins
+
+Under the Navio+ you can find pads ADC2 and ADC3, they can be used as either pin 4 or 5 in APM. ADC range is 0-3.3V .
