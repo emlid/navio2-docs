@@ -27,6 +27,7 @@ sudo dd bs=1M if=emlid-raspberrypi2-raspbian-rt-20150401.img of=/dev/mmcblk0
 ```
 
 For Mac OS:
+
 * Find the memory card using `diskutil list` command(Try running it with and without the card inserted).
 It will be one of the /dev/diskX instances.
 **Be careful with the number as you might destroy your whole OS X installation.**
