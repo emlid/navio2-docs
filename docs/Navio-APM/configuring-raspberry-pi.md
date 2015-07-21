@@ -23,15 +23,19 @@ Run
 
 For Ubuntu\Linux:
 ```
-sudo dd bs=1M if=emlid-raspberrypi2-raspbian-rt-20150401.img of=/dev/mmcblk0 
+sudo dd bs=1M if=emlid-raspberrypi2-raspbian-rt-20150401.img of=/dev/mmcblk0
 ```
 
 For Mac OS:
+* Find the memory card using `diskutil list` command(Try running it with and without the card inserted).
+It will be one of the /dev/diskX instances.
+**Be careful with the number as you might destroy your whole OS X installation.**
+* Unmount the disk with `sudo diskutil unmountDisk /dev/diskX`
+* Write the image with
 ```
-sudo dd bs=1m if=emlid-raspberrypi2-raspbian-rt-20150401.img of=/dev/mmcblk0 
+sudo dd bs=1m if=emlid-raspberrypi2-raspbian-rt-20150401.img of=/dev/rdiskX
 ```
-
-in a console, where /dev/mmcblk0 is your sd card drive.
+Notice the addition of r in the disk path. It shows that that's this device is not buffered and will make the writing procedure much faster.
 The process may take a few minutes, after it’s finished dd will display a message.
 
 More detailed instructions are available [here](http://www.raspberrypi.org/documentation/installation/installing-images/).
@@ -52,7 +56,7 @@ network={
 
 To get access to this file use one of the following methods:
 
-**Edit configuration on SD card** 
+**Edit configuration on SD card**
 
 On Linux it’s easy, simply plug an SD card and it will be mounted.
 On Windows you would need to install an ext4 driver like this one - http://www.paragon-software.com/home/extfs-windows/
@@ -81,7 +85,7 @@ Connect HDMI monitor and USB keyboard to your Raspberry, power it up and you wil
 sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
-Modify the file as described above, save it and reboot. 
+Modify the file as described above, save it and reboot.
 This method may be problematic because some keyboards are not compatible with this kernel. If your keyboard does not work, try another one or use another method.
 
 **Use ethernet**
