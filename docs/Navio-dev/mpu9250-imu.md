@@ -6,7 +6,7 @@ MPU9250 is one of the best in class inertial sensors, which combines a gyroscope
 If you haven't already done that, download Navio drivers and examples code like this:
 
 ```bash
-git clone www.github.com/emlid/navio
+git clone https://github.com/emlid/navio
 ```
 
 Move to folder Navio/Examples/AccelGyroMag, compile and run the example
