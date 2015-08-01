@@ -13,6 +13,7 @@ pages:
 - ['Downloads/Real-time-Linux-RPi1.md', 'Downloads', 'Real-time Linux for RPi1']
 - ['Downloads/Real-time-Linux-RPi2.md', 'Downloads', 'Real-time Linux for RPi2']
 - ['Downloads/APM-binaries.md', 'Downloads', 'APM binaries']
+- ['Downloads/Windows-IoT.md', 'Downloads', 'Windows IoT']
 - ['Navio-dev/mpu9250-imu.md', 'Navio for developers', '9DOF IMU']
 - ['Navio-dev/AHRS.md', 'Navio for developers']
 - ['Navio-dev/ms5611-barometer.md', 'Navio for developers', 'Barometer']
