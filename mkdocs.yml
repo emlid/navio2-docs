@@ -26,6 +26,7 @@ pages:
 - ['Navio-dev/rtklib.md', 'Navio for developers', 'Navio Raw RTKLib']
 - ['Navio-dev/using-default-raspbian.md', 'Navio for developers', 'Using default Raspbian']
 - ['Navio-dev/datasheets.md', 'Navio for developers', 'Datasheets']
+- ['Navio-dev/Windows-IoT.md', 'Navio for developers', 'Windows IoT']
 - ['RTKLIB/rtklib-base-setup.md', 'RTK with NEO6-T']
 - ['RTKLIB/rtklib-rover-setup.md', 'RTK with NEO6-T']
 - ['RTKLIB/RTKGPS+.md', 'RTK with NEO6-T']
