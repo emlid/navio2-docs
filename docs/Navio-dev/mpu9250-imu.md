@@ -6,7 +6,7 @@ MPU9250 is one of the best in class inertial sensors, which combines a gyroscope
 If you haven't already done that, download Navio drivers and examples code like this:
 
 ```bash
-git clone www.github.com/emlid/navio
+git clone https://github.com/emlid/Navio
 ```
 
 Move to folder Navio/Examples/AccelGyroMag, compile and run the example
@@ -50,7 +50,7 @@ bool MPU9250::initialize(int sample_rate_div, int low_pass_filter)
 {
     uint8_t i = 0;
     uint8_t MPU_Init_Data[MPU_InitRegNum][2] = {
-        {0x80, MPUREG_PWR_MGMT_1},     // Reset Device
+        //{0x80, MPUREG_PWR_MGMT_1},     // Reset Device - Disabled because it seems to corrupt initialisation of AK8963
         {0x01, MPUREG_PWR_MGMT_1},     // Clock Source
         {0x00, MPUREG_PWR_MGMT_2},     // Enable Acc &amp; Gyro
         {low_pass_filter, MPUREG_CONFIG},  // Use DLPF set Gyroscope bandwidth 184Hz, temperature bandwidth     188Hz
@@ -75,7 +75,7 @@ bool MPU9250::initialize(int sample_rate_div, int low_pass_filter)
 
 for(i=0; i &lt; MPU_InitRegNum; i++) {
 WriteReg(MPU_Init_Data[i][1], MPU_Init_Data[i][0]);
-usleep(10000); //I2C must slow down the write speed, otherwise it would not work
+usleep(100000); //I2C must slow down the write speed, otherwise it would not work
 }
 
 set_acc_scale(BITS_FS_16G);
