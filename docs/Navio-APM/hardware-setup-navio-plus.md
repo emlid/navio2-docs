@@ -23,7 +23,7 @@ It is completely safe to use Navio+ with all boards stated above.
 
 ###Powering Navio+
 
-Navio+ has three power sources, all of them can be used simultaneously as they are protected by ideal diodes. 
+Navio+ has three power sources, all of them can be used simultaneously as they are protected by ideal diodes.
 
 **IMPORTANT: ALL POWER SOURCES SHOULD PROVIDE VOLTAGE IN 4.8-5.3V RANGE, OTHERWISE YOU CAN DAMAGE YOUR NAVIO+ AND RASPBERRY PI.**
 
@@ -76,9 +76,9 @@ Only one ESC central wire should be connected to Navio+ otherwise BECs built in 
 
 ###Telemetry modem
 
-Radio modems can be connected either over UART or over USB. 
+Radio modems can be connected either over UART or over USB.
 
-For UART port use /dev/ttyAMA0 serial. 
+For UART port use /dev/ttyAMA0 serial.
 Please do not connect CTS line when using 3DR Radio as RPi does not handle hardware flow control properly.
 ![uartradio](Navio-APM/img/NavioPlus-UARTradiomodem.jpg)
 
@@ -87,7 +87,7 @@ Use /dev/ttyUSB0 virtual serial port for USB.
 
 ###Barometer UV protection
 
-MS5611 barometer (steel cap IC) is sensitive to UV light and might report sudden jumps in altitude under sunlight. It is very important to cover it with a piece of cloth (something like microphone fabric) or put autopilot in a protective case to protect it both from sunlight and airstreams. 
+MS5611 barometer (steel cap IC) is sensitive to UV light and might report sudden jumps in altitude under sunlight. It is very important to cover it with a piece of cloth (something like microphone fabric) or put autopilot in a protective case to protect it both from sunlight and airstreams.
 
 ![barouvprotection](Navio-APM/img/NavioPlus-BaroUVProtection.jpg)
 

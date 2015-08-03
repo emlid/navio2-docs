@@ -4,7 +4,7 @@
 
 
 
-        
+
 ##Collaboration
 
 This document can be edited on GitHub in markdown. If you find any mistakes, typos or  pieces that are not documented well enough simply open an issue or contribute by sending a pull request.
@@ -12,4 +12,3 @@ This document can be edited on GitHub in markdown. If you find any mistakes, typ
 ##Discussion
 
 We are happy to answer any questions at [community.emlid.com](http://community.emlid.com)
- 
