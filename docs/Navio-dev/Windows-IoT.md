@@ -4,7 +4,7 @@ This page describes how to start development by installing Windows IoT on your d
 
 ##Prerequisites
 
-Use the links on the [Download Page](Downloads/Windows-IoT.md) to download the current Windows IoT Core image and Visual Studio 2015 Community Edition with Tools.
+Use the links on the [Download Page](http://docs.emlid.com/Downloads/Windows-IoT) to download the current Windows IoT Core image and Visual Studio 2015 Community Edition with Tools.
 
 ##Build and Run the Hardware Test App
 
