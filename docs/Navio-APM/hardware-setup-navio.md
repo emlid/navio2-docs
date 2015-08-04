@@ -24,12 +24,12 @@ In case you want to control servos, motors or other high power loads it is neces
 * ADC signal pins – 0V-3.3V input
 
 ####Connection map
-![map](Navio-APM/img/Navio-ConnectionMap.png)
+![map](img/Navio-ConnectionMap.png)
 
 
 Raspberry Pi provides a set of peripheral interfaces which can be used to connect additional hardware. Navio provides access to these interfaces on it's ports. Even though the set of interfaces is limited, it is possible to add more by using USB adapters. This guide demonstrates how different hardware can be connected to Navio and how to properly power it up in a drone.
 ####Typical hardware setup
-![Navio-typical-gear-setup](Navio-APM/img/Navio-AntennaRadioBECs.jpg)
+![Navio-typical-gear-setup](img/Navio-AntennaRadioBECs.jpg)
 
 ####Power
 Raspberry Pi is sensitive to voltage drop-outs as they cause it to reboot, to protect it we separated power circuits for Raspberry Pi \ sensors and servo rail \ ports. Power input for Raspberry Pi and sensors is labeled '5VRPI', while power input for servo rail and ports is labeled 'BEC' and both are located on 2.54mm header. That way by using two different power sources you can connect servos, radio modem and other power-hungry loads without disturbing Raspberry Pi.
@@ -51,7 +51,7 @@ GNSS antenna for Navio's onboard GNSS receiver should be connected to the u.fl s
 ####Radio modem
 Radio modems that work over UART interface can be connected to the Navio's UART port. Please note that power on UART port is 5V and it is powered by the 'BEC' power input.
 
-####External compass 
+####External compass
 MPU9250 sensor onboard of Navio contains magnetometer, but optionally it is possible to use external compass. There are a lot of HMC5883L breakout boards, but for such board to be compatible it is required that the board can be powered by 5V.
 [This one](https://store.3drobotics.com/products/hmc5883l-triple-axis-magnetometer) is compatible.
 
@@ -62,10 +62,10 @@ Optionally it it is possible to connect external GPS and compass, but not necess
 As Raspberry Pi only has one UART interface in case you would like to use an external GPS there would be no UART ports left for a radio modem. In that case it is possible to add more UART ports by using USB-to-UART adapters that are usually built with Silabs CP210x or FTDI chips such as [this one](https://www.sparkfun.com/products/718).
 
 ####Voltage and current sense
-![Navio-current-and-voltage-sense](Navio-APM/img/Navio-CurrentAndVoltageSense.jpg)
+![Navio-current-and-voltage-sense](img/Navio-CurrentAndVoltageSense.jpg)
 
 To measure battery's voltage and current use sense boards that provide measurements scaled to 3.3V. Series of AttoPilot voltage and current sense boards rated for different currents can be used for these purposes. Connect A0 and A1 channels of ADC to the voltage and current sense correspondingly.
 
 #### Barometer UV protection
 
-MS5611 barometer (steel cap IC) is sensitive to UV light and might report sudden jumps in altitude under sunlight. It is very important to cover it with a piece of cloth (something like microphone fabric) or put autopilot in a protective case to protect it both from sunlight and airstreams. 
+MS5611 barometer (steel cap IC) is sensitive to UV light and might report sudden jumps in altitude under sunlight. It is very important to cover it with a piece of cloth (something like microphone fabric) or put autopilot in a protective case to protect it both from sunlight and airstreams.

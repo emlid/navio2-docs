@@ -23,7 +23,7 @@ What has been added:
 * RGB LED
 * MPU9250 built-in compass driver
 * U-blox GPS SPI driver
-* ADC based on ADS1115 
+* ADC based on ADS1115
 
 ####Installing APM
 
@@ -90,7 +90,7 @@ sudo ArduCopter-quad -A udp:192.168.1.2:14550 -C /dev/ttyAMA0 > /home/pi/startup
 ####Connecting to the GCS
 **APM Planner**
 
-APM Planner is a ground station software for APM. It can be downloaded from the 
+APM Planner is a ground station software for APM. It can be downloaded from the
 [ardupilot.com](http://ardupilot.com/downloads/?category=35)
 
 APM Planner listens on UDP port 14550, so it should catch telemetry from the drone automatically.
@@ -119,7 +119,7 @@ As Raspberry has no data about Navio board voltage, prearm check should be disab
 ####Voltage and current sensing
 
 If you have original power module connected to Navio+, you can get battery voltage and curent readings from it. Simply press on the "Pixhawk Power Module 90A" in APM Planner to setup voltage and current measurement for APM:
-![PM](Navio-APM/img/Navio+PM.png)
+![PM](img/Navio+PM.png)
 
 After that you can check in full parameter list that:
 
@@ -141,4 +141,3 @@ You should see voltage and current values. After that it works everytime.
 Please follow procedures from [APM wiki](http://copter.ardupilot.com/wiki/initial-setup/) to perform calibrations and finish setup.
 
 Do not forget to enable [RC Failsafe](http://copter.ardupilot.com/wiki/configuration/throttle-failsafe/)!
-

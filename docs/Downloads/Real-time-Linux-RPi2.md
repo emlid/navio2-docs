@@ -1,13 +1,13 @@
 #####PREEMPT_RT
 
-![rpi2-cyclictest](Downloads/img/rpi2-cyclictest-plot.png)
+![rpi2-cyclictest](img/rpi2-cyclictest-plot.png)
 
-This is a release of Raspbian with real-time kernel for Raspberry Pi 2 Model B. 
+This is a release of Raspbian with real-time kernel for Raspberry Pi 2 Model B.
 It is based on 2015-02-16-raspbian-wheezy with default kernel replaced to 3.18.9-rt5-v7+ kernel and a few additional tunings.
 
 Default Raspbian kernel 3.18 is configured with PREEMPT option and provides worst case latency around hundreds of microseconds. Real-time demanding applications require lower latencies than that. Real-time patch lowers the worst case latency to tens of microseconds, improving performance of real-time applications such as autopilots to be run on Linux.
 
-Results of testing with 
+Results of testing with
 
 ```
 sudo cyclictest -l1000000 -m -n -a0 -t1 -p99 -i400 -h400 -q
