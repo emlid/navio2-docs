@@ -24,7 +24,7 @@ In case you want to control servos, motors or other high power loads it is neces
 * ADC signal pins – 0V-3.3V input
 
 ####Connection map
-![map](img/Navio-ConnectionMap.png)
+![map](img/Navio-ConnectionMap.jpg)
 
 
 Raspberry Pi provides a set of peripheral interfaces which can be used to connect additional hardware. Navio provides access to these interfaces on it's ports. Even though the set of interfaces is limited, it is possible to add more by using USB adapters. This guide demonstrates how different hardware can be connected to Navio and how to properly power it up in a drone.
