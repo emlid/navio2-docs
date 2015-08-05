@@ -143,6 +143,9 @@ As other APM configuration procedures are very similar for most APM-running auto
 *Important*: There is no need to perform "4. Load Copter Firmware" step as APM is installed using deb package or binary on RPi with Navio. Also, frame type is selected by running the corresdonding binary as described above.
 
 [Hardware configuration](http://copter.ardupilot.com/wiki/initial-setup/configuring-hardware) 
+
 [ESC Calibration](http://copter.ardupilot.com/wiki/initial-setup/configuring-hardware) 
+
 [Motor Setup](http://copter.ardupilot.com/wiki/initial-setup/configuring-hardware) 
+
 [Enable RC Failsafe](http://copter.ardupilot.com/wiki/configuration/throttle-failsafe/)!
