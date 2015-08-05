@@ -138,6 +138,11 @@ You should see voltage and current values. After that it works everytime.
 
 ####Further configuration
 
-Please follow procedures from [APM wiki](http://copter.ardupilot.com/wiki/initial-setup/) to perform calibrations and finish setup.
+As other APM configuration procedures are very similar for most APM-running autopilot hardware, please use the APM documentation. 
 
-Do not forget to enable [RC Failsafe](http://copter.ardupilot.com/wiki/configuration/throttle-failsafe/)!
+*Important*: There is no need to perform "4. Load Copter Firmware" step as APM is installed using deb package or binary on RPi with Navio. Also, frame type is selected by running the corresdonding binary as described above.
+
+[Hardware configuration](http://copter.ardupilot.com/wiki/initial-setup/configuring-hardware) 
+[ESC Calibration](http://copter.ardupilot.com/wiki/initial-setup/configuring-hardware) 
+[Motor Setup](http://copter.ardupilot.com/wiki/initial-setup/configuring-hardware) 
+[Enable RC Failsafe](http://copter.ardupilot.com/wiki/configuration/throttle-failsafe/)!
