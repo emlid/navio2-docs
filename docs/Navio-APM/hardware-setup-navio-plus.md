@@ -97,6 +97,8 @@ A couple of 3D printable cases are available for Navio+\RPi2 made by Navio+ user
 
 [NAVIO+ RPi2 Case by Pedro Alves](http://www.thingiverse.com/thing:872991)
 
+Can be ordered on the [Airborne Projects website](https://www.airborneprojects.com/product/navio-rpi2-3d-printed-case/).
+
 ![naviopluscasebypedroalves1](img/NavioPlus-CaseByPedroAlves1.jpg)
 ![naviopluscasebypedroalves2](img/NavioPlus-CaseByPedroAlves2.jpg)
 
