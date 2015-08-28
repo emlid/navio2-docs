@@ -1,5 +1,5 @@
 
-* [MPU-9250](http://www.invensense.com/mems/gyro/documents/PS-MPU-9250A-01.pdf)
+* [MPU-9250](http://store.invensense.com/datasheets/invensense/MPU9250REV1.0.pdf)
 
 * [MS5611](http://www.meas-spec.com/downloads/MS5611-01BA03.pdf)
 
