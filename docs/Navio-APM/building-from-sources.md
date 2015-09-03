@@ -102,4 +102,4 @@ If you are compiling directly on Raspberry copy the binary from tmp directory to
 cp /tmp/APMrover2.build/APMrover2.elf /home/pi/APMrover2.elf
 ```
 
-Instructions how to run APM on Raspberry and to connect GCS to it are available  <a href="http://www.emlid.com/navio-apm/" target="_blank"> here </a>
+Instructions how to run APM on Raspberry and to connect GCS to it are available  [here](installation-and-running.md).
