@@ -96,4 +96,4 @@ Note that this function also sets scales for both Accelerometer and Gyroscope:
 
 The main function loop is pretty straightforward: read the data, print the data.
 
-You can find additional information about MPU9250, including the datasheet and the register map [here](http://www.invensense.com/mems/gyro/mpu9250.html).
+You can find additional information about MPU9250 in the datasheet.
