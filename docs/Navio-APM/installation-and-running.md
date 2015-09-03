@@ -119,7 +119,7 @@ As Raspberry has no data about Navio board voltage, prearm check should be disab
 ####Voltage and current sensing
 
 If you have original power module connected to Navio+, you can get battery voltage and curent readings from it. Simply press on the "Pixhawk Power Module 90A" in APM Planner to setup voltage and current measurement for APM:
-![PM](img/Navio+PM.png)
+![PM](img/NavioPlus-PowerModule.jpg)
 
 After that you can check in full parameter list that:
 
