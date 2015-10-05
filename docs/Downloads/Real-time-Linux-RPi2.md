@@ -41,7 +41,7 @@ List of changes includes:
 
 ####SD card image download
 
-* [emlid-raspberrypi2-raspbian-rt-20150401.img.xz on MEGA](https://mega.co.nz/#!0VZFzbwC!6tTzWFKl8jdR4Q52A9A03wYyAPghIDKtxGpavNMBKn4)
+* [emlid-raspberrypi2-raspbian-rt-20150401.img.xz on MEGA](https://mega.nz/#!0Ugm0RwQ!6tTzWFKl8jdR4Q52A9A03wYyAPghIDKtxGpavNMBKn4)
 
 * [emlid-raspberrypi2-raspbian-rt-20150401.img.xz alternative download](https://drive.google.com/file/d/0BxaybdBoJZ8zOFdFQ1lGT0U5Uzg/view?usp=sharing)
 
