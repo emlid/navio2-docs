@@ -41,8 +41,6 @@ List of changes includes:
 
 ####SD card image download
 
-* [emlid-raspberrypi2-raspbian-rt-20150401.img.xz on MEGA](https://mega.nz/#!0Ugm0RwQ!6tTzWFKl8jdR4Q52A9A03wYyAPghIDKtxGpavNMBKn4)
-
-* [emlid-raspberrypi2-raspbian-rt-20150401.img.xz alternative download](https://drive.google.com/file/d/0BxaybdBoJZ8zOFdFQ1lGT0U5Uzg/view?usp=sharing)
+* [emlid-raspberrypi2-raspbian-rt-20150401.img.xz](http://files.emlid.com/data/public/rt-20150401)
 
 To flash the SD card refer to this [tutorial](http://elinux.org/RPi_Easy_SD_Card_Setup#Flashing_the_SD_Card_using_Windows)

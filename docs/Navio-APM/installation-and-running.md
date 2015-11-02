@@ -30,7 +30,7 @@ What has been added:
 Log in to your Raspberry Pi using SSH or other method, download the deb package with APM binaries using wget and install it. Deb package contains binaries that are compatible with Navio, Navio Raw or Navio+:
 
 ```bash
-wget http://emlid.com/files/APM/apm.deb
+wget 'http://files.emlid.com/data/public/apm?dl=true&file=%2Ff294ded855%2Fapm.deb' -O apm.deb
 sudo dpkg -i apm.deb
 ```
 
@@ -138,14 +138,14 @@ You should see voltage and current values. After that it works everytime.
 
 ####Further configuration
 
-As other APM configuration procedures are very similar for most APM-running autopilot hardware, please use the APM documentation. 
+As other APM configuration procedures are very similar for most APM-running autopilot hardware, please use the APM documentation.
 
 *Important*: There is no need to perform "4. Load Copter Firmware" step as APM is installed using deb package or binary on RPi with Navio. Also, frame type is selected by running the corresdonding binary as described above.
 
-[Hardware configuration](http://copter.ardupilot.com/wiki/initial-setup/configuring-hardware) 
+[Hardware configuration](http://copter.ardupilot.com/wiki/initial-setup/configuring-hardware)
 
-[ESC Calibration](http://copter.ardupilot.com/wiki/initial-setup/configuring-hardware) 
+[ESC Calibration](http://copter.ardupilot.com/wiki/initial-setup/configuring-hardware)
 
-[Motor Setup](http://copter.ardupilot.com/wiki/initial-setup/configuring-hardware) 
+[Motor Setup](http://copter.ardupilot.com/wiki/initial-setup/configuring-hardware)
 
 [Enable RC Failsafe](http://copter.ardupilot.com/wiki/configuration/throttle-failsafe/)!

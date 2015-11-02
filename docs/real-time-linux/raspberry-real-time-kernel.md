@@ -4,7 +4,7 @@ This is a release of the new SD card image of default Raspberry Pi distribution
 
 Default Raspbian kernel is configured with PREEMPT option and provides worst case latency around single digit milliseconds. Real-time demanding applications require lower latencies than that. Real-time patch and PREEMPT_RT option lowers the worst case latency to tens of microseconds, allowing for real-time applications such as autopilots to be run on Linux.
 
-Results of testing with 
+Results of testing with
 
 ```
 sudo cyclictest -l1000000 -m -n -a0 -t1 -p99 -i400 -h400 -q</i>”:
@@ -43,6 +43,6 @@ Patched and configured source code for Raspberry Pi real-time kernel:
 
 SD card image downloads:
 
-* [Emlid-Raspbian-RT-FEB-2015.img.xz on MEGA](https://mega.co.nz/#!RVJxHJpI!QVPTZaNY0AiuPbcxQjOTmZ2un6d0j7W3g1jwheuotUc)
+* [emlid-raspberrypi2-raspbian-rt-20150401.img.xz](http://files.emlid.com/data/public/rt-20150401)
 
 --
