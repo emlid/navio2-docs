@@ -5,7 +5,7 @@ This is a release of Raspbian with real-time kernel for Raspberry Pi Model A+/B
 
 Default Raspbian kernel is configured with PREEMPT option and provides worst case latency around single digit milliseconds. Real-time demanding applications require lower latencies than that. Real-time patch lowers the worst case latency to tens of microseconds, allowing for real-time applications such as autopilots to be run on Linux.
 
-Results of testing with 
+Results of testing with
 
 ```
 sudo cyclictest -l1000000 -m -n -a0 -t1 -p99 -i400 -h400 -q
@@ -35,6 +35,6 @@ List of changes includes:
 
 ####SD card image
 
-* [emlid-raspberrypi1-raspbian-rt-2015feb.img.xz on MEGA](https://mega.nz/#!ocgGQDiI!QVPTZaNY0AiuPbcxQjOTmZ2un6d0j7W3g1jwheuotUc)
+* [emlid-raspberrypi2-raspbian-rt-20150401.img.xz](http://files.emlid.com/data/public/rt-20150401)
 
 To flash the SD card refer to this [tutorial](http://elinux.org/RPi_Easy_SD_Card_Setup#Flashing_the_SD_Card_using_Windows)

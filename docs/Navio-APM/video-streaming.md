@@ -1,11 +1,11 @@
 #### Video Streaming with Navio
 
-Streaming real-time video from a drone powered by a Raspberry Pi 2 has never been easier.  There is only only a handful of actions that you need to make to get a drone streaming real-time video to a remote PC, tablet, phone or whatnot. 
+Streaming real-time video from a drone powered by a Raspberry Pi 2 has never been easier.  There is only only a handful of actions that you need to make to get a drone streaming real-time video to a remote PC, tablet, phone or whatnot.
 
 #### Hardware
 
-This instructions are for Raspberry Pi Camera Module. 
-Please note that Raspberry Pi Camera Module emits a lot of RF noise which may affect GPS performance. To workaround that wrap Camera Module and its cable using tape and alumnium\copper foil (use tape to keep foil from short curcuiting Camera Module pcb). 
+This instructions are for Raspberry Pi Camera Module.
+Please note that Raspberry Pi Camera Module emits a lot of RF noise which may affect GPS performance. To workaround that wrap Camera Module and its cable using tape and alumnium\copper foil (use tape to keep foil from short curcuiting Camera Module pcb).
 
 #### Raspberry PI2
 
@@ -28,15 +28,15 @@ sudo apt-get install gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreame
 #### Android
 
 Download and install QtGStreamerHUD:
-[QtGStreamerHUD.apk](http://www.emlid.com/files/android/QtGStreamerHUD.apk). Find out your IP address in the Preferences. You'll need it in order to connect to the phone from your RPi2. Please ensure Unknown sources is enabled in settings before installing. After completing the installation , hit the gears icon on the top right and set the pipeline to "udpscrc port=9000 buffer-size=600....." the second option in the pipeline dropdown menu.
+[QtGStreamerHUD.apk](http://files.emlid.com/data/public/qtgstreamerhud). Find out your IP address in the Preferences. You'll need it in order to connect to the phone from your RPi2. Please ensure Unknown sources is enabled in settings before installing. After completing the installation , hit the gears icon on the top right and set the pipeline to "udpscrc port=9000 buffer-size=600....." the second option in the pipeline dropdown menu.
 
 Use our [our](http://docs.emlid.com/Navio-APM/installation-and-running/) tutorial to run APM using the IP you just found out.
 
 Here's the app in action
 
-![selfie](img/NavioPlus-gstreamer-selfie.jpg)
+![selfie](img/NavioPlus-gstreamer-selfie.png)
 
-Unfortunately, the cable length was not enough to make a selfie but at least we'd tried. 
+Unfortunately, the cable length was not enough to make a selfie but at least we'd tried.
 
 #### Mac OS X
 
@@ -45,13 +45,13 @@ The simplest way is to use brew. To install it run the following in your Mac ter
 ```bash
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
-brew install gstreamer gst-libav gst-plugins-ugly gst-plugins-base gst-plugins-bad gst-plugins-good 
+brew install gstreamer gst-libav gst-plugins-ugly gst-plugins-base gst-plugins-bad gst-plugins-good
 ```
 
 #### Windows
 
 Download and install [gstreamer for Windows](http://gstreamer.freedesktop.org/data/pkg/windows/1.4.5/gstreamer-1.0-x86_64-1.4.5.msi).
- 
+
 #### Launching
 
 Now everything is ready for streaming.
@@ -70,6 +70,6 @@ raspivid -n -w 1280 -h 720 -b 1000000 -fps 15 -t 0 -o - | gst-launch-1.0 -v fdsr
 ```
 where <remote_ip> is the IP of the device you're streaming to.
 
-Adjust bitrate with ***-b*** switch or ***-fps*** if your video lags behind. 
+Adjust bitrate with ***-b*** switch or ***-fps*** if your video lags behind.
 
 Feel free to ask on our [forum](http://community.emlid.com) if you stumble upon any problems. We're always there at your convenience.  

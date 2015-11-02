@@ -45,7 +45,7 @@ Here is the main code, which is mostly self-explanatory. As it takes some time
 int main()
 {
     MS5611 baro(RASPBERRY_PI_MODEL_B_I2C, MS5611_DEFAULT_ADDRESS);
-   
+
     baro.initialize();
 
     while (true) {
@@ -59,7 +59,7 @@ int main()
 
         baro.calculatePressureAndTemperature();  
 
-        printf("Temperature(C): %f Pressure(millibar): %fn", 
+        printf("Temperature(C): %f Pressure(millibar): %fn",
                 baro.getTemperature(), baro.getPressure());
         sleep(1);
     }
@@ -69,6 +69,4 @@ int main()
 
 ```
 
-More information about MS5611 is available in the [datasheet](http://www.emlid.com/?attachment_id=287)
-
-
+More information about MS5611 is available in the [datasheet](http://files.emlid.com/data/public/ms5611-01ba03)
