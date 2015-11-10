@@ -56,7 +56,7 @@ MPU9250 sensor onboard of Navio contains magnetometer, but optionally it is poss
 [This one](https://store.3drobotics.com/products/hmc5883l-triple-axis-magnetometer) is compatible.
 
 ####External GPS
-Optionally it it is possible to connect external GPS and compass, but not necessary as Navio already contains an onboard GNSS receiver and compass. As UART and I2C ports on Navio have the same pinouts as on Pixhawk it is possible to connect any Pixhawk-compatible GNSS modules with their provided wires, they usually have an external compass built-in which can be used too by connecting over I2C DF13 wire. Older modules such as ones for APM 2.5 could be used with proper wiring.
+Optionally it is possible to connect external GPS and compass, but not necessary as Navio already contains an onboard GNSS receiver and compass. As UART and I2C ports on Navio have the same pinouts as on Pixhawk it is possible to connect any Pixhawk-compatible GNSS modules with their provided wires, they usually have an external compass built-in which can be used too by connecting over I2C DF13 wire. Older modules such as ones for APM 2.5 could be used with proper wiring.
 
 ####Radio over USB
 As Raspberry Pi only has one UART interface in case you would like to use an external GPS there would be no UART ports left for a radio modem. In that case it is possible to add more UART ports by using USB-to-UART adapters that are usually built with Silabs CP210x or FTDI chips such as [this one](https://www.sparkfun.com/products/718).
