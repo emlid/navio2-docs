@@ -15,7 +15,6 @@ pages:
   - 'Real-time Linux for RPi1': 'Downloads/Real-time-Linux-RPi1.md'
   - 'Real-time Linux for RPi2' : 'Downloads/Real-time-Linux-RPi2.md'
   - 'APM binaries': 'Downloads/APM-binaries.md'
-  - 'Windows IoT': 'Downloads/Windows-IoT.md'
 - Navio for developers:
   - '9DOF IMU': 'Navio-dev/mpu9250-imu.md'
   - 'AHRS' : 'Navio-dev/AHRS.md'
@@ -29,7 +28,9 @@ pages:
   - 'Navio Raw RTKLib' : 'Navio-dev/rtklib.md'
   - 'Using default Raspbian' : 'Navio-dev/using-default-raspbian.md'
   - 'Datasheets' : 'Navio-dev/datasheets.md'
-  - 'Windows IoT': 'Navio-dev/Windows-IoT.md'
+- Community projects:
+  - 'Windows IoT': 'Community-projects/Windows-IoT.md'
+  - 'SoftOSD': 'Community-projects/SoftOSD.md'
 - RTK with NEO6-T:
   - 'Rtklib base setup' : 'RTKLIB/rtklib-base-setup.md'
   - 'Rtklib rover setup' : 'RTKLIB/rtklib-rover-setup.md'
