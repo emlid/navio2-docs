@@ -1,17 +1,10 @@
 ###Currently supported boards
 
-APM autopilot port for Navio+ currently works with:
+APM autopilot port for Navio+ is developed and tested on **Raspberry Pi 2 Model B**.
 
-* Raspberry Pi Model A (requires desoldering RCA connector on Rpi)
-* Raspberry Pi Model B (requires desoldering RCA connector on Rpi)
-* Raspberry Pi Model A+
-* Raspberry Pi Model B+
-* Raspberry Pi 2 Model B
+Previous models such as Raspberry Pi Model A+ and Raspberry Pi Model B+ are electrically compatible, but lack performance to run APM:Copter on 400Hz. These models are sufficient to run developer examples and APM:Rover. 
 
-Ports in progress, but not complete:
-
-* Odroid-C1 (GPS and RCInput currently not working)
-* Raspberry Pi Zero (Electrically compatible, but has not been tested yet)
+Raspberry Pi Zero is electrically compatible, but has not been tested yet.
 
 It is completely safe to use Navio+ with all boards stated above.
 
