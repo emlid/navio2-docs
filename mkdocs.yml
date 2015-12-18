@@ -25,7 +25,6 @@ pages:
   - 'PPM RC input' : 'Navio-dev/rc-input.md'
   - 'ADC' : 'Navio-dev/ads1115-adc.md'
   - 'FRAM' : 'Navio-dev/mb85r-fram.md'
-  - 'Navio Raw RTKLib' : 'Navio-dev/rtklib.md'
   - 'Using default Raspbian' : 'Navio-dev/using-default-raspbian.md'
   - 'Datasheets' : 'Navio-dev/datasheets.md'
 - Community projects:
