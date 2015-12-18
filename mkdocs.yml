@@ -12,7 +12,6 @@ pages:
   - 'Video Streaming': 'Navio-APM/video-streaming.md'
   - 'Building from sources': 'Navio-APM/building-from-sources.md'
 - Downloads:
-  - 'Real-time Linux for RPi1': 'Downloads/Real-time-Linux-RPi1.md'
   - 'Real-time Linux for RPi2' : 'Downloads/Real-time-Linux-RPi2.md'
   - 'APM binaries': 'Downloads/APM-binaries.md'
 - Navio for developers:
