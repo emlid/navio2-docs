@@ -16,7 +16,7 @@ This is the DOC page of the SoftOSD software which is a software version of the 
 
 SoftOSD is the result of the NAVIO+ existance which is rich in great possibilities and development opportunities.
 
-This software is a closed software , which means the source code is not availiable to the public.All the features of the software are given from the either the Raspberry Pi 2 platform of the NAVIO+ framework with great developement capabilities.
+This software is a closed software , which means the source code is not available to the public.All the features of the software are given from the either the Raspberry Pi 2 platform of the NAVIO+ framework with great development capabilities.
 
 The software is written in Qt Language with some declarive additions in QML. It is very light in terms of size (~80kb) and uses advanced software techniques in its implementation and function.
 It uses 4 major threads that communicates with the NAVIO+:
@@ -31,7 +31,7 @@ d. 5 Second Thread.
   This is a spare thread for future use, like the Audio Modem and others sensors.
 Threads are not guaranteed to work in their named Timed events but tests have shown that minor single digit msec offsets have been found in a very stressed cases.
 
-SoftOSD has been debuged fully and found with no memory leaks , not even in its libraries used.This makes it a safe to use software in Raspberry Pi enviroment. APM has not been tested with SoftOSD at that time but any conqurent use of those two softwares its is sure that will work.
+SoftOSD has been debuged fully and found with no memory leaks , not even in its libraries used.This makes it a safe to use software in Raspberry Pi environment. APM has not been tested with SoftOSD at that time but any conqurent use of those two softwares its is sure that will work.
 Offcourse in any case this doesnt mean that I take any responsibility of any damage might occure due to glitch of APM. SoftOSD does not perform any action in the sensos of NAVIO+ neither alters their nature , which means ...it just reads data.
 
 ### Installation
@@ -74,7 +74,7 @@ Now we will use a trick to have Camera and Application "overlaid".
     This will execute the video preview of Raspicam and display it on the output of the Raspberry.
     Lets check the options of the command.
 
-    -t 0 -> Tells the programm to run the camera preview indefinetly (usally the preview runs for 5-8 seconds)
+    -t 0 -> Tells the programm to run the camera preview indefinetly (usually the preview runs for 5-8 seconds)
 
     -fps 25 -> Tells the programm to get 25 Frames Per Second from the Camera View.
 
