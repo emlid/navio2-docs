@@ -1,71 +1,104 @@
-####Mounting Navio on Raspberry Pi
+### Currently supported boards
 
-Navio was designed to fit on top of Raspberry Pi Model A and Model B, however it also works with Raspberry Pi Model B+ due to the backward compatibility between them.  Mounting hole is 2.9mm to accommodate M2.5 screw or bolt.
+APM autopilot port for Navio2 is developed and tested on **Raspberry Pi 2 Model B**. 
 
-####Powering Navio and Raspberry Pi
+Previous models such as Raspberry Pi Model A+ and Raspberry Pi Model B+ are electrically compatible, but lack performance to run APM:Copter on 400Hz. These models are sufficient to run developer examples and APM:Rover.
 
-***From the single power source over USB***
+Raspberry Pi Zero is electrically compatible, but has not been tested yet. It is based on the same processor as A+/B+ models and even though it is overclocked its performance is also much lower than Raspberry Pi 2.
 
-This method could be used for working with sensor data only. Raspberry Pi powers the Navio board but no voltage on the servo rail is present. 5VRPI pin on header corresponds to Raspberry Pi 5V network and is directly connected to USB source. Never connect two power sources to this network at the same time, it will damage the power supply. If you just want to do PPM decoding or power something over the servo rail you can add a jumper between 5VRPI and BEC. This way the whole servo rail is powered from the Pi, please do not connect servos in this configгration, it will cause voltage spikes and Raspberry Pi will reboot. Use power adapters that can handle at least 1A of current.
+It is completely safe to use Navio2 with all boards stated above.
 
-***From separate power sources over 5VRPI and BEC power inputs on servo header***
+### Attaching Navio2 to a Raspberry Pi
 
-In case you want to control servos, motors or other high power loads it is necessary to use separate power sources for Navio servo rail and Raspberry Pi since the latter is very sensitive to voltage dropouts. Use two BECs or another DC sources that provide 5V and connect them to 5VRPI and BEC inputs on Navio board.
-5VRPI input and BEC input should be strictly 4.75-5.25V.
+* Install spacers to the top side of Raspberry Pi and fix them with screws from the bottom.
+* Connect extension header to the 40-pin gpio port.
+* Attach Navio2 to the extension header.
+* Fix Navio2 using screws.
 
-***Voltage levels on ports and headers***
+### Powering Navio2
 
-* Servo rail power pins – 5V
-* Servo rail PWM pins – 5V
-* PPM input pin – 5V
-* UART, SPI, I2C port power pins – 5V
-* UART, SPI, I2C signal pins – 3.3V (**CAUTION!** connecting 5V logic device to these pins may damage your Raspberry Pi!)
-* ADC power pin – 3.3V output
-* ADC signal pins – 0V-3.3V input
+**IMPORTANT: ALL POWER SOURCES SHOULD PROVIDE VOLTAGE IN 4.8-5.3V RANGE, OTHERWISE YOU CAN DAMAGE YOUR NAVIO2 AND RASPBERRY PI.**
 
-####Connection map
-![map](img/Navio-ConnectionMap.jpg)
+Navio2 has three power sources, all of them can be used simultaneously as they are protected by ideal diodes.
 
+***For testing and development purposes***
 
-Raspberry Pi provides a set of peripheral interfaces which can be used to connect additional hardware. Navio provides access to these interfaces on it's ports. Even though the set of interfaces is limited, it is possible to add more by using USB adapters. This guide demonstrates how different hardware can be connected to Navio and how to properly power it up in a drone.
-####Typical hardware setup
-![Navio-typical-gear-setup](img/Navio-AntennaRadioBECs.jpg)
+Connect 5V 1A power adapter to the Raspberry Pi’s microUSB port. Raspberry Pi will provide power to the Navio2.
 
-####Power
-Raspberry Pi is sensitive to voltage drop-outs as they cause it to reboot, to protect it we separated power circuits for Raspberry Pi \ sensors and servo rail \ ports. Power input for Raspberry Pi and sensors is labeled '5VRPI', while power input for servo rail and ports is labeled 'BEC' and both are located on 2.54mm header. That way by using two different power sources you can connect servos, radio modem and other power-hungry loads without disturbing Raspberry Pi.
+***In a drone***
 
+Navio2 should be powered by a power module connected to the “POWER” port on Navio2. Navio2 will provide power to the Raspberry Pi.
+![power-module](img/navio2-power-module.png)
 
-If you are not connecting any high load you can simply power Raspberry Pi and Navio's sensors using Pi's microUSB socket. Do not connect power to the microUSB socket and '5VRPI' input simultaneously, it will damage the boards.
+***Redundancy:***
 
-Acceptable voltage level for Raspberry Pi is 4.75-5.25V, provided current should be at least 1A for Raspberry Pi + Navio.
+In case of power module failure Navio2 will switch to power from the servo rail.
 
-####PPM Input
-RC receiver's PPM output should be connected to 'PPM' pin on 2.54mm header. 'PPM' input accepts signal with 5V level.
+### Powering servo rail
 
-####RC outputs
-RC outputs on 2.54mm header provide PWM values with 5V voltage level that can be used to control servos or motors. Functions that are designated to RC outputs can be found in APM [plane](http://plane.ardupilot.com/wiki/arduplane-setup/connecting-your-rc-gear/), [copter](http://copter.ardupilot.com/wiki/connecting-the-escs-and-motors/), [rover](http://rover.ardupilot.com/wiki/apmrover-setup/#APMRover_Setup) setup guides.
+Power module does not power servos. To provide power to the servo rail plug your drone’s BEC into any free channel on the servo rail. Use BECs that provide voltage in a range of 4.8-5.3V. If you’d like to use high voltage servos use a power separation board.
 
-####GNSS antenna
-GNSS antenna for Navio's onboard GNSS receiver should be connected to the u.fl socket labeled 'ANT'.
+![antenna](img/navio2-esc.png)
 
-####Radio modem
-Radio modems that work over UART interface can be connected to the Navio's UART port. Please note that power on UART port is 5V and it is powered by the 'BEC' power input.
+### GNSS antenna
+![antenna](img/navio2-gnss-antenna.png)
 
-####External compass
-MPU9250 sensor onboard of Navio contains magnetometer, but optionally it is possible to use external compass. There are a lot of HMC5883L breakout boards, but for such board to be compatible it is required that the board can be powered by 5V.
-[This one](https://store.3drobotics.com/products/hmc5883l-triple-axis-magnetometer) is compatible.
+### RC input
 
-####External GPS
-Optionally it is possible to connect external GPS and compass, but not necessary as Navio already contains an onboard GNSS receiver and compass. As UART and I2C ports on Navio have the same pinouts as on Pixhawk it is possible to connect any Pixhawk-compatible GNSS modules with their provided wires, they usually have an external compass built-in which can be used too by connecting over I2C DF13 wire. Older modules such as ones for APM 2.5 could be used with proper wiring.
+Navio2 supports PPM and SBUS signals as an RC input. To connect receivers that do not support PPM output you can use PPM encoder. PPM receiver is powered by Navio2 and does not require power on the servo rail.
 
-####Radio over USB
-As Raspberry Pi only has one UART interface in case you would like to use an external GPS there would be no UART ports left for a radio modem. In that case it is possible to add more UART ports by using USB-to-UART adapters that are usually built with Silabs CP210x or FTDI chips such as [this one](https://www.sparkfun.com/products/718).
+Some of the receivers with PPM output:
 
-####Voltage and current sense
-![Navio-current-and-voltage-sense](img/Navio-CurrentAndVoltageSense.jpg)
+**For ACCST (most FrSky transmitters):**
 
-To measure battery's voltage and current use sense boards that provide measurements scaled to 3.3V. Series of AttoPilot voltage and current sense boards rated for different currents can be used for these purposes. Connect A0 and A1 channels of ADC to the voltage and current sense correspondingly.
+* FrSky D4R-II 4ch 2.4Ghz ACCST Receiver
+* FrSKY V8R7-SP ACCST 7 Channel RX with composite PPM
+* FrSKY D8R-XP
 
-#### Barometer UV protection
+**For FASST (Futaba & some FrSky trasmitters):**
 
-MS5611 barometer (steel cap IC) is sensitive to UV light and might report sudden jumps in altitude under sunlight. It is very important to cover it with a piece of cloth (something like microphone fabric) or put autopilot in a protective case to protect it both from sunlight and airstreams.
+FrSky TFR4 4ch 2.4Ghz Surface/Air Receiver FASST Compatible
+
+![rcin](img/navio2-rc-receiver.png)
+
+### RC output
+
+***ESCs***
+
+ESCs are connected to RC outputs labeled from 1 to 14 on a 2.54mm header.
+
+Only one ESC power wire (central) should be connected to Navio2 servo rail, otherwise BECs built in ESCs will heat each other.
+
+![escs](img/navio2-escs.png)
+
+***Servos***
+
+Servos are connected to RC outputs labeled from 1 to 14 on a 2.54mm header.
+
+Power module does not provide power to servos. To provide power to servos connect BEC to the servo rail. BEC would also serve as back-up power supply to Navio2.
+
+![servos](img/navio2-servos.png)
+
+### Telemetry modem
+
+Radio modems can be connected either over UART or over USB.
+
+***UART radio***
+
+For UART port use /dev/ttyAMA0 serial.
+![uartradio](img/navio2-uart-radio.png)
+
+***USB radio***
+
+Use /dev/ttyUSB0 virtual serial port for USB.
+![usbradio](img/navio2-usb-radio.png)
+
+### Typical quadcopter setup based on Navio2
+
+![typical-hardware-setup](img/navio2-typical-quadcopter-setup.png)
+
+### Barometer UV protection
+
+MS5611 barometer (steel cap IC) is sensitive to UV light and might report sudden jumps in altitude under sunlight. It is very important to cover it with a piece of open cell foam (something like microphone fabric) or put autopilot in a protective case to protect it both from sunlight and airstreams.
+
+![barouvprotection](img/baro-uv-protection.jpg)
