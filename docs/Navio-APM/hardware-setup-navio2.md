@@ -1,6 +1,6 @@
 ### Currently supported boards
 
-APM autopilot port for Navio2 is developed and tested on **Raspberry Pi 2 Model B**. 
+APM autopilot port for Navio2 is developed and tested on **Raspberry Pi 2 Model B**.
 
 Previous models such as Raspberry Pi Model A+ and Raspberry Pi Model B+ are electrically compatible, but lack performance to run APM:Copter on 400Hz. These models are sufficient to run developer examples and APM:Rover.
 
@@ -14,6 +14,8 @@ It is completely safe to use Navio2 with all boards stated above.
 * Connect extension header to the 40-pin gpio port.
 * Attach Navio2 to the extension header.
 * Fix Navio2 using screws.
+
+![mount](img/navio2-mount.png)
 
 ### Powering Navio2
 
