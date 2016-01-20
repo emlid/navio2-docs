@@ -34,7 +34,7 @@ Use our [our](http://docs.emlid.com/Navio-APM/installation-and-running/) tutoria
 
 Here's the app in action
 
-![selfie](img/NavioPlus-gstreamer-selfie.png)
+![selfie](img/gstreamer-selfie.jpg)
 
 Unfortunately, the cable length was not enough to make a selfie but at least we'd tried.
 
