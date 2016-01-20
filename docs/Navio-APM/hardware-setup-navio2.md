@@ -49,6 +49,8 @@ Power module does not power servos. To provide power to the servo rail plug your
 
 Navio2 supports PPM and SBUS signals as an RC input. To connect receivers that do not support PPM output you can use PPM encoder. PPM receiver is powered by Navio2 and does not require power on the servo rail.
 
+**IMPORTANT: Do not connect servos to the RC receiver! Servos can consume a lot of power which RC receiver port may not be able to provide and that may lead to Raspberry Pi and Navio shutting down and even getting damaged.**
+
 Some of the receivers with PPM output:
 
 **For ACCST (most FrSky transmitters):**
