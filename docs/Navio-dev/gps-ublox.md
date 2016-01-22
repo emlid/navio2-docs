@@ -1,8 +1,8 @@
 
 Navio features three different receivers: NEO-7M in the standard Navio, NEO-6T in the Navio RAW version and NEO-M8N in Navio+. All of them are compatible with this tutorial. Full tech specs are available at the official [product page](http://www.u-blox.com/en/gps-modules/pvt-modules.html). These GPS modules are connected over SPI and send messages, containing location information and receive messages with configuration data.
 
+#### U-blox NEO example
 
-####U-blox NEO example
 This example is designed to show an easy way to capture and decode UBX protocol messages. For simplicity, it only parses UBX protocol NAV-POSLLH messages. NAV-POSLLH details, as well as full UBX protocol description can be seen [here](http://www.u-blox.com/images/downloads/Product_Docs/u-blox6_ReceiverDescriptionProtocolSpec_%28GPS.G6-SW-10018%29.pdf). The output of the example data is: current longitude and latitude, current height and the iTOW parameter. iTOW is the current millisecond time of week.
 
 
@@ -16,18 +16,19 @@ make gps
 
 After you run the code, you will start seeing messages with current location data. Note that it takes some time for the receiver to get it's position and at first you will see zero value of latitude, longitude and height. iTOW parameter will change every second. This example starts an infinite loop, so when you are done, just stop the process with **CTRL+C**.
 
-####U-blox NEO driver
+#### U-blox NEO driver
+
 Now, let's look through the example code:
 
 ```C++
-#include "Navio/Ublox.h" 
+#include "Navio/Ublox.h"
 
 using namespace std;
 
 int main(int argc, char *argv[]){
 
     // This vector is used to store location data, decoded from ubx messages.
-    // After you decode at least one message successfully, the information is stored in vector 
+    // After you decode at least one message successfully, the information is stored in vector
     // in a way described in function decodeMessage(std::vector&amp; data) of class UBXParser
 
     std::vector pos_data;
@@ -43,22 +44,22 @@ int main(int argc, char *argv[]){
 
         // gps.decodeMessages();
         // You can use this function to decode all messages, incoming from the GPS receiver.
-        // The function starts an infinite loop. 
-        // In this example we can only decode NAV-POSLLH messages, the others are simply ignored. 
+        // The function starts an infinite loop.
+        // In this example we can only decode NAV-POSLLH messages, the others are simply ignored.
         // You can add new message types in function decodeMessage() of class UBXParser
 
-        // Here, however we use a different approach. Instead of trying to extract info 
+        // Here, however we use a different approach. Instead of trying to extract info
         // from every message(as done in decodeMessages()),
-        // this function waits for a message of a specified type 
-        // and gets you just the information you need. 
-        // In this example we decode NAV-POSLLH messages, adding new types, however, is easy. 
+        // this function waits for a message of a specified type
+        // and gets you just the information you need.
+        // In this example we decode NAV-POSLLH messages, adding new types, however, is easy.
 
-        while (true) 
+        while (true)
         {
             if (gps.decodeSingleMessage(Ublox::NAV_POSLLH, pos_data) == 1)
             {
                 // after desired message is successfully decoded, we can use the information
-                // stored in pos_data vector right here, or we can do something with it 
+                // stored in pos_data vector right here, or we can do something with it
                 // from inside decodeSingleMessage() function(see Ublox.h).
                 // the way, data is stored in pos_data vector is specified in decodeMessage()
                 // of class UBXParser(see Ublox.h)
@@ -93,10 +94,10 @@ If you want to decode a different type of message, you can add it to the functio
 switch(id){
     case 258: {
             // ID for Nav-Posllh messages is 0x0102 == 258
-            // In this example we extract 4 variables - longitude, latitude, 
+            // In this example we extract 4 variables - longitude, latitude,
             // height above ellipsoid and iTOW - GPS Millisecond Time of Week
 
-            // All the needed parameters are 4-byte numbers with little endianness. 
+            // All the needed parameters are 4-byte numbers with little endianness.
             // We know the current message and we want to update the info in the data vector.
             // First we clear the old data:
 
@@ -117,5 +118,9 @@ switch(id){
         break;
 
 ```
-Note, that to enable a certain type of message in the receiver, you need to send a configuration message first. For advanced configuration, you can use 
+Note, that to enable a certain type of message in the receiver, you need to send a configuration message first. For advanced configuration, you can use
 [U-center](Navio-dev/GPS-ucenter/) software.
+
+More information about the GPS receiver is available in [U-blox NEO-M8 datasheet](http://www.u-blox.com/images/downloads/Product_Docs/NEO-M8_DataSheet_%28UBX-13003366%29.pdf).
+
+Information about Navio GNSS antenna is available in [ANT101 - GPSGLONASS PCB Active Antenna](http://files.emlid.com/data/public/ant101-pcb-antenna-datasheet).

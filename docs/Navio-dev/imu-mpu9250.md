@@ -13,7 +13,7 @@ Move to folder Navio/Examples/AccelGyroMag, compile and run the example
 
 ```
 cd Navio/C++/Examples/AccelGyroMag
-make 
+make
 ./AccelGyroMag
 ```
 
@@ -33,7 +33,7 @@ int main()
 
    while(1) {
       imu.getMotion9(&ax, &ay, &az, &gx, &gy, &gz, &mx, &my, &mz);
-      
+
       printf("Acc: %+05.3f %+05.3f %+05.3f ", ax, ay, az);
       printf("Gyr: %+05.3f %+05.3f %+05.3f ", gx, gy, gz);
       printf("Mag: %+05.3f %+05.3f %+05.3fn", mx, my, mz);
@@ -96,4 +96,4 @@ Note that this function also sets scales for both Accelerometer and Gyroscope:
 
 The main function loop is pretty straightforward: read the data, print the data.
 
-You can find additional information about MPU9250 in the datasheet.
+You can find additional information about the chip in [MPU-9250 datasheet](http://store.invensense.com/datasheets/invensense/MPU9250REV1.0.pdf).

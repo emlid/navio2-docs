@@ -1,11 +1,10 @@
-####MS5611 example
+#### MS5611 example
 
 If you haven't already done that, download Navio drivers and examples code like this:
 
 ```bash
 git clone www.github.com/emlid/navio
 ```
-
 
 ***C++***
 
@@ -35,7 +34,7 @@ Temperature(C): 34.2795449066 Pressure(millibar): 1030.45554448
 Temperature(C): 34.3018652344 Pressure(millibar): 1030.46921925
 ```
 
-####MS5611 code
+#### MS5611 code
 
 Here is the main code, which is mostly self-explanatory. As it takes some time for the sensor to perform conversion delays are added between calls to methods that start the conversion and read the resulting data. After reading both pressure and temperature values temperature compensation can be performed to get resulting pressure value.
 
@@ -69,4 +68,4 @@ int main()
 
 ```
 
-More information about MS5611 is available in the [datasheet](http://files.emlid.com/data/public/ms5611-01ba03)
+More information about the chip is available in the [MS5611 datasheet](http://www.meas-spec.com/downloads/MS5611-01BA03.pdf).

@@ -1,8 +1,9 @@
 ![3DIMU](http://www.emlid.com/wp-content/uploads/2014/10/3DIMU.png)
 
-
 One of examples for Navio demonstrates the work of Mahony AHRS with the data from an onboard MPU9250 sensor. We’ve also made a simple but cool visualizer for it that you can run on your PC\Mac. Here’s the instruction how to run AHRS and visualizer:
-####Preparing your Mac
+
+#### Preparing your Mac
+
 Install [pip](https://pip.pypa.io/en/latest/installing.html) and use it to get required packages:
 
 ```
@@ -11,7 +12,9 @@ sudo pip install pyserial
 ```
 
 You might be asked to install command line developer tools along the way.
-####On PC\Mac
+
+#### On PC\Mac
+
 Download [the archive with Navio utilities](https://github.com/emlid/Navio/archive/master.zip)
 Extract the archive, enter the directory with 3DIMU utility and run it:
 
@@ -19,7 +22,8 @@ Extract the archive, enter the directory with 3DIMU utility and run it:
 cd Navio/Utilities/3DIMU
 python 3Dimu.py
 ```
-####On Raspberry Pi
+#### On Raspberry Pi
+
 Clone Navio repository, navigate to the folder with AHRS example, compile and run it:
 
 ```

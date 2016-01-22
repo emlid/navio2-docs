@@ -1,4 +1,3 @@
-
-####LSM9DS1
+#### LSM9DS1
 
 [TODO]
