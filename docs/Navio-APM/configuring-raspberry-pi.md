@@ -1,11 +1,10 @@
-####Configuring Raspberry Pi
+#### Configuring Raspberry Pi
 
-Default Raspbian kernel is configured with PREEMPT option and provides worst case latency around single digit milliseconds. Real-time patch with PREEMPT_RT option lowers the worst case latency to tens of microseconds, allowing for better real-time performance useful for autopilots. We have a documentation page dedicated to real-time Linux where you can get more information as well as see the results of performance tests.
+Default Raspbian kernel is configured with PREEMPT option and provides worst case latency around hundreds of microseconds. Real-time patch with PREEMPT_RT option lowers the worst case latency to tens of microseconds, allowing for better real-time performance useful for autopilots. We have a documentation page dedicated to real-time Linux where you can get more information as well as see the results of performance tests.
 
-We provide an SD card image of Raspbian with fully preemptive real-time Linux kernel. The image is also additionally configured for usage in drone applications. In research purposes you may [use the default Raspbian](http://docs.emlid.com/Navio-dev/using-default-raspbian/) image with additional configuration, but if you’d like to use APM autopilot use only the image we provide in the [downloads](http://docs.emlid.com/Downloads/Real-time-Linux-RPi2/) section.
+We provide an SD card image of Raspbian with fully preemptive real-time Linux kernel. The image is also additionally configured for usage in drone applications. In research purposes you may use the default Raspbian, but if you’d like to use APM autopilot use only the image we provide in the [downloads](http://docs.emlid.com/navio2/Downloads/Real-time-Linux-RPi2/) section.
 
-
-####Writing image to SD card
+#### Writing image to SD card
 
 **On Windows:**
 
@@ -41,7 +40,7 @@ The process may take a few minutes, after it’s finished dd will display a mess
 
 More detailed instructions are available [here](http://www.raspberrypi.org/documentation/installation/installing-images/).
 
-####Configuring WiFi access
+#### Configuring Wi-Fi access
 
 There are a few ways to configure Raspberry Pi to connect to your WiFi network. First, it is necessary to connect a supported USB dongle. Raspberry Pi supports a lot of WiFi dongles, the most common ones are based on RTL8192\8188 chipsets, Ralink chips are also widely supported. An extensive list of supported dongles is available [here](http://elinux.org/RPi_USB_Wi-Fi_Adapters).
 
@@ -91,7 +90,7 @@ This method may be problematic because some keyboards are not compatible with th
 
 **Use ethernet**
 
-If you’re working on Raspberry Pi B+ or have a USB-to-Ethernet adapter you can connect to it over ethernet by connecting it to the switch, router or directly to your laptop.
+You can connect to Raspberry Pi over Ethernet by plugging it using Ethernet cable to a switch, router or directly to your computer.
 
 **Finding an IP address**
 
@@ -103,5 +102,3 @@ nmap -sn 192.168.1.*
 You can use it with a GUI such as Zenmap or Fing application on your phone.
 
 Look for the hostname ”navio-rpi”.
-
-
