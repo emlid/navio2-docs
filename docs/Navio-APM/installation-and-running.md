@@ -2,40 +2,17 @@
 
 ![apm](http://www.emlid.com/wp-content/uploads/2014/10/APM.png)
 
-You can run APM (ArduPilot) on Raspberry Pi with Navio or Navio+. The autopilot's code works directly on Raspberry Pi using the APM's Linux HAL. Even though it is possible to run APM on standard Raspbian distribution it won't work properly as it requires lower latency. Please use Raspbian with real time kernel for running APM, you can get it in download section.
+You can run APM (ArduPilot) on Raspberry Pi with Navio2. The autopilot's code works directly on Raspberry Pi using the APM's Linux HAL. For APM to work properly please use the configured Raspbian distribution that we provide.  
 
-Important! Keep in mind that the code for Navio is in the experimental state. Use it with caution!
+#### Installing APM
 
-####State of the APM port to Raspberry Pi with Navio
-These things were already supported in APM's library and worked with minimal configuration:
+Log in to your Raspberry Pi using SSH or other method, download the deb package with APM binaries using wget and install it. The following deb package contains binaries that are compatible with Navio2:
 
-* MPU9250 inertial sensor
-*  barometer
-* Serial port
-
-What has been added:
-
-* Raspberry Pi build configuration
-* Navio board configuration
-* GPIO driver for Raspberry Pi
-* RCOutput based on PCA9685 with 24.576 external oscillator
-* RCInput - uses pigpio daemon to sample GPIOs with 1MHz rate, should be rewritten to work without pigpio
-* RGB LED
-* MPU9250 built-in compass driver
-* U-blox GPS SPI driver
-* ADC based on ADS1115
-
-####Installing APM
-
-Log in to your Raspberry Pi using SSH or other method, download the deb package with APM binaries using wget and install it. Deb package contains binaries that are compatible with Navio, Navio Raw or Navio+:
-
-```bash
-wget 'http://files.emlid.com/data/public/apm?dl=true&file=%2Ff294ded855%2Fapm.deb' -O apm.deb
-sudo dpkg -i apm.deb
-```
+**[LINK TO APM DEB PACKAGE FOR NAVIO2 WILL BE ADDED SOON]**
 
 If you'd like to build the binary yourself please proceed to the [Building from sources](building-from-sources.md).
-####Running APM
+
+#### Running APM
 
 Supported vehicle types are:
 * APMrover2
@@ -80,14 +57,16 @@ UDP and serial telemetry can be used simultaneously like this:
 sudo ArduCopter-quad -A udp:192.168.1.2:14550 -C /dev/ttyAMA0
 ```
 
-####Autostarting APM on boot
+#### Autostarting APM on boot
+
 To automatically start APM on boot add the following (change -A and -C options to suit your setup) to /etc/rc.local file on your Raspberry Pi:
 
 ```bash
 sudo ArduCopter-quad -A udp:192.168.1.2:14550 -C /dev/ttyAMA0 > /home/pi/startup_log &
 ```
 
-####Connecting to the GCS
+#### Connecting to the GCS
+
 **APM Planner**
 
 APM Planner is a ground station software for APM. It can be downloaded from the
@@ -112,11 +91,7 @@ To run it specify the --master port, which can be serial, TCP or UDP. It also ca
 
 Where 192.168.1.2 is the IP address of the GCS, not RPi.
 
-####Skip board voltage check
-
-As Raspberry has no data about Navio board voltage, prearm check should be disabled as shown [here](http://copter.ardupilot.com/wiki/flying-arducopter/prearm_safety_check/). Pick "Skip Voltage".
-
-####Voltage and current sensing
+#### Voltage and current sensing
 
 If you have original power module connected to Navio+, you can get battery voltage and curent readings from it. Simply press on the "Pixhawk Power Module 90A" in APM Planner to setup voltage and current measurement for APM:
 ![PM](img/NavioPlus-PowerModule.jpg)
@@ -136,11 +111,11 @@ sudo ArduCopter-quad -A udp:192.168.1.2:14550
 
 You should see voltage and current values. After that it works everytime.
 
-####Further configuration
+#### Further configuration
 
 As other APM configuration procedures are very similar for most APM-running autopilot hardware, please use the APM documentation.
 
-*Important*: There is no need to perform "4. Load Copter Firmware" step as APM is installed using deb package or binary on RPi with Navio. Also, frame type is selected by running the corresdonding binary as described above.
+*Important*: There is no need to perform "4. Load Copter Firmware" step as APM is installed using deb package or binary on RPi with Navio. Also, frame type is selected by running the corresponding binary as described above.
 
 [Hardware configuration](http://copter.ardupilot.com/wiki/initial-setup/configuring-hardware)
 

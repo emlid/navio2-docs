@@ -1,8 +1,8 @@
-#### Configuring Raspberry Pi
+#### Downloading configured Raspbian image
 
-Default Raspbian kernel is configured with PREEMPT option and provides worst case latency around hundreds of microseconds. Real-time patch with PREEMPT_RT option lowers the worst case latency to tens of microseconds, allowing for better real-time performance useful for autopilots. We have a documentation page dedicated to real-time Linux where you can get more information as well as see the results of performance tests.
+We provide an SD card image of Raspbian configured for usage in drone applications. In research purposes you may use the default Raspbian, but if you’d like to use APM autopilot use only the image we provide.
 
-We provide an SD card image of Raspbian with fully preemptive real-time Linux kernel. The image is also additionally configured for usage in drone applications. In research purposes you may use the default Raspbian, but if you’d like to use APM autopilot use only the image we provide in the [downloads](http://docs.emlid.com/navio2/Downloads/Real-time-Linux-RPi2/) section.
+**[LINK TO THE CONFIGURED RASPBIAN IMAGE FOR NAVIO2 WILL BE PROVIDED SOON]**
 
 #### Writing image to SD card
 
