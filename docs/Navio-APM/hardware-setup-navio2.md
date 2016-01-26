@@ -43,6 +43,9 @@ Power module does not power servos. To provide power to the servo rail plug your
 ![antenna](img/navio2-esc.png)
 
 ### GNSS antenna
+
+GNSS antenna is plugged into the MCX port on top of Navio2.
+
 ![antenna](img/navio2-gnss-antenna.png)
 
 ### RC input
@@ -61,7 +64,7 @@ Some of the receivers with PPM output:
 
 **For FASST (Futaba & some FrSky trasmitters):**
 
-FrSky TFR4 4ch 2.4Ghz Surface/Air Receiver FASST Compatible
+* FrSky TFR4 4ch 2.4Ghz Surface/Air Receiver FASST Compatible
 
 ![rcin](img/navio2-rc-receiver.png)
 
