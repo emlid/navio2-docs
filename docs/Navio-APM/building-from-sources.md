@@ -2,7 +2,7 @@
 
 #### Where to get the code
 
-Navio2 is supported in main [APM repository](https://github.com/diydrones/ardupilot).
+Navio2 will soon be supported in the main [APM repository](https://github.com/diydrones/ardupilot).
 
 #### How to build
 
