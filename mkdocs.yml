@@ -10,9 +10,6 @@ pages:
   - 'APM installation and running' : 'Navio-APM/installation-and-running.md'
   - 'Video streaming': 'Navio-APM/video-streaming.md'
   - 'Building APM from sources': 'Navio-APM/building-from-sources.md'
-- Downloads:
-  - 'Real-time Linux for RPi2' : 'Downloads/Real-time-Linux-RPi2.md'
-  - 'APM binaries for Navio2': 'Downloads/APM-binaries.md'
 - Navio for developers:
   - '9DOF IMU (primary)': 'Navio-dev/imu-mpu9250.md'
   - '9DOF IMU (secondary)': 'Navio-dev/imu-lsm9ds1.md'
