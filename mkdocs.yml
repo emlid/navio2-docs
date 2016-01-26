@@ -4,24 +4,23 @@ site_favicon: favicon.ico
 repo_url: https://github.com/emlid/navio-docs
 pages:
 - Introduction : 'index.md'
-- Navio2 APM autopilot:
+- Navio2 with APM autopilot:
   - 'Hardware setup': 'Navio-APM/hardware-setup-navio2.md'
   - 'Raspberry Pi configuration': 'Navio-APM/configuring-raspberry-pi.md'
   - 'APM installation and running' : 'Navio-APM/installation-and-running.md'
   - 'Video streaming': 'Navio-APM/video-streaming.md'
   - 'Building APM from sources': 'Navio-APM/building-from-sources.md'
-- Navio for developers:
+- Navio2 for developers:
   - '9DOF IMU (primary)': 'Navio-dev/imu-mpu9250.md'
-  - '9DOF IMU (secondary)': 'Navio-dev/imu-lsm9ds1.md'
+#  - '9DOF IMU (secondary)': 'Navio-dev/imu-lsm9ds1.md'
   - 'AHRS' : 'Navio-dev/ahrs.md'
   - 'Barometer' : 'Navio-dev/barometer-ms5611.md'
   - 'GPS' : 'Navio-dev/gps-ublox.md'
   - 'GPS via u-center' : 'Navio-dev/gps-ublox-ucenter.md'
-  - 'RGB LED' : 'Navio-dev/rgb-led.md'
-  - 'PWM output' : 'Navio-dev/pwm-output.md'
-  - 'RC input' : 'Navio-dev/rc-input.md'
-  - 'ADC' : 'Navio-dev/adc.md'
-  - 'Datasheets' : 'Navio-dev/datasheets.md'
+#  - 'RGB LED' : 'Navio-dev/rgb-led.md'
+#  - 'PWM output' : 'Navio-dev/pwm-output.md'
+#  - 'RC input' : 'Navio-dev/rc-input.md'
+#  - 'ADC' : 'Navio-dev/adc.md'
 - Community projects:
   - 'Windows IoT': 'Community-projects/Windows-IoT.md'
   - 'SoftOSD': 'Community-projects/SoftOSD.md'

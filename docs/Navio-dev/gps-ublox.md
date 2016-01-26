@@ -5,7 +5,6 @@ Navio features three different receivers: NEO-7M in the standard Navio, NEO-6T 
 
 This example is designed to show an easy way to capture and decode UBX protocol messages. For simplicity, it only parses UBX protocol NAV-POSLLH messages. NAV-POSLLH details, as well as full UBX protocol description can be seen [here](http://www.u-blox.com/images/downloads/Product_Docs/u-blox6_ReceiverDescriptionProtocolSpec_%28GPS.G6-SW-10018%29.pdf). The output of the example data is: current longitude and latitude, current height and the iTOW parameter. iTOW is the current millisecond time of week.
 
-
 Now move to the folder Navio/Examples/GPS, compile and run the example.
 
 ```

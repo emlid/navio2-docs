@@ -1,3 +1,3 @@
-#### PPM / SBUS input
+#### RC input
 
-[TODO]
+***RC INPUT TUTORIAL FOR NAVIO2 IS COMING SOON***
