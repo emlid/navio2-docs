@@ -5,7 +5,8 @@ repo_url: https://github.com/emlid/navio-docs
 pages:
 - Introduction : 'index.md'
 - Navio2 with APM autopilot:
-  - 'Hardware setup': 'Navio-APM/hardware-setup-navio2.md'
+  - 'Hardware setup': 'Navio-APM/hardware-setup.md'
+  - 'Typical setup schemes': 'Navio-APM/typical-setup-schemes.md'
   - 'Raspberry Pi configuration': 'Navio-APM/configuring-raspberry-pi.md'
   - 'APM installation and running' : 'Navio-APM/installation-and-running.md'
   - 'Video streaming': 'Navio-APM/video-streaming.md'
