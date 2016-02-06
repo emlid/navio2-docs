@@ -6,9 +6,17 @@ You can run APM (ArduPilot) on Raspberry Pi with Navio2. The autopilot's code wo
 
 #### Installing APM
 
-Log in to your Raspberry Pi using SSH or other method, download the deb package with APM binaries using wget and install it. The following deb package contains binaries that are compatible with Navio2:
+Log in to your Raspberry Pi using SSH or other method, download the deb package with APM binaries using wget and install it. The following deb package contains binaries that are compatible with Navio2
 
-**[LINK TO APM DEB PACKAGE FOR NAVIO2 WILL BE ADDED SOON]**
+
+[apm-navio2.deb](http://files.emlid.com/data/public/027fe8)
+
+To download from Raspberry and install it run the following:
+
+```
+wget 'http://files.emlid.com/data/public/027fe8?dl=true&file=/e73146b3a5/apm-navio2_3.3.2-rc2-beta_armhf.deb' -O apm-navio2.deb
+sudo dpkg -i apm-navio2.deb
+```
 
 If you'd like to build the binary yourself please proceed to the [Building from sources](building-from-sources.md).
 
