@@ -2,7 +2,7 @@
 
 We provide an SD card image of Raspbian configured for usage in drone applications. In research purposes you may use the default Raspbian, but if you’d like to use APM autopilot use only the image we provide.
 
-[Raspbian Image](http://files.emlid.com/data/public/navio2)
+[Emlid Raspbian Image for Navio2](http://files.emlid.com/data/public/navio2)
 
 #### Writing image to SD card
 
