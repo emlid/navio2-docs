@@ -122,4 +122,4 @@ Note, that to enable a certain type of message in the receiver, you need to send
 
 More information about the GPS receiver is available in [U-blox NEO-M8 datasheet](http://www.u-blox.com/images/downloads/Product_Docs/NEO-M8_DataSheet_%28UBX-13003366%29.pdf).
 
-Information about Navio GNSS antenna is available in [ANT101 - GPSGLONASS PCB Active Antenna](http://files.emlid.com/data/public/ant101-pcb-antenna-datasheet).
+Information about Navio GNSS antenna is available in [ANT101 - GPSGLONASS PCB Active Antenna](http://files.emlid.com/ANT101-PCB-Antenna-Datasheet.pdf).
