@@ -2,7 +2,7 @@
 
 We provide an SD card image of Raspbian configured for usage in drone applications. In research purposes you may use the default Raspbian, but if you’d like to use APM autopilot use only the image we provide.
 
-[Emlid Raspbian Image for Navio2](http://files.emlid.com/images/emlid-raspberrypi2-raspbian-navio2-20160203.img.xz)
+[Emlid Raspbian Image for Navio2](http://files.emlid.com/images/emlid-raspberrypi2-raspbian-navio2-20160212.img.xz)
 
 #### Writing image to SD card
 
@@ -22,7 +22,7 @@ Run
 
 For Ubuntu\Linux:
 ```
-sudo dd bs=1M if=emlid-raspberrypi2-raspbian-navio2-20160203.img of=/dev/mmcblk0
+sudo dd bs=1M if=emlid-raspberrypi2-raspbian-navio2-20160212.img of=/dev/mmcblk0
 ```
 
 For Mac OS:
@@ -33,7 +33,7 @@ It will be one of the /dev/diskX instances.
 * Unmount the disk with `sudo diskutil unmountDisk /dev/diskX`
 * Write the image with
 ```
-sudo dd bs=1m if=emlid-raspberrypi2-raspbian-navio2-20160203.img of=/dev/rdiskX
+sudo dd bs=1m if=emlid-raspberrypi2-raspbian-navio2-20160212.img of=/dev/rdiskX
 ```
 Notice the addition of r in the disk path. It shows that that's this device is not buffered and will make the writing procedure much faster.
 The process may take a few minutes, after it’s finished dd will display a message.
