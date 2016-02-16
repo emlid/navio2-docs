@@ -100,10 +100,6 @@ For UART port use /dev/ttyAMA0 serial.
 Use /dev/ttyUSB0 virtual serial port for USB.
 ![usbradio](img/navio2-usb-radio.png)
 
-### Typical quadcopter setup based on Navio2
-
-![typical-hardware-setup](img/navio2-typical-quadcopter-setup.png)
-
 ### Barometer UV protection
 
 MS5611 barometer (steel cap IC) is sensitive to UV light and might report sudden jumps in altitude under sunlight. It is very important to cover it with a piece of open cell foam (something like microphone fabric) or put autopilot in a protective case to protect it both from sunlight and airstreams.
