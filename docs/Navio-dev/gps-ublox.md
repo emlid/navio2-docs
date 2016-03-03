@@ -1,14 +1,14 @@
 
 Navio features three different receivers: NEO-7M in the standard Navio, NEO-6T in the Navio RAW version and NEO-M8N in Navio+. All of them are compatible with this tutorial. Full tech specs are available at the official [product page](http://www.u-blox.com/en/gps-modules/pvt-modules.html). These GPS modules are connected over SPI and send messages, containing location information and receive messages with configuration data.
 
-#### U-blox NEO example
+**U-blox NEO example**
 
 This example is designed to show an easy way to capture and decode UBX protocol messages. For simplicity, it only parses UBX protocol NAV-POSLLH messages. NAV-POSLLH details, as well as full UBX protocol description can be seen [here](http://www.u-blox.com/images/downloads/Product_Docs/u-blox6_ReceiverDescriptionProtocolSpec_%28GPS.G6-SW-10018%29.pdf). The output of the example data is: current longitude and latitude, current height and the iTOW parameter. iTOW is the current millisecond time of week.
 
 Now move to the folder Navio/Examples/GPS, compile and run the example.
 
 ```
-cd Navio/C++/Examples/GPS
+cd Navio2/C++/Examples/GPS
 make gps
 ./gps
 ```
@@ -85,7 +85,7 @@ int main(int argc, char *argv[]){
 }
 ```
 
-SPI communication is defined in the SPI class, located at `Navio/Navio/SPIdev.h`. This code uses a Ublox class, which can be found in `Navio/Navio/Ublox.h`.Ublox class features a separate
+SPI communication is defined in the SPI class, located at `Navio2/Navio/SPIdev.h`. This code uses a Ublox class, which can be found in `Navio2/Navio/Ublox.h`.Ublox class features a separate
 scanner and parser, to take care of the incoming Ublox data.
 If you want to decode a different type of message, you can add it to the function **decodeMessage()** of class UBXParser, just like NAV-POSLLH is defined there:
 
@@ -118,7 +118,7 @@ switch(id){
 
 ```
 Note, that to enable a certain type of message in the receiver, you need to send a configuration message first. For advanced configuration, you can use
-[U-center](Navio-dev/GPS-ucenter/) software.
+[U-center](Navio-dev/gps-ublox-ucenter/) software.
 
 More information about the GPS receiver is available in [U-blox NEO-M8 datasheet](http://www.u-blox.com/images/downloads/Product_Docs/NEO-M8_DataSheet_%28UBX-13003366%29.pdf).
 
