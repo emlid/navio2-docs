@@ -15,7 +15,7 @@ make gps
 
 After you run the code, you will start seeing messages with current location data. Note that it takes some time for the receiver to get it's position and at first you will see zero value of latitude, longitude and height. iTOW parameter will change every second. This example starts an infinite loop, so when you are done, just stop the process with **CTRL+C**.
 
-#### U-blox NEO driver
+**U-blox NEO driver**
 
 Now, let's look through the example code:
 
