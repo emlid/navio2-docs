@@ -3,7 +3,7 @@
 If you haven't already done that, download Navio drivers and examples code like this:
 
 ```bash
-git clone www.github.com/emlid/navio
+git clone www.github.com/emlid/Navio2
 ```
 
 ***C++***
@@ -11,7 +11,7 @@ git clone www.github.com/emlid/navio
 Move to the folder with the source code, compile and run the example:
 
 ```
-cd Navio/C++/Examples/Barometer
+cd Navio2/C++/Examples/Barometer
 make
 sudo ./Barometer
 ```
@@ -21,7 +21,7 @@ sudo ./Barometer
 Move to the folder with the code and run the example:
 
 ```
-cd Navio/Python/Barometer
+cd Navio2/Python/Barometer
 sudo python Barometer.py
 ```
 
