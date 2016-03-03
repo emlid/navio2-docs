@@ -15,11 +15,11 @@ You might be asked to install command line developer tools along the way.
 
 #### On PC\Mac
 
-Download [the archive with Navio utilities](https://github.com/emlid/Navio/archive/master.zip)
+Download [the archive with Navio utilities](https://github.com/emlid/Navio2/archive/master.zip)
 Extract the archive, enter the directory with 3DIMU utility and run it:
 
 ```
-cd Navio/Utilities/3DIMU
+cd Navio2/Utilities/3DIMU
 python 3Dimu.py
 ```
 #### On Raspberry Pi
@@ -27,8 +27,8 @@ python 3Dimu.py
 Clone Navio repository, navigate to the folder with AHRS example, compile and run it:
 
 ```
-git clone https://github.com/emlid/Navio.git
-cd Navio/C++/Examples/AHRS
+git clone https://github.com/emlid/Navio2.git
+cd Navio2/C++/Examples/AHRS
 make
 ./AHRS X.X.X.X 7000
 ```
