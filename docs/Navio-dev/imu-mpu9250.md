@@ -1,27 +1,27 @@
 
-#### MPU9250
+**MPU9250**
 
 MPU9250 is one of the best in class inertial sensors, which combines a gyroscope, an accelerometer and a magnetometer in one device. MPU sensor family is not only popular as a part of drone autopilot projects, but is also widely used in devices like cellphones, tablets, etc.
 
-#### IMU example
+**IMU example**
 
 If you haven't already done that, download Navio drivers and examples code like this:
 
 ```bash
-git clone https://github.com/emlid/Navio
+git clone https://github.com/emlid/Navio2
 ```
 
 Move to folder Navio/Examples/AccelGyroMag, compile and run the example
 
 ```
-cd Navio/C++/Examples/AccelGyroMag
+cd Navio2/C++/Examples/AccelGyroMag
 make
 ./AccelGyroMag
 ```
 
 You should immediately see 9 values, updated in real time. Try to move the device around and see them change. They include Accelerometer, Gyroscope and Magnetometer data, three axis each.
 
-#### MPU9250 driver
+**MPU9250 driver**
 
 Let's see the example code:
 
