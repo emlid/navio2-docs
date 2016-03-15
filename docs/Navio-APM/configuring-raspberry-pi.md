@@ -4,6 +4,8 @@ We provide an SD card image of Raspbian configured for usage in drone applicatio
 
 [Emlid Raspbian Image for Navio2](http://files.emlid.com/images/emlid-raspberrypi2-raspbian-navio2-20160212.img.xz)
 
+Please do not perform apt-get upgrade on this image as it will remove required changes. An image that will handle updates properly is in the works. 
+
 #### Writing image to SD card
 
 **On Windows:**
