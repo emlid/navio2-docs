@@ -1,7 +1,7 @@
 
 **MPU9250 and LSM9DS1**
 
-Navio2 contains two 9DOF(degree of freedom) IMU - MPU9250 and LSM9DS1. Each of them combines a gyroscope, an accelerometer and a magnetometer in one device. IMU sensors are not only popular as a part of drone autopilot projects, but is also widely used in devices like cellphones, tablets, etc.
+Navio2 contains two 9DOF(degree of freedom) IMU - MPU9250 and LSM9DS1. Each of them combines a gyroscope, an accelerometer and a magnetometer in one device. IMU sensors are not only popular as a part of drone autopilot projects, but are also widely used in devices like cellphones, tablets, etc.
 
 **IMU example**
 
