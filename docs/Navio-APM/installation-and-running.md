@@ -38,6 +38,10 @@ To run APM binary type the following in your RPi's console (change ArduCopter-qu
 ```bash
 sudo ArduCopter-quad -A udp:192.168.1.2:14550
 ```
+In case of using Waf build system (check [Building from sources](building-from-sources.md)) change ```ArduCopter-quad``` to ```./arducopter```:
+```bash
+sudo ./ardupilot -A udp:192.168.1.2:14550
+```
 
 Where 192.168.1.2 is the IP address of the device with the Ground Control Station - your laptop, smartphone etc.
 
@@ -83,25 +87,23 @@ APM Planner listens on UDP port 14550, so it should catch telemetry from the dro
 
 **MAVProxy**
 
-MAVProxy is a console-oriented ground station software written in Python that can be used standalone or together with APM Planner. It’s well suited for advanced users and developers. MAVProxy can be installed with pip:
+MAVProxy is a console-oriented ground station software written in Python that can be used standalone or together with APM Planner. It’s well suited for advanced users and developers. 
 
-```bash
-pip install mavlink mavproxy console wp
-```
+To install MAVProxy use [Download and Installation](http://dronecode.github.io/MAVProxy/html/getting_started/download_and_installation.html) instructions.
 
 
 To run it specify the --master port, which can be serial, TCP or UDP. It also can perform data passthrough using --out option.
 
 ```bash
-<>mavproxy.py --master 192.168.1.2:14550 --console
+mavproxy.py --master 192.168.1.2:14550 --console
 ```
 
 Where 192.168.1.2 is the IP address of the GCS, not RPi.
 
 #### Voltage and current sensing
 
-If you have original power module connected to Navio+, you can get battery voltage and curent readings from it. Simply press on the "Pixhawk Power Module 90A" in APM Planner to setup voltage and current measurement for APM:
-![PM](img/NavioPlus-PowerModule.jpg)
+If you have original power module connected to Navio2, you can get battery voltage and curent readings from it. Simply press on the "Pixhawk Power Module 90A" in APM Planner to setup voltage and current measurement for APM:
+![PM](img/navio2-power-module.png)
 
 After that you can check in full parameter list that:
 
@@ -122,12 +124,12 @@ You should see voltage and current values. After that it works everytime.
 
 As other APM configuration procedures are very similar for most APM-running autopilot hardware, please use the APM documentation.
 
-*Important*: There is no need to perform "4. Load Copter Firmware" step as APM is installed using deb package or binary on RPi with Navio. Also, frame type is selected by running the corresponding binary as described above.
+*Important*: There is no need to perform "Load Copter Firmware" step as APM is installed using deb package or binary on RPi with Navio. Also, frame type is selected by running the corresponding binary as described above.
 
 [Hardware configuration](http://copter.ardupilot.com/wiki/initial-setup/configuring-hardware)
 
-[ESC Calibration](http://copter.ardupilot.com/wiki/initial-setup/configuring-hardware)
+[ESC Calibration](http://copter.ardupilot.com/wiki/esc-calibration/)
 
-[Motor Setup](http://copter.ardupilot.com/wiki/initial-setup/configuring-hardware)
+[Connect ESCs and Motors](http://copter.ardupilot.com/wiki/connect-escs-and-motors/)
 
-[Enable RC Failsafe](http://copter.ardupilot.com/wiki/configuration/throttle-failsafe/)!
+[Enable RC Failsafe](http://copter.ardupilot.com/wiki/radio-failsafe/)!
