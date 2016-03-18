@@ -100,8 +100,8 @@ Where 192.168.1.2 is the IP address of the GCS, not RPi.
 
 #### Voltage and current sensing
 
-If you have original power module connected to Navio+, you can get battery voltage and curent readings from it. Simply press on the "Pixhawk Power Module 90A" in APM Planner to setup voltage and current measurement for APM:
-![PM](img/NavioPlus-PowerModule.jpg)
+If you have original power module connected to Navio2, you can get battery voltage and curent readings from it. Simply press on the "Pixhawk Power Module 90A" in APM Planner to setup voltage and current measurement for APM:
+![PM](img/navio2-power-module.png)
 
 After that you can check in full parameter list that:
 
@@ -130,4 +130,4 @@ As other APM configuration procedures are very similar for most APM-running auto
 
 [Motor Setup](http://copter.ardupilot.com/wiki/initial-setup/configuring-hardware)
 
-[Enable RC Failsafe](http://copter.ardupilot.com/wiki/configuration/throttle-failsafe/)!
+[Enable RC Failsafe](http://copter.ardupilot.com/wiki/radio-failsafe/)!
