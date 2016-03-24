@@ -1,4 +1,4 @@
-#### Video Streaming with Navio
+#### Video Streaming with Navio2
 
 Streaming real-time video from a drone powered by a Raspberry Pi 2 has never been easier.  There is only a handful of actions that you need to make to get a drone streaming real-time video to a remote PC, tablet, phone or whatnot.
 
@@ -9,11 +9,18 @@ Please note that Raspberry Pi Camera Module emits a lot of RF noise which may af
 
 #### Raspberry PI2
 
-First things first. You need to install some packages on RPi2
-
+First things first. You need to _expand filesystem_ and _enable camera_ using Raspberry Pi configuration tool. Type the following command in console:
 ```bash
-sudo apt-get install gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-libav
+sudo raspi-config
+```  
+Raspi-config menu will appear on your screen. After changeing the options press the Finish button. Expand filesystem and enable camera options require a reboot to take effect. Raspi-config will ask if you wish to reboot now when you select the Finish button.
+
+Now you need install gstreamer1.0 package on RPi2:  
+```bash
+sudo apt-get update
+sudo apt-get install gstreamer1.0
 ```
+This operation takes a long time. 
 
 After the installation has completed you can choose whatever platform you want to stream FPV to.
 
@@ -22,7 +29,7 @@ After the installation has completed you can choose whatever platform you want t
 If you're going to stream to a Ubuntu PC, install the same packages locally.
 
 ```bash
-sudo apt-get install gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-libav
+sudo apt-get install gstreamer1.0
 ```
 
 #### Android
@@ -68,7 +75,7 @@ From now on, your computer will be waiting for the input stream from Raspberry P
 ```bash
 raspivid -n -w 1280 -h 720 -b 1000000 -fps 15 -t 0 -o - | gst-launch-1.0 -v fdsrc ! h264parse ! rtph264pay config-interval=10 pt=96 ! udpsink host=<remote_ip> port=9000
 ```
-where <remote_ip> is the IP of the device you're streaming to.
+where ```<remote_ip>``` is the IP of the device you're streaming to.
 
 Adjust bitrate with ***-b*** switch or ***-fps*** if your video lags behind.
 
