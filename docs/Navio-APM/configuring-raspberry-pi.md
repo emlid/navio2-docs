@@ -15,8 +15,13 @@ We provide an SD card image of Raspbian configured for usage in drone applicatio
 * Click “Write”. The process may take a few minutes.
 
 **On Linux and Mac OS:**
-
-Extract an image.
+ 
+Extract an image.  
+For Ubuntu\Linux run:
+```bash
+unxz emlid-raspberrypi2-raspbian-navio2-20160212.img.xz
+```
+You will got uncompressed image.  
 Unmount SD card partitions if they were mounted.
 Run
 
