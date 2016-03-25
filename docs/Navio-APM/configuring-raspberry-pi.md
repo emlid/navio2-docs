@@ -17,13 +17,18 @@ We provide an SD card image of Raspbian configured for usage in drone applicatio
 * Click “Write”. The process may take a few minutes.
 
 **On Linux and Mac OS:**
-
-Extract an image.
+ 
+Extract an image.  
+For Ubuntu\Linux run:
+```bash
+unxz emlid-raspberrypi2-raspbian-navio2-20160212.img.xz
+```
+You will got uncompressed image.  
 Unmount SD card partitions if they were mounted.
 Run
 
 For Ubuntu\Linux:
-```
+```bash
 sudo dd bs=1M if=emlid-raspberrypi2-raspbian-navio2-20160212.img of=/dev/mmcblk0
 ```
 
@@ -34,7 +39,7 @@ It will be one of the /dev/diskX instances.
 **Be careful with the number as you might destroy your whole OS X installation.**
 * Unmount the disk with `sudo diskutil unmountDisk /dev/diskX`
 * Write the image with
-```
+```bash
 sudo dd bs=1m if=emlid-raspberrypi2-raspbian-navio2-20160212.img of=/dev/rdiskX
 ```
 Notice the addition of r in the disk path. It shows that that's this device is not buffered and will make the writing procedure much faster.
@@ -48,7 +53,7 @@ There are a few ways to configure Raspberry Pi to connect to your WiFi network. 
 
 Wi-Fi networks can be configured by editing the /etc/wpa_supplicant/wpa_supplicant.conf file located on SD card. To add your network simply add the following lines to it:
 
-```
+```bash
 network={
   ssid="yourssid"
   key_mgmt=WPA-PSK
@@ -70,7 +75,7 @@ After getting access to SD card contents open /etc/wpa_supplicant/wpa_supplicant
 
 By default in our image Raspberry Pi is set up to connect to the following WiFi network:
 
-```
+```bash
 ssid = “emlidltd”
 psk = “emlidltd”
 key_mgmt = wpa-psk
@@ -83,7 +88,7 @@ Another options is to create new WiFi network using tethering on a smartphone.
 
 Connect HDMI monitor and USB keyboard to your Raspberry, power it up and you will get access to the console, where you can use text editor to modify wpa_supplicant. After logging into the system, type:
 
-```
+```bash
 sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
