@@ -5,7 +5,7 @@ It is possible to connect to Navio's onboard u-blox GPS module from u-center so
 
 The utility is available from our GitHub Navio repository:
 
-```
+```bash
 git clone https://github.com/emlid/Navio2
 cd Navio2/Utilities/ublox-spi-to-tcp
 make

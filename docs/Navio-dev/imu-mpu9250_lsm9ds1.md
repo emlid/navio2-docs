@@ -1,4 +1,3 @@
-
 **MPU9250 and LSM9DS1**
 
 Navio2 contains two 9DOF(degree of freedom) IMU - MPU9250 and LSM9DS1. Each of them combines a gyroscope, an accelerometer and a magnetometer in one device. IMU sensors are not only popular as a part of drone autopilot projects, but are also widely used in devices like cellphones, tablets, etc.
@@ -15,7 +14,7 @@ IMU example for Navio2 runs with one of the on-board sensors at a time. During s
 ***C++***  
 Move to the folder with the source code, compile and run the example:
 
-```
+```bash
 cd Navio2/C++/Examples/AccelGyroMag
 make
 ./AccelGyroMag -i [sensor name]
@@ -23,14 +22,14 @@ make
 
 ***Python***  
 Move to the folder with the source code, compile and run the example:
-```
+```bash
 cd Navio2/Python
 python AccelGyroMag.py -i [sensor name]
 ```
 Argument [sensor name] allows you to choose inertial measurement unit: mpu is MPU9250, lsm is LSM9DS1.
 
 You should immediately see 9 values, updated in real time. Try to move the device around and see them change. They include Accelerometer, Gyroscope and Magnetometer data, three axis each.  
-```
+```bash
 Selected: MPU9250
 Connection established:  True
 Acc:  +0.014  +0.139  +9.974  Gyr:   -0.042   +0.022   +0.011  Mag: -3525.450 +29.584  +0.000

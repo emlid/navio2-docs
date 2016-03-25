@@ -6,13 +6,13 @@ Navio features three different receivers: NEO-7M in the standard Navio, NEO-6T 
 This example is designed to show an easy way to capture and decode UBX protocol messages. For simplicity, it only parses UBX protocol NAV-STATUS and NAV-POSLLH messages. NAV-POSLLH details, as well as full UBX protocol description can be seen [here](http://www.u-blox.com/images/downloads/Product_Docs/u-blox6_ReceiverDescriptionProtocolSpec_%28GPS.G6-SW-10018%29.pdf). The output of the example data is: current GPS status, current longitude and latitude, current height above Ellipsoid, current height above mean sea level, vertical and horizontal accuracy estimate and the iTOW parameter. iTOW is the current millisecond time of week.
 
 If you haven't already done that, download Navio2 drivers and examples code like this:
-```
+```bash
 git clone https://github.com/emlid/Navio2.git
 ```
 
 ***C++***  
 Move to the folder Navio2/C++/Examples/GPS, compile and run the example.
-```
+```bash
 cd Navio2/C++/Examples/GPS
 make
 ./gps
@@ -20,7 +20,7 @@ make
 
 ***Python***  
 Move to the folder with the source code and run the example:
-```
+```bash
 cd Navio2/Python
 python GPS.py
 ```  

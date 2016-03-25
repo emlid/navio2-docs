@@ -1,4 +1,4 @@
-#### MS5611 example
+**MS5611 example**
 
 If you haven't already done that, download Navio2 drivers and examples code like this:
 
@@ -10,7 +10,7 @@ git clone www.github.com/emlid/Navio2
 
 Move to the folder with the source code, compile and run the example:
 
-```
+```bash
 cd Navio2/C++/Examples/Barometer
 make
 ./Barometer
@@ -20,14 +20,14 @@ make
 
 Move to the folder with the code and run the example:
 
-```
+```bash
 cd Navio2/Python
 python Barometer.py
 ```
 
 You should see pressure and temperature values. Keep in mind that board tends to get hot from Raspberry and would show slightly higher temperature than it is in your room.
 
-```
+```bash
 Temperature(C): 34.3509172821 Pressure(millibar): 1030.4646104
 Temperature(C): 34.2971904755 Pressure(millibar): 1030.4639519
 Temperature(C): 34.2795449066 Pressure(millibar): 1030.45554448
