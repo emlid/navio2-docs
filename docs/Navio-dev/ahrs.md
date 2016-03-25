@@ -6,7 +6,7 @@ One of examples for Navio2 demonstrates the work of Mahony AHRS with the data fr
 
 Install [pip](https://pip.pypa.io/en/latest/installing.html) and use it to get required packages:
 
-```
+```bash
 sudo pip install PyOpenGL PyOpenGL_accelerate
 sudo pip install pyserial
 ```
@@ -16,7 +16,7 @@ You might be asked to install command line developer tools along the way.
 #### Preparing your PC
 
 Install OpenGL
-```
+```bash
 sudo apt-get install python-opengl
 ```
 
@@ -25,7 +25,7 @@ sudo apt-get install python-opengl
 Download [the archive with Navio utilities](https://github.com/emlid/Navio2/archive/master.zip)
 Extract the archive, enter the directory with 3DIMU utility and run it:
 
-```
+```bash
 cd Navio2/Utilities/3DIMU
 sudo python 3Dimu.py
 ```
@@ -33,7 +33,7 @@ sudo python 3Dimu.py
 
 Clone Navio2 repository, navigate to the folder with AHRS example, compile and run it:
 
-```
+```bash
 git clone https://github.com/emlid/Navio2.git
 cd Navio2/C++/Examples/AHRS
 make
