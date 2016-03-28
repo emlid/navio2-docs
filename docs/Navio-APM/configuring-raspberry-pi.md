@@ -23,7 +23,7 @@ For Ubuntu\Linux run:
 ```bash
 unxz emlid-raspberrypi2-raspbian-navio2-20160212.img.xz
 ```
-You will got uncompressed image.  
+This will result in an uncompressed image.  
 Unmount SD card partitions if they were mounted.
 Run
 
