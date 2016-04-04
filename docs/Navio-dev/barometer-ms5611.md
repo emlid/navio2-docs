@@ -1,17 +1,13 @@
 **MS5611 example**
 
-If you haven't already done that, download Navio2 drivers and examples code like this:
-
-```bash
-git clone www.github.com/emlid/Navio2
-```
+If you haven't already done that, download Navio2 drivers and examples code [here](navio-repository-cloning/).
 
 ***C++***
 
 Move to the folder with the source code, compile and run the example:
 
 ```bash
-cd Navio2/C++/Examples/Barometer
+cd C++/Examples/Barometer
 make
 ./Barometer
 ```
@@ -21,7 +17,7 @@ make
 Move to the folder with the code and run the example:
 
 ```bash
-cd Navio2/Python
+cd Python
 python Barometer.py
 ```
 

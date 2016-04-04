@@ -5,16 +5,14 @@ PWM 0-13 channels are available on 2.54mm header pins numbered 1-14 accordingly.
 
 To try to control servo connect the servo to the Navio’s output channel number 1 and run the provided example. Do not forget to supply power to the servo rail.
 
-If you haven't already done that, download Navio2 drivers and examples code like this:
-```bash
-git clone https://github.com/emlid/Navio2.git
-```
+If you haven't already done that, download Navio2 drivers and examples code [here](navio-repository-cloning/).
+
 ***C++***
 
 Move to the folder with the source code, compile and run the example
 
 ```bash
-cd Navio2/C++/Examples/Servo
+cd C++/Examples/Servo
 make
 sudo ./Servo
 ```
@@ -24,7 +22,7 @@ sudo ./Servo
 Move to the folder with the code and run the example
 
 ```bash
-cd Navio/Python
+cd Python
 sudo python Servo.py
 ```
 

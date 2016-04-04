@@ -2,16 +2,13 @@
 
 In this example ADC continuously measures voltage on all six channels available on Navio2. The first two channels are responsible for board voltage and servo rail voltage. Channels 2 and 3 show voltage and current levels in the “Power” connector respectively. The last two channels are present in "ADC" connector.
 
+Download Navio2 drivers and examples code [here](navio-repository-cloning/).
 
-Download Navio2 drivers and examples code like this:
-```bash
-git clone https://github.com/emlid/Navio2.git
-```
 ***C++***
 
 Move to the folder with the source code, compile and run the example:
 ```bash
-cd Navio2/C++/Examples/ADC
+cd C++/Examples/ADC
 make
 ./ADC
 ```
@@ -19,7 +16,7 @@ make
 
 Move to the folder with the source code and run the example:
 ```bash
-cd Navio2/Python
+cd Python
 python ADC.py
 ```
 The program performs measurement of all 6 ADC channels and outputs measured values in volts in six columns.

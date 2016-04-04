@@ -12,6 +12,7 @@ pages:
   - 'Video streaming': 'Navio-APM/video-streaming.md'
   - 'Building APM from sources': 'Navio-APM/building-from-sources.md'
 - Navio2 for developers:
+  - 'Navio2 examples setup': 'Navio-dev/navio-repository-cloning.md'
   - 'Pinout': 'Navio-dev/pinout.md'
   - '9DOF IMU' : 'Navio-dev/imu-mpu9250_lsm9ds1.md'
   - 'AHRS' : 'Navio-dev/ahrs.md'

@@ -31,11 +31,11 @@ sudo python 3Dimu.py
 ```
 #### On Raspberry Pi
 
-Clone Navio2 repository, navigate to the folder with AHRS example, compile and run it:
+Clone Navio repository using the following [instructions](navio-repository-cloning/).
+Navigate to the folder with AHRS example, compile and run it:
 
 ```bash
-git clone https://github.com/emlid/Navio2.git
-cd Navio2/C++/Examples/AHRS
+cd C++/Examples/AHRS
 make
 sudo ./AHRS -i [sensor name] X.X.X.X 7000
 ```
