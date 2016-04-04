@@ -18,7 +18,7 @@ Raspi-config menu will appear on your screen. After changeing the options press 
 Now you need install gstreamer1.0 package on RPi2:  
 ```bash
 sudo apt-get update
-sudo apt-get install gstreamer1.0
+sudo apt-get install gstreamer1.0-tools gstreamer1.0-plugins-good gstreamer1.0-plugins-bad
 ```
 This operation takes a long time. 
 
@@ -29,7 +29,7 @@ After the installation has completed you can choose whatever platform you want t
 If you're going to stream to a Ubuntu PC, install the same packages locally.
 
 ```bash
-sudo apt-get install gstreamer1.0
+sudo apt-get install gstreamer1.0-tools gstreamer1.0-plugins-good gstreamer1.0-plugins-bad
 ```
 
 #### Android
