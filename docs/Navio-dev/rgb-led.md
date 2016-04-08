@@ -1,15 +1,12 @@
 **RGB LED**
 
-If you haven't already done that, download Navio2 drivers and examples code like this:
-```bash
-git clone https://github.com/emlid/Navio2.git
-```  
+If you haven't already done that, download Navio2 drivers and examples code [here](navio-repository-cloning/).
 
 ***C++***
 
 Move to the folder with the source code, compile and run the example
 ```bash
-cd Navio/C++/Examples/LED2
+cd C++/Examples/LED2
 make
 sudo ./LED
 ```
@@ -17,7 +14,7 @@ sudo ./LED
 
 Move to the folder with the code and run the example:
 ```bash
-cd Navio2/Python
+cd Python
 sudo python LED.py
 ```  
 

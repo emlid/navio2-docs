@@ -5,17 +5,13 @@ To be used in autopilot applications Navio needs to decode RC input. Navio2 supp
 RCInput example shows value of chosen PWM channel. You can specify the channel in source code.  
 Connect PPM or S.Bus output from your RC receiver to the PPM/SB Input pin on Navio2. Note that your Navio should be powered off before connecting the receiver. 
 
-
-Now you can run the example. If you haven't already done that, download Navio2 drivers and examples code like this:
-```bash
-git clone https://github.com/emlid/Navio2.git
-```
+If you haven't already done that, download Navio2 drivers and examples code [here](navio-repository-cloning/).
 
 ***C++***
 
 Move to the folder with the source code, compile and run the example:
 ```bash
-cd Navio2/C++/Examples/RCInput
+cd C++/Examples/RCInput
 make
 sudo ./RCInput
 ```
@@ -23,7 +19,7 @@ sudo ./RCInput
 
 Move to the folder with the source code and run the example:
 ```bash
-cd Navio2/Python
+cd Python
 sudo python RCInput.py
 ```
 The program performs measurement of selected PWM channel and outputs measured values to console. The value will change if you move a stick on your RC transmitter. 
