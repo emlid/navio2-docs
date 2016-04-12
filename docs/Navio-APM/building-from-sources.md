@@ -12,7 +12,7 @@ APM binary for Navio2 can be built using two ways:
 
 2) Using a cross-compiler (on Linux PC or virtual machine). This is much faster, but requires one-time setup.
 
-If you'd like to build on Raspberry Pi or use Waf build system(either on Raspberry Pi or Linux PC) skip the next step.
+If you'd like to build on Raspberry Pi or use Waf build system (either on Raspberry Pi or Linux PC) skip the next step.
 
 #### Cross-compiler setup on Linux (optional)
 
@@ -97,16 +97,20 @@ Differently from the make-based build, with Waf there's a configure step to choo
 waf configure --board=navio2
 ```
 
-Now you can build arducopter: 
+Now you can build arducopter. For quadcopter use the following command:
 ```bash
-waf copter
+waf --targets bin/arducopter-quad
 ```  
-In the end of compilation binary file with the name ```arducopter``` will be placed in ```ardupilot/build/navio2/bin/``` directory.
+To build for other frame types replace quad with one of the following options:
+```bash
+coax heli hexa octa octa-quad single tri y6
+```
+In the end of compilation binary file with the name ```arducopter-quad``` will be placed in ```ardupilot/build/navio2/bin/``` directory.
 
 If you're using cross-compiler transfer the binary to your Raspberry Pi:
 
 ```bash
-rsync -avz ardupilot/build/navio2/bin/arducopter pi@192.168.1.3:/home/pi/
+rsync -avz ardupilot/build/navio2/bin/arducopter-quad pi@192.168.1.3:/home/pi/
 ```
 
 Where 192.168.1.3 is an IP address of your Raspberry Pi with Navio2.
