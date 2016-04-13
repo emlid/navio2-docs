@@ -1,10 +1,11 @@
 #### Downloading configured Raspbian image
 
-We provide an SD card image of Raspbian configured for usage in drone applications. In research purposes you may use the default Raspbian, but if you’d like to use APM autopilot use only the image we provide.
+We provide an SD card image of Raspbian for usage in drone and research applications. 
+Please only use this image with Navio as it has been specially configured for it.
 
-[Emlid Raspbian Image for Navio2](http://files.emlid.com/images/emlid-raspbian-20160408.img.xz)
+[Emlid Raspbian Image for Navio2/Navio+ (emlid-raspbian-20160408)](http://files.emlid.com/images/emlid-raspbian-20160408.img.xz)
 
-If you want to download the older image, you can find it [here](http://files.emlid.com/images/emlid-raspberrypi2-raspbian-navio2-20160212.img.xz). This image does not handle *apt-get upgrade* nicely.
+Older image (20160212) is available for download [here](http://files.emlid.com/images/emlid-raspberrypi2-raspbian-navio2-20160212.img.xz). Please use only if necessary, otherwise use the image above.
 
 #### Writing image to SD card
 
