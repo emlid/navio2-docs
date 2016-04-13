@@ -5,7 +5,7 @@ Please only use this image with Navio as it has been specially configured for it
 
 [Emlid Raspbian Image for Navio2/Navio+ (emlid-raspbian-20160408)](http://files.emlid.com/images/emlid-raspbian-20160408.img.xz)
 
-Older image (20160212) is available for download [here](http://files.emlid.com/images/emlid-raspberrypi2-raspbian-navio2-20160212.img.xz). Please use only if necessary, otherwise use the image above.
+<sub> Older image (20160212) is available for download [here](http://files.emlid.com/images/emlid-raspberrypi2-raspbian-navio2-20160212.img.xz). Please use only if necessary, otherwise use the image above. </sub>
 
 #### Writing image to SD card
 
