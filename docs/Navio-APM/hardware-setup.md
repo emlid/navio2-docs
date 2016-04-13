@@ -5,7 +5,7 @@ APM on Navio2 is working on:
 * Raspberry Pi 3 Model B
 * Raspberry Pi 2 Model B
 
-Other models such as Raspberry Pi Model A+, Raspberry Pi Model B+, Raspberry Pi Zero are electrically compatible, but lack performance to run APM:Copter. It is completely safe to use Navio2 with all boards stated above.
+<sub> Other models such as Raspberry Pi Model A+, Raspberry Pi Model B+, Raspberry Pi Zero are electrically compatible, but lack performance to run APM:Copter. It is completely safe to use Navio2 with all boards stated above. </sub>
 
 ### Attaching Navio2 to a Raspberry Pi
 
