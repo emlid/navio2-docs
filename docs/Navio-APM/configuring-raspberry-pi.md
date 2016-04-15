@@ -93,3 +93,15 @@ nmap -sn 192.168.1.*
 You can use it with a GUI such as Zenmap or Fing application on your phone.
 
 Look for the hostname ”navio”.
+
+
+#### Known Issues
+
+
+This section lists issues **we’re currently working on**. This is not a comprehensive list of known issues, simply the ones that users are most likely to encounter.
+
+1. Erratic PWM appears when motorised gimball is used ([here](https://community.emlid.com/search?q=erratic%20motors) some threads on forum)
+2. Internal compass offsets are too high (take a look at [these topics](https://community.emlid.com/search?q=compass%20variance))
+
+
+If you have another problem, feel free to visit our [forum](https://community.emlid.com/) to find a solution or ask a question.
