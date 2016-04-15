@@ -65,8 +65,14 @@ Now everything is ready for streaming.
 
 ***On your computer***
 
+For Ubuntu/Mac OS X:
 ```bash
 gst-launch-1.0 -v udpsrc port=9000 caps='application/x-rtp, media=(string)video, clock-rate=(int)90000, encoding-name=(string)H264' ! rtph264depay ! avdec_h264 ! videoconvert ! autovideosink sync=f
+```
+For Windows:
+
+```bash
+gst-launch-1.0 -v udpsrc port=9000 caps="application/x-rtp, media=(string)video, clock-rate=(int)90000, encoding-name=(string)H264" ! rtph264depay ! avdec_h264 ! videoconvert ! autovideosink sync=f
 ```
 From now on, your computer will be waiting for the input stream from Raspberry PI2. Once it gets a stream, you'll see the real-time video from your drone.
 
