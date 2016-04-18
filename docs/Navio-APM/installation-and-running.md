@@ -122,6 +122,9 @@ You should see voltage and current values. After that it works everytime.
 
 #### Further configuration
 
+**WARNING**
+Auxiliary function switches on channels 5-8 are still not supported and could lead to erroneous PWM generation on motors' channels and that's why we do ask to NOT SET AUXILIARY FUNCTION SWITCHES TO RC5..8.
+
 As other APM configuration procedures are very similar for most APM-running autopilot hardware, please use the APM documentation.
 
 *Important*: There is no need to perform "Load Copter Firmware" step as APM is installed using deb package or binary on RPi with Navio. Also, frame type is selected by running the corresponding binary as described above.
