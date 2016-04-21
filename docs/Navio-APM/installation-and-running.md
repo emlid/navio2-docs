@@ -1,6 +1,6 @@
 #### APM
 
-![apm](http://www.emlid.com/wp-content/uploads/2014/10/APM.png)
+![apm](img/APM.png)
 
 You can run APM (ArduPilot) on Raspberry Pi with Navio2. The autopilot's code works directly on Raspberry Pi using the APM's Linux HAL. For APM to work properly please use the configured Raspbian distribution that we provide.  
 
