@@ -1,7 +1,8 @@
 site_name: Emlid
-theme: docstheme
+theme_dir: docstheme
 site_favicon: favicon.ico
 repo_url: https://github.com/emlid/navio2-docs
+
 pages:
 - Introduction : 'index.md'
 - Navio2 with APM autopilot:
