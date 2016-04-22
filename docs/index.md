@@ -1,3 +1,8 @@
+**NAVIO2**
+
+<div style="text-align: center;"><img src="img/Navio2WithPaspberryPi.png"></div><br>
+
+
 **Emlid documentation**
 
 This is a documentation for Navio2 - autopilot HAT for Raspberry Pi.
