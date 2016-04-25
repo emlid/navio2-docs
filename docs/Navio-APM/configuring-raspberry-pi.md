@@ -57,7 +57,6 @@ Wi-Fi networks can be configured by editing the /boot/wpa_supplicant.conf file l
 ```bash
 network={
   ssid="yourssid"
-  key_mgmt=WPA-PSK
   psk="yourpasskey"
 }
 ```
