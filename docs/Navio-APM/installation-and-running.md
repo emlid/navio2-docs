@@ -8,12 +8,12 @@ You can run APM (ArduPilot) on Raspberry Pi with Navio2. The autopilot's code wo
 
 Log in to your Raspberry Pi using SSH or other method, download the deb package with APM binaries using wget and install it. The following deb package contains binaries that are compatible with Navio2:
 
-[apm-navio2.deb](http://files.emlid.com/apm/apm-navio2_3.3.2-rc2-beta-1.2_armhf.deb)
+[apm-navio2.deb](https://files.emlid.com/apm/apm-navio2_3.3.2-rc2-beta-1.2_armhf.deb)
 
 To download from Raspberry and install it run the following:
 
 ```
-wget 'http://files.emlid.com/apm/apm-navio2_3.3.2-rc2-beta-1.2_armhf.deb' -O apm-navio2.deb
+wget 'https://files.emlid.com/apm/apm-navio2_3.3.2-rc2-beta-1.2_armhf.deb' -O apm-navio2.deb
 sudo dpkg -i apm-navio2.deb
 ```
 
@@ -87,7 +87,7 @@ APM Planner listens on UDP port 14550, so it should catch telemetry from the dro
 
 **MAVProxy**
 
-MAVProxy is a console-oriented ground station software written in Python that can be used standalone or together with APM Planner. It’s well suited for advanced users and developers. 
+MAVProxy is a console-oriented ground station software written in Python that can be used standalone or together with APM Planner. It’s well suited for advanced users and developers.
 
 To install MAVProxy use [Download and Installation](http://dronecode.github.io/MAVProxy/html/getting_started/download_and_installation.html) instructions.
 

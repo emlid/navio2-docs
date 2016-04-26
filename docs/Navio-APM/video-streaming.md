@@ -20,7 +20,7 @@ Now you need install gstreamer1.0 package on RPi2:
 sudo apt-get update
 sudo apt-get install gstreamer1.0-tools gstreamer1.0-plugins-good gstreamer1.0-plugins-bad
 ```
-This operation takes a long time. 
+This operation takes a long time.
 
 After the installation has completed you can choose whatever platform you want to stream FPV to.
 
@@ -35,7 +35,7 @@ sudo apt-get install gstreamer1.0-tools gstreamer1.0-plugins-good gstreamer1.0-p
 #### Android
 
 Download and install QtGStreamerHUD:
-[QtGStreamerHUD.apk](http://files.emlid.com/QtGStreamerHUD.apk). Find out your IP address in the Preferences. You'll need it in order to connect to the phone from your RPi2. Please ensure Unknown sources is enabled in settings before installing. After completing the installation , hit the gears icon on the top right and set the pipeline to "udpscrc port=9000 buffer-size=600....." the second option in the pipeline dropdown menu.
+[QtGStreamerHUD.apk](https://files.emlid.com/QtGStreamerHUD.apk). Find out your IP address in the Preferences. You'll need it in order to connect to the phone from your RPi2. Please ensure Unknown sources is enabled in settings before installing. After completing the installation , hit the gears icon on the top right and set the pipeline to "udpscrc port=9000 buffer-size=600....." the second option in the pipeline dropdown menu.
 
 Use our [our](http://docs.emlid.com/Navio-APM/installation-and-running/) tutorial to run APM using the IP you just found out.
 
