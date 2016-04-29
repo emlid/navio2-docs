@@ -17,6 +17,14 @@ wget 'https://files.emlid.com/apm/apm-navio2_3.3.2-rc2-beta-1.2_armhf.deb' -O ap
 sudo dpkg -i apm-navio2.deb
 ```
 
+***ATTENTION***
+
+There's ongoing beta-testing of the newer APM version which fixes a lot of issues our users had been facing. You can get it this way:
+```
+wget 'https://files.emlid.com/apm/apm-navio2_3.4-unstable.deb' -O apm-navio2.deb
+sudo dpkg -i apm-navio2.deb
+```
+
 If you'd like to build the binary yourself please proceed to the [Building from sources](building-from-sources.md).
 
 #### Running APM
