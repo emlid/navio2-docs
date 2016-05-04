@@ -30,6 +30,7 @@ If you'd like to build the binary yourself please proceed to the [Building from 
 #### Running APM
 
 Supported vehicle types are:
+
 * APMrover2
 * ArduPlane
 * ArduCopter-quad
@@ -128,6 +129,14 @@ sudo ArduCopter-quad -A udp:192.168.1.2:14550
 
 You should see voltage and current values. After that it works everytime.
 
+#### Second compass configuration
+
+Navio2 contains two 9DOF IMU - MPU9250 and LSM9DS1. The latter has lower offsets. In order to use it, you need to enable it as an **external compass** in Mission Planner and set rotation to **ROLL_180**.  
+
+After calibration you will get the following results: 
+![compass-settings](img/compass-settings.png)
+
+Compass 2 may be set as primary due to lower offsets.
 #### Further configuration
 
 **WARNING**
