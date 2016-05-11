@@ -104,3 +104,20 @@ Use /dev/ttyUSB0 virtual serial port for USB.
 MS5611 barometer (steel cap IC) is sensitive to UV light and might report sudden jumps in altitude under sunlight. It is very important to cover it with a piece of open cell foam (something like microphone fabric) or put autopilot in a protective case to protect it both from sunlight and airstreams.
 
 ![barouvprotection](img/baro-uv-protection.jpg)
+
+
+### Anti-vibration mount
+
+We have designed an anti-vibration for Navio that can be easily 3D printed. It significantly simplifies mounting and eliminates vibrations.  
+Bottom view:
+![vibronavio](img/vibro-bottom-view.png)
+Anti-vibration with Navio2 mounted on frame:
+![anti-vibration-mount](img/anti-vibration-mount.jpg)
+
+
+STL Files:  
+[Top](https://github.com/emlid/hardware/blob/master/VibroNavio2top_rev_A.STL)  
+[Bottom](https://github.com/emlid/hardware/blob/master/VibroNavio2bot_rev_A.STL)  
+
+You will also need 8 blue vibration damping balls from [Hobbyking](http://www.hobbyking.com/hobbyking/store/__40603__Vibration_Damping_Ball_65g_Bag_of_8_.html)
+![damping-balls](img/damping-balls.jpg)
