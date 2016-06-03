@@ -38,42 +38,7 @@ If you would like to add the compiler to the PATH permanently edit /etc/environm
 
 #### Building APM using make-based build system
 
-These steps are the same both for compiling APM directly on Raspberry Pi and cross-compiling.
-
-Download the APM code and update submodules:
-
-```bash
-git clone https://github.com/ArduPilot/ardupilot.git
-cd ardupilot
-git submodule update --init
-```
-
-Navigate to the autopilot’s directory: APMrover, ArduCopter or ArduPlane. For example ArduCopter:
-
-```bash
-cd ArduCopter
-```
-Build for quadcopter:
-
-```bash
-make navio2-quad
-```
-
-To build for other frame types replace quad with one of the following options:
-
-```bash
-quad tri hexa y6 octa octa-quad heli single obc nologging
-```
-
-In the end of compilation binary file with the name ArduCopter.elf will be placed in the same directory.
-
-If you're using cross-compiler transfer the binary to your Raspberry Pi:
-
-```bash
-rsync -avz ArduCopter.elf pi@192.168.1.3:/home/pi/
-```
-
-Where 192.168.1.3 is an IP address of your Raspberry Pi with Navio2.
+<sub> **Deprecated**. Please use [waf](building-from-sources/#building-apm-using-waf-build-system) to build the project. </sub>
 
 #### Building APM using Waf build system
 
