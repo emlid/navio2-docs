@@ -93,6 +93,13 @@ You can use it with a GUI such as Zenmap or Fing application on your phone.
 
 Look for the hostname ”navio”.
 
+#### Upgrading
+
+Once you logged in, we suggest upgrading the OS immediately.
+
+```sudo apt-get update && sudo apt-get upgrade```
+
+This is a required step before attempting to fly your drone.
 
 #### Known Issues
 
