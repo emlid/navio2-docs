@@ -131,7 +131,11 @@ You should see voltage and current values. After that it works everytime.
 
 #### Second compass configuration
 
-Navio2 contains two 9DOF IMU - MPU9250 and LSM9DS1. The latter has lower offsets. In order to use it, you need to enable it as an **external compass** in Mission Planner and set rotation to **ROLL_180**.  
+Navio2 contains two 9DOF IMU - MPU9250 and LSM9DS1. The latter has lower offsets. If you installed In order to use it, you need to enable it as an **external compass** in Mission Planner and set rotation to **ROLL_180**. This will be fixed later.
+
+**WARNING**
+
+Beware that if you compiled from ArduPilot/Copter-3.4-rcX, you don't need to set rotation and enable as an external compass.
 
 After calibration you will get the following results: 
 ![compass-settings](img/compass-settings.png)
