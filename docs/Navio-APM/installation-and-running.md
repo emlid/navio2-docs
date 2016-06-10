@@ -6,26 +6,25 @@ You can run APM (ArduPilot) on Raspberry Pi with Navio2. The autopilot's code wo
 
 #### Installing APM
 
-Log in to your Raspberry Pi using SSH or other method, download the deb package with APM binaries using wget and install it. The following deb package contains binaries that are compatible with Navio2:
+Log in to your Raspberry Pi using SSH or other method.
 
-[apm-navio2.deb](https://files.emlid.com/apm/apm-navio2_3.3.2-rc2-beta-1.2_armhf.deb)
-
-To download from Raspberry and install it run the following:
-
-```
-wget 'https://files.emlid.com/apm/apm-navio2_3.3.2-rc2-beta-1.2_armhf.deb' -O apm-navio2.deb
-sudo dpkg -i apm-navio2.deb
+```bash
+pi@navio: ~ $ sudo apt-get update && sudo apt-get install apm-navio2
 ```
 
-***ATTENTION***
-
-There's ongoing beta-testing of the newer APM version which fixes a lot of issues our users had been facing. You can get it this way:
+<sub>
+You can also install an older version, if you wish.
+```bash
+pi@navio: ~ $ wget 'https://files.emlid.com/apm/apm-navio2_3.4-unstable.deb' -O apm-navio2.deb
+pi@navio: ~ $ sudo dpkg -i apm-navio2.deb
 ```
-wget 'https://files.emlid.com/apm/apm-navio2_3.4-unstable.deb' -O apm-navio2.deb
-sudo dpkg -i apm-navio2.deb
-```
+</sub>
 
 If you'd like to build the binary yourself please proceed to the [Building from sources](building-from-sources.md).
+
+#### Upgrade
+
+In case of an upgrade follow this [entry](ardupilot-upgrade.md) carefully! 
 
 #### Running APM
 
@@ -131,9 +130,7 @@ You should see voltage and current values. After that it works everytime.
 
 #### Second compass configuration
 
-Navio2 contains two 9DOF IMU - MPU9250 and LSM9DS1. The latter has lower offsets. If you installed In order to use it, you need to enable it as an **external compass** in Mission Planner and set rotation to **ROLL_180**. This will be fixed later.
-
-**WARNING**
+Navio2 contains two 9DOF IMU - MPU9250 and LSM9DS1. The latter has lower offsets. If you installed In order to use it, you need to enable it.
 
 Beware that if you compiled from ArduPilot/Copter-3.4-rcX, you don't need to set rotation and enable as an external compass.
 
