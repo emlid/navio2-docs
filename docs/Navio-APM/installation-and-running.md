@@ -44,11 +44,11 @@ Supported vehicle types are:
 To run APM binary type the following in your RPi's console (change ArduCopter-quad to your vehicle type):
 
 ```bash
-sudo ArduCopter-quad -A udp:192.168.1.2:14550
+pi@navio: ~ $ sudo ArduCopter-quad -A udp:192.168.1.2:14550
 ```
 If you build APM from sources launch obtained binary file:
 ```bash
-sudo ./arducopter -A udp:192.168.1.2:14550
+pi@navio: ~ $ sudo ./arducopter -A udp:192.168.1.2:14550
 ```
 
 Where 192.168.1.2 is the IP address of the device with the Ground Control Station - your laptop, smartphone etc.
@@ -67,13 +67,13 @@ When using UART for telemetry please note that default baud rates are:
 If you would like to transfer telemetry over the UART port on Navio you can specify it like this:
 
 ```bash
-sudo ArduCopter-quad -C /dev/ttyAMA0
+pi@navio: ~ $ sudo ArduCopter-quad -C /dev/ttyAMA0
 ```
 
 UDP and serial telemetry can be used simultaneously like this:
 
 ```bash
-sudo ArduCopter-quad -A udp:192.168.1.2:14550 -C /dev/ttyAMA0
+pi@navio: ~ $ sudo ArduCopter-quad -A udp:192.168.1.2:14550 -C /dev/ttyAMA0
 ```
 
 #### Autostarting APM on boot
@@ -81,7 +81,7 @@ sudo ArduCopter-quad -A udp:192.168.1.2:14550 -C /dev/ttyAMA0
 To automatically start APM on boot add the following (change -A and -C options to suit your setup) to /etc/rc.local file on your Raspberry Pi:
 
 ```bash
-sudo ArduCopter-quad -A udp:192.168.1.2:14550 -C /dev/ttyAMA0 > /home/pi/startup_log &
+pi@navio: ~ $ sudo ArduCopter-quad -A udp:192.168.1.2:14550 -C /dev/ttyAMA0 > /home/pi/startup_log &
 ```
 
 #### Connecting to the GCS
@@ -123,7 +123,7 @@ BATT_VOLT_PIN 2
 CTRL+C to kill ArduCopter and run again using:
 
 ```bash
-sudo ArduCopter-quad -A udp:192.168.1.2:14550
+pi@navio: ~ $ sudo ArduCopter-quad -A udp:192.168.1.2:14550
 ```
 
 You should see voltage and current values. After that it works everytime.
