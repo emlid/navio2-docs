@@ -30,7 +30,7 @@ In case of an upgrade follow this [entry](ardupilot-upgrade.md) carefully!
 
 Supported vehicle types are:
 
-* APMrover2
+* ArduRover
 * ArduPlane
 * ArduCopter-quad
 * ArduCopter-tri
