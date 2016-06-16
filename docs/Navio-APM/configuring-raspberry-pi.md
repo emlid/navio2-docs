@@ -97,18 +97,14 @@ Look for the hostname ”navio”.
 
 Once you logged in, we suggest upgrading the OS immediately.
 
-```sudo apt-get update && sudo apt-get upgrade```
+```sudo apt-get update && sudo apt-get dist-upgrade```
 
 This is a required step before attempting to fly your drone.
 
 #### Known Issues
 
 
-This section lists issues **we’re currently working on**. This is not a comprehensive list of known issues, simply the ones that users are most likely to encounter.
-
-1. Erratic PWM appears when motorised gimball is used ([here](https://community.emlid.com/t/auxiliary-pwm-channels-for-navio-2). This is fixed for most of the cases. Refer to [this section](http://docs.emlid.com/navio2/Navio-APM/installation-and-running/#further-configuration).
-
-2. Internal compass offsets are too high (take a look at [these topics](https://community.emlid.com/search?q=compass%20variance))
+1.  Internal compass offsets are too high (take a look at [this](ardupilot-tips/#second-compass-configuration) entry to overcome this problem) 
 
 
 If you have another problem, feel free to visit our [forum](https://community.emlid.com/) to find a solution or ask a question.
