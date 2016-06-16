@@ -86,6 +86,14 @@ The proper way would be to use systemd service, though.
 
 #### Connecting to the GCS
 
+**Mission Planner**
+
+A Windows only ground station. It is the most feature complete, though.
+
+**QGroundControl**
+
+A crossplatform ground station for Mavlink-based flight stacks (like Ardupilot). It works on every platform imaginable but in general lags a little behind Mission Planner.
+
 **APM Planner**
 
 APM Planner is a ground station software for APM. It can be downloaded from the
