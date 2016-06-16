@@ -95,7 +95,7 @@ Look for the hostname ”navio”.
 
 #### Upgrading
 
-Once you logged in, we suggest upgrading the OS immediately.
+Once you logged in, we suggest upgrading the OS immediately and reboot.
 
 ```sudo apt-get update && sudo apt-get dist-upgrade```
 
