@@ -138,6 +138,9 @@ After calibration you will get the following results:
 ![compass-settings](img/compass-settings.png)
 
 Compass 2 may be set as primary due to lower offsets.
+
+Due to an issue in Mission Planner we strongly suggest using Onboard calibration. Otherwise, you might get ```Compass Variance``` errors.
+
 #### Further configuration
 
 **WARNING**
