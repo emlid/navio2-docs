@@ -6,6 +6,8 @@ You can run APM (ArduPilot) on Raspberry Pi with Navio2. The autopilot's code wo
 
 #### Installing APM
 
+*Important*: There is no need to perform "Load Copter Firmware" step as APM is installed using deb package or binary on RPi with Navio. Also, frame type is selected by running the corresponding binary as described above.
+
 Log in to your Raspberry Pi using SSH or other method.
 
 ```bash
@@ -13,11 +15,7 @@ pi@navio: ~ $ sudo apt-get update && sudo apt-get install apm-navio2
 ```
 
 <sub>
-You can also install an older version, if you wish.
-```bash
-pi@navio: ~ $ wget 'https://files.emlid.com/apm/apm-navio2_3.4-unstable.deb' -O apm-navio2.deb
-pi@navio: ~ $ sudo dpkg -i apm-navio2.deb
-```
+You can also install an older [version](https://files.emlid.com/apm/apm-navio2_3.4-unstable.deb), if you wish.
 </sub>
 
 If you'd like to build the binary yourself please proceed to the [Building from sources](building-from-sources.md).
@@ -84,6 +82,8 @@ To automatically start APM on boot add the following (change -A and -C options t
 pi@navio: ~ $ sudo ArduCopter-quad -A udp:192.168.1.2:14550 -C /dev/ttyAMA0 > /home/pi/startup_log &
 ```
 
+The proper way would be to use systemd service, though. 
+
 #### Connecting to the GCS
 
 **APM Planner**
@@ -107,51 +107,3 @@ mavproxy.py --master 192.168.1.2:14550 --console
 ```
 
 Where 192.168.1.2 is the IP address of the GCS, not RPi.
-
-#### Voltage and current sensing
-
-If you have original power module connected to Navio2, you can get battery voltage and curent readings from it. Simply press on the "Pixhawk Power Module 90A" in APM Planner to setup voltage and current measurement for APM:
-![PM](img/navio2-power-module.png)
-
-After that you can check in full parameter list that:
-
-```bash
-BATT_CURR_PIN 3
-BATT_VOLT_PIN 2
-```
-
-CTRL+C to kill ArduCopter and run again using:
-
-```bash
-pi@navio: ~ $ sudo ArduCopter-quad -A udp:192.168.1.2:14550
-```
-
-You should see voltage and current values. After that it works everytime.
-
-#### Second compass configuration
-
-Navio2 contains two 9DOF IMU - MPU9250 and LSM9DS1. The latter has lower offsets. If you installed In order to use it, you need to enable it.
-
-Beware that if you compiled from ArduPilot/Copter-3.4-rcX, you don't need to set rotation and enable as an external compass.
-
-After calibration you will get the following results: 
-![compass-settings](img/compass-settings.png)
-
-Compass 2 may be set as primary due to lower offsets.
-
-Due to an issue in Mission Planner we strongly suggest using Onboard calibration. Otherwise, you might get ```Compass Variance``` errors.
-
-#### Further configuration
-
-**WARNING**
-Auxiliary function switches on channels 5-8 are still not supported and could lead to erroneous PWM generation on motors' channels and that's why we do ask to NOT SET AUXILIARY FUNCTION SWITCHES TO RC5..8.
-
-As other APM configuration procedures are very similar for most APM-running autopilot hardware, please use the APM documentation.
-
-*Important*: There is no need to perform "Load Copter Firmware" step as APM is installed using deb package or binary on RPi with Navio. Also, frame type is selected by running the corresponding binary as described above.
-
-[Hardware configuration](http://ardupilot.org/copter/docs/configuring-hardware.html)
-
-[ESC Calibration](http://ardupilot.org/copter/docs/esc-calibration.html)
-
-[Enable RC Failsafe](http://ardupilot.org/copter/docs/radio-failsafe.html)!
