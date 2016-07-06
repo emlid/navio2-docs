@@ -11,25 +11,22 @@ Please note that Raspberry Pi Camera Module emits a lot of RF noise which may af
 
 First things first. You need to _expand filesystem_ and _enable camera_ using Raspberry Pi configuration tool. Type the following command in console:
 ```bash
-sudo raspi-config
+pi@navio: ~ $ sudo raspi-config
 ```  
-Raspi-config menu will appear on your screen. After changeing the options press the Finish button. Expand filesystem and enable camera options require a reboot to take effect. Raspi-config will ask if you wish to reboot now when you select the Finish button.
-
-Now you need install gstreamer1.0 package on RPi2:  
-```bash
-sudo apt-get update
-sudo apt-get install gstreamer1.0-tools gstreamer1.0-plugins-good gstreamer1.0-plugins-bad
-```
-This operation takes a long time.
+Raspi-config menu will appear on your screen. After changing the options press the *Finish* button. Expand filesystem and enable camera options require a reboot to take effect. Raspi-config will ask if you wish to reboot now when you select the *Finish* button.
 
 After the installation has completed you can choose whatever platform you want to stream FPV to.
 
 #### Ubuntu
 
-If you're going to stream to a Ubuntu PC, install the same packages locally.
+If you're going to stream to a Ubuntu PC, install the some packages locally beforehand.
+```bash
+user@ubuntu: ~ $ sudo apt-get update
+user@ubuntu: ~ $ sudo apt-get install gstreamer1.0-tools gstreamer1.0-plugins-good gstreamer1.0-plugins-bad
+```
 
 ```bash
-sudo apt-get install gstreamer1.0-tools gstreamer1.0-plugins-good gstreamer1.0-plugins-bad
+user@ubuntu: ~ $ sudo apt-get install gstreamer1.0-tools gstreamer1.0-plugins-good gstreamer1.0-plugins-bad
 ```
 
 #### Android
@@ -50,9 +47,9 @@ Unfortunately, the cable length was not enough to make a selfie but at least we'
 The simplest way is to use brew. To install it run the following in your Mac terminal:
 
 ```bash
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update
-brew install gstreamer gst-libav gst-plugins-ugly gst-plugins-base gst-plugins-bad gst-plugins-good
+user@mac: ~ $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+user@mac: ~ $ brew update
+user@mac: ~ $ brew install gstreamer gst-libav gst-plugins-ugly gst-plugins-base gst-plugins-bad gst-plugins-good
 ```
 
 #### Windows
@@ -67,7 +64,7 @@ Now everything is ready for streaming.
 
 For Ubuntu/Mac OS X:
 ```bash
-gst-launch-1.0 -v udpsrc port=9000 caps='application/x-rtp, media=(string)video, clock-rate=(int)90000, encoding-name=(string)H264' ! rtph264depay ! avdec_h264 ! videoconvert ! autovideosink sync=f
+user@mac ~ $ gst-launch-1.0 -v udpsrc port=9000 caps='application/x-rtp, media=(string)video, clock-rate=(int)90000, encoding-name=(string)H264' ! rtph264depay ! avdec_h264 ! videoconvert ! autovideosink sync=f
 ```
 For Windows:
 
@@ -79,7 +76,7 @@ From now on, your computer will be waiting for the input stream from Raspberry P
 ***On Raspberry***
 
 ```bash
-raspivid -n -w 1280 -h 720 -b 1000000 -fps 15 -t 0 -o - | gst-launch-1.0 -v fdsrc ! h264parse ! rtph264pay config-interval=10 pt=96 ! udpsink host=<remote_ip> port=9000
+pi@navio: ~ raspivid -n -w 1280 -h 720 -b 1000000 -fps 15 -t 0 -o - | gst-launch-1.0 -v fdsrc ! h264parse ! rtph264pay config-interval=10 pt=96 ! udpsink host=<remote_ip> port=9000
 ```
 where ```<remote_ip>``` is the IP of the device you're streaming to.
 
