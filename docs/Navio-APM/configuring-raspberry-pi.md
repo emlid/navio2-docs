@@ -3,9 +3,9 @@
 We provide an SD card image of Raspbian for usage in drone and research applications.
 Please only use this image with Navio as it has been specially configured for it.
 
-[Emlid Raspbian Image for Navio2/Navio+ (emlid-raspbian-20160408)](https://files.emlid.com/images/emlid-raspbian-20160408.img.xz)
+[Emlid Raspbian Image for Navio2/Navio+ (emlid-raspbian-20160718)](https://files.emlid.com/images/emlid-raspbian-20160718.img.xz)
 
-<sub> Older image (20160212) is available for download [here](https://files.emlid.com/images/emlid-raspberrypi2-raspbian-navio2-20160212.img.xz). Please use only if necessary, otherwise use the image above. </sub>
+<sub> Older image (20160408) is available for download [here](https://files.emlid.com/images/emlid-raspbian-20160408.img.xz). Please use only if necessary, otherwise use the image above. </sub>
 
 [MD5SUMS](https://files.emlid.com/images/MD5SUMS)
 
