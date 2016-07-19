@@ -1,7 +1,5 @@
 #### ArduPilot
 
-![apm](img/APM.png)
-
 You can run ArduPilot on Raspberry Pi 3 or 2 with Navio2. The autopilot's code works directly on Raspberry Pi. For ArduPilot to work properly please use the configured Raspbian distribution that we provide.  
 
 #### Installing ArduPilot
