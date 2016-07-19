@@ -1,28 +1,21 @@
-#### APM
+#### ArduPilot
 
 ![apm](img/APM.png)
 
-You can run APM (ArduPilot) on Raspberry Pi with Navio2. The autopilot's code works directly on Raspberry Pi using the APM's Linux HAL. For APM to work properly please use the configured Raspbian distribution that we provide.  
+You can run ArduPilot on Raspberry Pi 3 or 2 with Navio2. The autopilot's code works directly on Raspberry Pi. For ArduPilot to work properly please use the configured Raspbian distribution that we provide.  
 
-#### Installing APM
+#### Installing ArduPilot
 
-*Important*: There is no need to perform "Load Copter Firmware" step as APM is installed using deb package or binary on RPi with Navio. Also, frame type is selected by running the corresponding binary as described above.
+Log in to your Raspberry Pi using SSH and install the package. It includes all vehicles and is based on the most stable branch available. Currently these are:
 
-Log in to your Raspberry Pi using SSH or other method.
+* ArduPlane 3.6.0
+* ArduRover 3.0.1
+* ArduCopter 3.4-rc1
 
 ```bash
 pi@navio: ~ $ sudo apt-get update && sudo apt-get install apm-navio2
 ```
-
-<sub>
-You can also install an older [version](https://files.emlid.com/apm/apm-navio2_3.4-unstable.deb), if you wish.
-</sub>
-
-If you'd like to build the binary yourself please proceed to the [Building from sources](building-from-sources.md).
-
-#### Upgrade
-
-In case of an upgrade follow this [entry](ardupilot-upgrade.md) carefully! 
+Navio2 is supported in ArduPilot upstream and if you'd like to build the binary yourself please proceed to the [Building from sources](building-from-sources.md).
 
 #### Running APM
 
@@ -76,13 +69,11 @@ pi@navio: ~ $ sudo ArduCopter-quad -A udp:192.168.1.2:14550 -C /dev/ttyAMA0
 
 #### Autostarting APM on boot
 
-To automatically start APM on boot add the following (change -A and -C options to suit your setup) to /etc/rc.local file on your Raspberry Pi:
+To automatically start ArduPilot on boot add the following (change -A and -C options to suit your setup) to /etc/rc.local file on your Raspberry Pi:
 
 ```bash
-pi@navio: ~ $ sudo ArduCopter-quad -A udp:192.168.1.2:14550 -C /dev/ttyAMA0 > /home/pi/startup_log &
+pi@navio: ~ $ sudo nohup ArduCopter-quad -A udp:192.168.1.2:14550 -C /dev/ttyAMA0 > /home/pi/startup_log &
 ```
-
-The proper way would be to use systemd service, though. 
 
 #### Connecting to the GCS
 
@@ -92,7 +83,7 @@ A Windows only ground station. It is the most feature complete, though.
 
 **QGroundControl**
 
-A crossplatform ground station for Mavlink-based flight stacks (like Ardupilot). It works on every platform imaginable but in general lags a little behind Mission Planner.
+A crossplatform ground station for Mavlink-based flight stacks (like Ardupilot).
 
 **APM Planner**
 
