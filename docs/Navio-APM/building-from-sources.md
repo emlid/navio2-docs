@@ -1,12 +1,12 @@
-![](http://www.emlid.com/wp-content/uploads/2014/10/APM.png)
+![](http://www.emlid.com/wp-content/uploads/2014/10/ArduPilot.png)
 
 #### Where to get the code
 
-Navio2 is supported in the main [APM repository](https://github.com/ArduPilot/ardupilot).
+Navio2 is supported in the main [ArduPilot repository](https://github.com/ArduPilot/ardupilot).
 
 #### How to build
 
-APM binary for Navio2 can be built using two ways:
+ArduPilot binary for Navio2 can be built using two ways:
 
 1) Directly on your Raspberry Pi. Simpler, but slower. Build takes approximately 15 minutes.
 
@@ -36,15 +36,15 @@ export PATH=/opt/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/b
 
 If you would like to add the compiler to the PATH permanently edit /etc/environment.
 
-#### Building APM using make-based build system
+#### Building ArduPilot using make-based build system
 
 <sub> **Deprecated**. Please use [waf](building-from-sources/#building-apm-using-waf-build-system) to build the project. </sub>
 
-#### Building APM using Waf build system
+#### Building ArduPilot using Waf build system
 
-These steps are the same both for compiling APM directly on Raspberry Pi and cross-compiling.
+These steps are the same both for compiling ArduPilot directly on Raspberry Pi and cross-compiling.
 
-Download the APM code and update submodules:
+Download the ArduPilot code and update submodules:
 
 ```bash
 git clone https://github.com/ArduPilot/ardupilot.git
@@ -83,4 +83,4 @@ Where 192.168.1.3 is an IP address of your Raspberry Pi with Navio2.
 For further information read [ardupilot WAF Build](https://github.com/ArduPilot/ardupilot/blob/master/README-WAF.md).
 
 
-Instructions how to run APM on Raspberry Pi and to connect GCS to it are available in  [Installation and running section](installation-and-running.md).
+Instructions how to run ArduPilot on Raspberry Pi and to connect GCS to it are available in  [Installation and running section](installation-and-running.md).

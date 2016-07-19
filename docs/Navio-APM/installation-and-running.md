@@ -15,7 +15,7 @@ pi@navio: ~ $ sudo apt-get update && sudo apt-get install apm-navio2
 ```
 Navio2 is supported in ArduPilot upstream and if you'd like to build the binary yourself please proceed to the [Building from sources](building-from-sources.md).
 
-#### Running APM
+#### Running ArduPilot
 
 Supported vehicle types are:
 
@@ -30,12 +30,12 @@ Supported vehicle types are:
 * ArduCopter-heli
 * ArduCopter-single
 
-To run APM binary type the following in your RPi's console (change ArduCopter-quad to your vehicle type):
+To run ArduPilot binary type the following in your RPi's console (change ArduCopter-quad to your vehicle type):
 
 ```bash
 pi@navio: ~ $ sudo ArduCopter-quad -A udp:192.168.1.2:14550
 ```
-If you build APM from sources launch obtained binary file:
+If you build ArduPilot from sources launch obtained binary file:
 ```bash
 pi@navio: ~ $ sudo ./arducopter -A udp:192.168.1.2:14550
 ```
@@ -65,7 +65,7 @@ UDP and serial telemetry can be used simultaneously like this:
 pi@navio: ~ $ sudo ArduCopter-quad -A udp:192.168.1.2:14550 -C /dev/ttyAMA0
 ```
 
-#### Autostarting APM on boot
+#### Autostarting ArduPilot on boot
 
 To automatically start ArduPilot on boot add the following (change -A and -C options to suit your setup) to /etc/rc.local file on your Raspberry Pi:
 

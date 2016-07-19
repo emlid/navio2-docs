@@ -31,8 +31,8 @@ d. 5 Second Thread.
   This is a spare thread for future use, like the Audio Modem and others sensors.
 Threads are not guaranteed to work in their named Timed events but tests have shown that minor single digit msec offsets have been found in a very stressed cases.
 
-SoftOSD has been debuged fully and found with no memory leaks , not even in its libraries used.This makes it a safe to use software in Raspberry Pi environment. APM has not been tested with SoftOSD at that time but any conqurent use of those two softwares its is sure that will work.
-Offcourse in any case this doesnt mean that I take any responsibility of any damage might occure due to glitch of APM. SoftOSD does not perform any action in the sensos of NAVIO+ neither alters their nature , which means ...it just reads data.
+SoftOSD has been debuged fully and found with no memory leaks , not even in its libraries used.This makes it a safe to use software in Raspberry Pi environment. ArduPilot has not been tested with SoftOSD at that time but any conqurent use of those two softwares its is sure that will work.
+Offcourse in any case this doesnt mean that I take any responsibility of any damage might occure due to glitch of ArduPilot. SoftOSD does not perform any action in the sensos of NAVIO+ neither alters their nature , which means ...it just reads data.
 
 ### Installation
 ------------
@@ -94,7 +94,7 @@ Now we will use a trick to have Camera and Application "overlaid".
 
 The image is provided as is and can be used for Qt Development with full multimedia support.
 The framework has been build natively (no cross compile) and all the development is perfomed on the platform.
-Also the image has all the required applications for APM and video streaming like gstreamer 1.0 etc.
+Also the image has all the required applications for ArduPilot and video streaming like gstreamer 1.0 etc.
 
 ### V4L2 devices (USB etc)
     ----------------------

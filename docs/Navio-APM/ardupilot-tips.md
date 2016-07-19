@@ -40,7 +40,7 @@ We do ask to ***NOT SET AUXILIARY FUNCTION SWITCHES TO RC5..8***.
 
 #### Further configuration
 
-As other APM configuration procedures are very similar for most APM-running autopilot hardware, please use the APM documentation.
+As other ArduPilot configuration procedures are very similar for most APM-running autopilot hardware, please use the APM documentation.
 
 [Hardware configuration](http://ardupilot.org/copter/docs/configuring-hardware.html)
 

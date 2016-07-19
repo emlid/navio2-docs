@@ -161,7 +161,7 @@ Mission statement: "Expand support and add new devices."
 5. RTKLib integration for highly accurate GPS.
 6. Emlid REACH integration, similar to Windows Remote Arduino or as close to full IoT Intel Galileo (Intel Edison) support as possible (depends on how good Microsoft's support is in this area).
 7. Expand the Windows drone sample, possibly spinning-off a new autopilot (includes support for other vehicle types, e.g. planes and rovers).
-8. Experiment with Windows HAL for APM (requires a good Linux code bridge like Cygwin, but for IoT).
+8. Experiment with Windows HAL for ArduPilot (requires a good Linux code bridge like Cygwin, but for IoT).
 9. Expand samples for other (than drone) projects, e.g. general robotics, trackers and DIY solutions.
 
 
