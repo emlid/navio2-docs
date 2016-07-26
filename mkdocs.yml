@@ -26,6 +26,7 @@ pages:
   - 'PWM output' : 'Navio-dev/pwm-output.md'
   - 'RC input' : 'Navio-dev/rc-input.md'
   - 'ADC' : 'Navio-dev/adc.md'
+  - 'Changelogs': 'Navio-dev/changelogs.md'
 - Community projects:
   - 'Windows IoT': 'Community-projects/Windows-IoT.md'
   - 'SoftOSD': 'Community-projects/SoftOSD.md'
