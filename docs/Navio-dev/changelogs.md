@@ -17,3 +17,8 @@
 - 16 RC Input channels are supported
 - ADC channels work as expected
 
+##RCIO kernel module
+
+*0.6.1:*
+
+- fixed a potential alt/default PWM rate misconfiguration that could lead to problems on octo/octo-quads
