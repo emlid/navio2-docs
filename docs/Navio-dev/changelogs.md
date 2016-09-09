@@ -8,6 +8,13 @@
 
 ##Navio ArduPilot changelog
 
+*3.4-rc4:*
+
+- Miscellaneous EKF improvements
+- New thread per bus API
+- MS5611 can never block the main thread as all bus operations are executed on another thread using the new API
+- Guided_NoGPS flight mode added to allow simpler control in non-GPS environments
+
 *3.4-rc1:*
 
 - LSM9DS1 support added with correct orientation set as default
