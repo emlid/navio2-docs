@@ -21,16 +21,16 @@ You might be asked to install command line developer tools along the way.
 * Download [Freeglut binaries](http://files.transmissionzero.co.uk/software/development/GLUT/freeglut-MinGW.zip) and place 32-bit and 64-bit DLLs to Windows 32-bit (C:\Windows\SysWOW64) and 64-bit (C:\Windows\System32) folders
 
 ####On Mac
-Download [the archive with Navio utilities](https://github.com/emlid/Navio/archive/master.zip)
+Download [the archive with Navio utilities](https://github.com/emlid/Navio2/archive/master.zip)
 Extract the archive, enter the directory with 3DIMU utility and run it:
 
 ```bash
-cd Navio/Utilities/3DIMU
-python 3Dimu.py
+cd Navio2/Utilities/3DIMU
+sudo python 3Dimu.py
 ```
 
 ####On PC
-Download [the archive with Navio utilities](https://github.com/emlid/Navio/archive/master.zip)
+Download [the archive with Navio utilities](https://github.com/emlid/Navio2/archive/master.zip)
 Extract the archive, enter the directory with 3DIMU utility, open .py file with IDLE (Python GUI). Press F5 to run.
 
 #### On Raspberry Pi
