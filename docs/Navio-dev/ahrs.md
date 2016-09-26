@@ -15,20 +15,24 @@ You might be asked to install command line developer tools along the way.
 
 #### Preparing your PC
 
-Install OpenGL
-```bash
-sudo apt-get install python-opengl
-```
+* Install [Python](https://www.python.org/downloads/release/python-2712/)
+* Install [OpenGL](https://pypi.python.org/pypi/PyOpenGL/3.0.2)
+* Install [Pyserial](https://pypi.python.org/pypi/pyserial/2.7)
+* Download [Freeglut binaries](http://files.transmissionzero.co.uk/software/development/GLUT/freeglut-MinGW.zip) and place 32-bit and 64-bit DLLs to Windows 32-bit (C:\Windows\SysWOW64) and 64-bit (C:\Windows\System32) folders
 
-#### On PC\Mac
-
-Download [the archive with Navio utilities](https://github.com/emlid/Navio2/archive/master.zip)
+####On Mac
+Download [the archive with Navio utilities](https://github.com/emlid/Navio/archive/master.zip)
 Extract the archive, enter the directory with 3DIMU utility and run it:
 
 ```bash
-cd Navio2/Utilities/3DIMU
-sudo python 3Dimu.py
+cd Navio/Utilities/3DIMU
+python 3Dimu.py
 ```
+
+####On PC
+Download [the archive with Navio utilities](https://github.com/emlid/Navio/archive/master.zip)
+Extract the archive, enter the directory with 3DIMU utility, open .py file with IDLE (Python GUI). Press F5 to run.
+
 #### On Raspberry Pi
 
 Clone Navio repository using the following [instructions](navio-repository-cloning/).
