@@ -26,7 +26,7 @@ Extract the archive, enter the directory with 3DIMU utility and run it:
 
 ```bash
 cd Navio2/Utilities/3DIMU
-sudo python 3Dimu.py
+python 3Dimu.py
 ```
 
 ####On PC
