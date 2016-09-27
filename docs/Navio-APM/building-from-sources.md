@@ -80,7 +80,7 @@ rsync -avz ardupilot/build/navio2/bin/arducopter-quad pi@192.168.1.3:/home/pi/
 
 Where 192.168.1.3 is an IP address of your Raspberry Pi with Navio2.
 
-For further information read [ardupilot WAF Build](https://github.com/ArduPilot/ardupilot/blob/master/README-WAF.md).
+For further information read [ardupilot WAF Build](https://github.com/ArduPilot/ardupilot/blob/master/BUILD.md).
 
 
 Instructions how to run ArduPilot on Raspberry Pi and to connect GCS to it are available in  [Installation and running section](installation-and-running.md).
