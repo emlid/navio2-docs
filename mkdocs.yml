@@ -27,6 +27,7 @@ pages:
   - 'RC input' : 'Navio-dev/rc-input.md'
   - 'RCIO' : 'Navio-dev/rcio.md'
   - 'ADC' : 'Navio-dev/adc.md'
+  - 'ROS' : 'Navio-dev/ros.md'
   - 'Changelogs': 'Navio-dev/changelogs.md'
 - Community projects:
   - 'Windows IoT': 'Community-projects/Windows-IoT.md'
