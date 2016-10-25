@@ -1,25 +1,22 @@
 **ROS**
 
-Our Raspbian images comes with preinstalled ROS.
+Emlid Raspbian images comes with preinstalled ROS.
 
 #### What is ROS?
 
-It's an endeavour by hundreds of roboticists around the globe to make a developing of new robots easier.
-You can look it more thouroughly here[]()
-/* copy-paste why ros is so cool */
+Robot Operating System is an endeavour by thousends of roboticists around the globe to make a developing of new robots easier. ROS is open source and includes ton of useful tools and that is making developing process more efficient. The idea is that you don't have to redesign the wheel to make a car. Someone else has already done that, and they've probably done it better than you, so you can focus your energy on specific part you want to build.
+You can look more thouroughly on [ROS wiki](http://wiki.ros.org/) to get a better understanding of its concepts. 
 
 ### How to get your hands on?
 
 #### ROS setup
 
-ROS need a little setup. Namely this boils down to [sourcing](http://superuser.com/questions/176783/what-is-the-difference-between-executing-a-bash-script-and-sourcing-a-bash-scrip) a special script provided in /opt/ros/<distribution>
-
-Make bash execute a ROS setup on every login by appending the line below to the end of your ```bashrc``` like this
+ROS need a little setup. Namely this boils down to [sourcing](http://superuser.com/questions/176783/what-is-the-difference-between-executing-a-bash-script-and-sourcing-a-bash-scrip) a special script provided in /opt/:  
 
 ```
 pi@navio: ~ $ echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
 ```
-
+A command above will make bash execute a ROS setup on every login by appending the line to the end of your ```bashrc```.
 
 #### Introduction to tmux
 You'll need to ```ssh``` into your Raspberry Pi using several terminals simultenously. That's why we recommend using a *terminal multiplexer* like [tmux](https://tmux.github.io/).
