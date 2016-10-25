@@ -11,7 +11,7 @@ You can look more thouroughly on [ROS wiki](http://wiki.ros.org/) to get a bette
 
 #### ROS setup
 
-ROS need a little setup. Namely this boils down to [sourcing](http://superuser.com/questions/176783/what-is-the-difference-between-executing-a-bash-script-and-sourcing-a-bash-scrip) a special script provided in /opt/:  
+ROS need a little setup. Namely this boils down to [sourcing](http://superuser.com/questions/176783/what-is-the-difference-between-executing-a-bash-script-and-sourcing-a-bash-scrip) a special script provided in /opt/:
 
 ```
 pi@navio: ~ $ echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
@@ -20,24 +20,74 @@ A command above will make bash execute a ROS setup on every login by appending t
 
 #### Introduction to tmux
 You'll need to ```ssh``` into your Raspberry Pi using several terminals simultenously. That's why we recommend using a *terminal multiplexer* like [tmux](https://tmux.github.io/).
+For operating tmux while working with ROS you have to learn some basics. 
+Before splitting the screen we have to create a new session:
 
-Before proceding any further we recommend looking up a tmux tutorial like this [one](https://danielmiessler.com/study/tmux/#gs.jMNdIc8) to get a grasp of the tool.
+```no-highlight
+$ tmux new -s session-name
+```
 
+Sometimes there is a need to attach to an existing session
+
+```no-highlight
+$ tmux a-t session-name
+```
+
+To detach from session:
+```no-highlight
+$ tmux detach
+```
+To kill session
+```no-highlight
+$ tmux kill-session -t session-name
+```
+
+Inside sessions we have to operate and navigate somehow with a number of functions. For this Tmux has a *universal shortcut* that lets you quickly perform many tasks. 
+
+Shortcut activation by default:
+```no-highlight
+Ctrl+b
+```
+After activation of Ctrl+b you have a number of options.
+
+```no-highlight
+? - get help
+```
+```no-highlight
+$ - rename current session
+```
+```no-highlight
+% - split horizontally
+```
+```no-highlight
+" - split vertically
+```
+```no-highlight
+o - toggle between panes
+```
+```no-highlight
+x - kill the current pane
+```
+
+For further information please refer to this [tutorial](https://danielmiessler.com/study/tmux/#basics).
+
+
+#### Preparing terminal
 Create a tmux session called "ros"
 
-```
+```no-highlight
 pi@navio: ~ $ tmux new -s ros
 ```
 And split your window into 4 panes like this:
 
 ![4 panes](img/ros/4panes.png)
 
-Learn how to navigate between panes in an efficent manner using hotkeys.
+Practice to navigate between panes in an efficient manner using hotkeys.
 
 
 #### Running roscore
 
-Select top-left (doesn't matter which one, of course) one and run ```roscore```
+Select top-left (doesn't matter which one actually) one and run ```roscore```
 
 ```
 pi@navio: ~ $ roscore
