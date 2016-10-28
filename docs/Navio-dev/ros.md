@@ -1,95 +1,72 @@
 **ROS**
 
-Emlid Raspbian images comes with preinstalled ROS.
-
+Emlid Raspbian images comes with pre-installed ROS.
 ### Basic understanding
 
 #### What is ROS?
 
-Robot Operating System is a delightful endeavour of thousends of roboticists around the globe to make a developing of new robots easier. ROS is an open source and includes ton of useful tools and that is making developing process more efficient. The idea is that you don't have to redesign the wheel to make a car. Someone else has already done that, and they've probably done it better than you, so you can focus your energy on specific part you want to build.
+Robot Operating System is a delightful endeavor of thousands of roboticists around the globe to make a developing of new robots easier. ROS is an open source and includes ton of useful tools and that is making developing process more efficient. The idea is that you don't have to redesign the wheel to make a car. Someone else has already done that, and they've probably done it better than you, so you can focus your energy on specific part you want to build.
 
 #### Overview
 
 Here we will look at general scheme of ROS within Emlid Raspbian firmware. Firstly we will have a general concept of ROS system and then do everything step by step to get started promptly with some basic understanding. 
 
-Emlids image is now including preinstalled ROS, so all we have to do is to start it after little setup (we will cover this step [very soon](#ros-setup)). After [running ROS](#running-roscore) we will find ourselves at ROS Master.
-From this place we now are able to find Nodes and make them communicate to each other on you Raspberry Pi. For this moment we can imagine Node as an IMU-sensor for instance which gives us some data. Depending on node there might be different set and amount of sensors and devices drivers within one. 
+Emlid image is including pre-installed ROS, so all we have to do is to start it after little setup (we will cover this step [below](#ros-setup)). After [running ROS](#running-roscore) we will find ourselves at ROS Master, the place containing all services, kind of a meeting point for Nodes. 
+From this place we now are able to find Nodes and make them communicate to each other on you Raspberry Pi. For this moment we can imagine Node, for instance, as an IMU-sensor which gives us some data. There might be different set of drivers within one node. 
 
 ////SCHEME 1
 
 
-Now we are going just a little bit deeper. Nodes can find each other and share data within ROS Master. This data shared between nodes is called "Messages". Nodes can [buplish messages](#running-rostopic) to the topics  and may subscribe on topics to receive messages.
+Now we are going just a little bit deeper. Nodes can find each other and share data within ROS Master. This data shared between nodes is called "Messages". Nodes can [publish messages](#running-rostopic) to the topics  and may subscribe on topics to receive messages.
 
-Let's take into consideration that we are running ROS for ardupilot. For your convenience Emlid image contains [Mavros node](#running-mavros-node) preinstalled. This node provides a lot of sensor drivers, communication driver for [Ardupilot](#running-ardupilot) and proxy to [GCS](#running-a-gcs).
+Let's take into consideration that we are running ROS for ardupilot. For your convenience Emlid image contains [mavros node](#running-mavros-node) pre-installed. This node provides a lot of sensor drivers, communication driver for [ardupilot](#running-ardupilot) and proxy to [GCS](#running-a-gcs).
 
 ///SCHEME2
 
-To make things clear let's proceed to step-by-step ROS running instructions which will convert your general knowledge into practical skills helpful for getting started with ROS. 
-
-You can look more thouroughly on [ROS wiki](http://wiki.ros.org/) to get a better understanding of its concepts. 
-
+To make things clear let's proceed to step-by-step ROS running practical instructions which will help to perceive acquired knowledge. 
 
 
 ### How to get your hands on: step by step
 #### ROS setup
 
-ROS need a little setup before running. Namely this boils down to [sourcing](http://superuser.com/questions/176783/what-is-the-difference-between-executing-a-bash-script-and-sourcing-a-bash-scrip) a special script provided in /opt/:
+ROS needs a little setup before running. Namely, this boils down to [sourcing](http://superuser.com/questions/176783/what-is-the-difference-between-executing-a-bash-script-and-sourcing-a-bash-scrip) a special script provided in /opt/:
 
 ```
 pi@navio: ~ $ echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
 ```
-A command above will make bash execute a ROS setup on every login by appending the line to the end of your ```bashrc```.
+A command above will make bash execute a ROS setup on every log in by appending the line to the end of your ```bashrc```.
 
-Start watching video tutorial on <a href="https://asciinema.org/a/abkuvzfx8yg7aekcwow7udoq3?t=0" target="_blank">asciinema.org</a>.
+Start watching the tutorial on <a href="https://asciinema.org/a/1i915k6h2b0i9sf02mwom7qu8?t=0" target="_blank">asciinema.org</a>.
 
 #### Introduction to tmux
-You'll need to ```ssh``` into your Raspberry Pi using several terminals simultenously. That's why we recommend using a *terminal multiplexer* like [tmux](https://tmux.github.io/).
+You'll need to ```ssh``` into your Raspberry Pi using several terminals simulteneously. That's why we recommend using a *terminal multiplexer* like [tmux](https://tmux.github.io/).
 For operating tmux while working with ROS you have to learn some basics. 
-Before splitting the screen we have to create a new session:
 
-```no-highlight
-$ tmux new -s session-name
-```
+Before splitting the screen we have to create a new session  ``` $ tmux new -s session-name ```
 
 The following commands might be useful too:
 
+To attach to an existing session   ```  $ tmux a-t session-name ```
 
-To attach to an existing session:
+To detach from session   ``` $ tmux detach ```
 
-```no-highlight
-$ tmux a-t session-name
-```
+To kill session   ``` $ tmux kill-session -t session-name ```
 
-To detach from session:
-```no-highlight
-$ tmux detach
-```
-To kill session:
-```no-highlight
-$ tmux kill-session -t session-name
-```
+Inside sessions we have to operate and navigate somehow with a number of functions. For this Tmux has a *universal shortcuts* that lets you quickly perform many tasks.
 
-Inside sessions we have to operate and navigate somehow with a number of functions. For this Tmux has a *universal shortcut* that lets you quickly perform many tasks. 
+Useful shortcuts:
 
-Shortcut activation by default:
-```no-highlight
-Ctrl+b
-```
-After activation of Ctrl+b you have a number of options.
+``` Ctrl+b ``` + ``` ? ```  to show hot keys;
 
-```no-highlight
-? - get help
+``` Ctrl+b ``` + ``` $ ```  to rename current session;
 
-$ - rename current session
+``` Ctrl+b ``` + ``` % ```  to split horizontally;
 
-% - split horizontally
+``` Ctrl+b ``` + ``` " ```  to split vertically;
 
-" - split vertically
+``` Ctrl+b ``` + ``` o ```  to toggle between panes;
 
-o - toggle between panes
-
-x - kill the current pane
-```
+``` Ctrl+b ``` + ``` x ```  to kill the current pane.
 
 For further information please refer to this [tutorial](https://danielmiessler.com/study/tmux/#basics).
 
@@ -104,9 +81,9 @@ And split your window into 4 panes like this:
 
 ![4 panes](img/ros/4panes.png)
 
-We recommend you to take your time and practice to navigate between panes in an efficient manner using hotkeys.
+We recommend you to take your time and practice to navigate between panes in an efficient manner using hot keys.
 
-Continue <a href="https://asciinema.org/a/abkuvzfx8yg7aekcwow7udoq3?t=57" target="_blank">watching the tutorial</a> for this step.
+Continue <a href="https://asciinema.org/a/1i915k6h2b0i9sf02mwom7qu8?t=22" target="_blank">watching the tutorial</a> for this step.
 
 
 #### Running roscore
@@ -116,11 +93,11 @@ Now it's time to start ROS Master. Select top-left (doesn't matter which one act
 ```
 pi@navio: ~ $ roscore
 ```
-If you were sucessfull bash will show you the following and you'll see Master started on Raspberry Pi.
+If you were successfull bash will show you the following and you'll see Master started on Raspberry Pi.
 
 ![roscore](img/ros/roscore.png)
 
-Continue <a href="https://asciinema.org/a/abkuvzfx8yg7aekcwow7udoq3?t=2:20" target="_blank">watching the tutorial</a> for this step.
+Continue <a href="https://asciinema.org/a/1i915k6h2b0i9sf02mwom7qu8?t=59" target="_blank">watching the tutorial</a> for this step.
 
 ```roscore``` is a backbone of ROS. It's the first thing you should run when using ROS because it's vital for successful Node execution and making publisher-subscriber architecture.
 
@@ -149,7 +126,7 @@ In case you are making changes in ardupilot while it's working, you should then 
 pi@navio: ~ $ sudo systemctl restart ardupilot
 ```
 
-Continue <a href="https://asciinema.org/a/abkuvzfx8yg7aekcwow7udoq3?t=3:40" target="_blank">watching the tutorial</a> for this step.
+Continue <a href="https://asciinema.org/a/1i915k6h2b0i9sf02mwom7qu8?t=1:14" target="_blank">watching the tutorial</a> for this step.
 
 #### Running a GCS
 
@@ -180,7 +157,7 @@ Finally after everything's set you'll see something like this:
 
 ![mavros_node](img/ros/mavros_node.png)
 
-Continue <a href="https://asciinema.org/a/abkuvzfx8yg7aekcwow7udoq3?t=5:06" target="_blank">watching the tutorial</a> for this step.
+Continue <a href="https://asciinema.org/a/1i915k6h2b0i9sf02mwom7qu8?t=2:52" target="_blank">watching the tutorial</a> for this step.
 
 #### Running rostopic
 
@@ -202,6 +179,9 @@ pi@navio: ~ $ rostopic echo /mavros/imu/data
 
 After typing *rostopic echo /mavros/* you can press TAB to see the list of existing topics and check them to practice more.
 
-Continue <a href="https://asciinema.org/a/abkuvzfx8yg7aekcwow7udoq3?t=6:49" target="_blank">watching the tutorial</a> for this step.
+Continue <a href="https://asciinema.org/a/1i915k6h2b0i9sf02mwom7qu8?t=4:01" target="_blank">watching the tutorial</a> for this step.
+
+
+You always can look more thoroughly on [ROS wiki](http://wiki.ros.org/) to get a better understanding of its concepts. 
 
 
