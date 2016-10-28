@@ -5,25 +5,25 @@ Emlid Raspbian images comes with pre-installed ROS.
 
 #### What is ROS?
 
-Robot Operating System is a delightful endeavor of thousands of roboticists around the globe to make a developing of new robots easier. ROS is an open source and includes ton of useful tools and that is making developing process more efficient. The idea is that you don't have to redesign the wheel to make a car. Someone else has already done that, and they've probably done it better than you, so you can focus your energy on specific part you want to build.
+Robot Operating System is an endeavor of thousands of roboticists around the globe to make development of new robots easier. ROS is an open source project which includes a ton of useful tools and that makes developing process more efficient. The idea is that you don't have to redesign the wheel every time. Someone else has already done that, and they've probably done it better than you, so you can focus your energy on specific part you want to build.
 
 #### Overview
 
-Here we will look at general scheme of ROS within Emlid Raspbian firmware. Firstly we will have a general concept of ROS system and then do everything step by step to get started promptly with some basic understanding. 
+Here we will look at general scheme of ROS incorporated in Emlid Raspbian. Firstly we will give a general concept of ROS and then do everything step by step to get started promptly with some basic understanding.
 
-Emlid image is including pre-installed ROS, so all we have to do is to start it after little setup (we will cover this step [below](#ros-setup)). After [running ROS](#running-roscore) we will find ourselves at ROS Master, the place containing all services, kind of a meeting point for Nodes. 
-From this place we now are able to find Nodes and make them communicate to each other on you Raspberry Pi. For this moment we can imagine Node, for instance, as an IMU-sensor which gives us some data. There might be different set of drivers within one node. 
+Emlid image includes pre-installed ROS, so all we have to do is to start it after a little setup (we will cover this step [below](#ros-setup)). After [running ROS](#running-roscore) we will find ourselves at ROS Master, the place containing all services, kind of a meeting point for *nodes*.
+From this place we now are able to find *nodes* and make them communicate to each other on your Raspberry Pi. For this moment we can imagine a node, for instance, as an IMU-sensor which gives us some data. There might be different set of drivers within one node.
 
 ////SCHEME 1
 
 
-Now we are going just a little bit deeper. Nodes can find each other and share data within ROS Master. This data shared between nodes is called "Messages". Nodes can [publish messages](#running-rostopic) to the topics  and may subscribe on topics to receive messages.
+Now we are going just a little bit deeper. nodes can find each other and share data. This data shared between nodes is called "Messages". nodes can [publish messages](#running-rostopic) to the topics  and may subscribe to topics to receive messages.
 
-Let's take into consideration that we are running ROS for ardupilot. For your convenience Emlid image contains [mavros node](#running-mavros-node) pre-installed. This node provides a lot of sensor drivers, communication driver for [ardupilot](#running-ardupilot) and proxy to [GCS](#running-a-gcs).
+Let's take into consideration that we usually run ROS alongside ardupilot. For your convenience Emlid image contains [mavros node](#running-mavros-node) pre-installed. This node provides a lot of sensor drivers, communication driver for [ardupilot](#running-ardupilot) and proxy to [GCS](#running-a-gcs).
 
 ///SCHEME2
 
-To make things clear let's proceed to step-by-step ROS running practical instructions which will help to perceive acquired knowledge. 
+To make things clear let's proceed to step-by-step ROS running practical instructions which will help to perceive acquired knowledge.
 
 
 ### How to get your hands on: step by step
@@ -39,34 +39,34 @@ A command above will make bash execute a ROS setup on every log in by appending 
 Start watching the tutorial on <a href="https://asciinema.org/a/1i915k6h2b0i9sf02mwom7qu8?t=0" target="_blank">asciinema.org</a>.
 
 #### Introduction to tmux
-You'll need to ```ssh``` into your Raspberry Pi using several terminals simulteneously. That's why we recommend using a *terminal multiplexer* like [tmux](https://tmux.github.io/).
+You'll need to ```ssh``` into your Raspberry Pi from several terminals simulteneously. That's why we recommend using a *terminal multiplexer* like [tmux](https://tmux.github.io/).
 For operating tmux while working with ROS you have to learn some basics. 
 
 Before splitting the screen we have to create a new session  ``` $ tmux new -s session-name ```
 
 The following commands might be useful too:
 
-To attach to an existing session   ```  $ tmux a-t session-name ```
+To attach to an existing session   ```  $ tmux a -t session-name ```
 
 To detach from session   ``` $ tmux detach ```
 
 To kill session   ``` $ tmux kill-session -t session-name ```
 
-Inside sessions we have to operate and navigate somehow with a number of functions. For this Tmux has a *universal shortcuts* that lets you quickly perform many tasks.
+Inside sessions we have to operate and navigate somehow with a number of functions. For this *tmux* has a *universal shortcuts* that lets you quickly perform many tasks.
 
 Useful shortcuts:
 
-``` Ctrl+b ``` + ``` ? ```  to show hot keys;
+``` Ctrl+b ``` + ``` ? ```  to show hot keys
 
-``` Ctrl+b ``` + ``` $ ```  to rename current session;
+``` Ctrl+b ``` + ``` $ ```  to rename current session
 
-``` Ctrl+b ``` + ``` % ```  to split horizontally;
+``` Ctrl+b ``` + ``` % ```  to split horizontally
 
-``` Ctrl+b ``` + ``` " ```  to split vertically;
+``` Ctrl+b ``` + ``` " ```  to split vertically
 
-``` Ctrl+b ``` + ``` o ```  to toggle between panes;
+``` Ctrl+b ``` + ``` o ```  to toggle between panes
 
-``` Ctrl+b ``` + ``` x ```  to kill the current pane.
+``` Ctrl+b ``` + ``` x ```  to kill the current pane
 
 For further information please refer to this [tutorial](https://danielmiessler.com/study/tmux/#basics).
 
@@ -93,13 +93,13 @@ Now it's time to start ROS Master. Select top-left (doesn't matter which one act
 ```
 pi@navio: ~ $ roscore
 ```
-If you were successfull bash will show you the following and you'll see Master started on Raspberry Pi.
+If you are successful bash will show you the following and you'll see Master started on Raspberry Pi.
 
 ![roscore](img/ros/roscore.png)
 
 Continue <a href="https://asciinema.org/a/1i915k6h2b0i9sf02mwom7qu8?t=59" target="_blank">watching the tutorial</a> for this step.
 
-```roscore``` is a backbone of ROS. It's the first thing you should run when using ROS because it's vital for successful Node execution and making publisher-subscriber architecture.
+```roscore``` is a backbone of ROS. It's the first thing you should run when using ROS because it's vital for successful node execution and making publisher-subscriber architecture work.
 
 #### Running ardupilot
 
@@ -120,7 +120,7 @@ pi@navio: ~ $ sudo systemctl start ardupilot
 
 This command launches ArduPilot (one-shot. <sub>```sudo systemctl enable ardupilot```</sub> to make it persistent). You'll see your LED blinking.
 
-In case you are making changes in ardupilot while it's working, you should then restart:
+In case you make changes in ardupilot while it's working, you should then restart:
 
 ```
 pi@navio: ~ $ sudo systemctl restart ardupilot
@@ -130,11 +130,11 @@ Continue <a href="https://asciinema.org/a/1i915k6h2b0i9sf02mwom7qu8?t=1:14" targ
 
 #### Running a GCS
 
-[Launch](../Navio-APM/installation-and-running/#connecting-to-the-gcs) your GCS (Ground Control Station) of choice. On the next step you'll understand why. 
+[Launch](../Navio-APM/installation-and-running/#connecting-to-the-gcs) your GCS (Ground Control Station) of choice. On the next step you'll understand why.
 
 #### Running mavros node
 
-As we've already discussed within the ROS package we are working with an executable files called Nodes. Each ROS Node contains specific functions and uses a ROS client library to communicate with other nodes. For example, we will run [mavros](http://wiki.ros.org/mavros) which makes it easy to access sensor data from ArduPilot. Moreover according to the scheme from the overview, mavros will become a udp bridge to Ground Control Station we've launched on previous step.
+As we've already discussed within the ROS package we are working with an executable files called nodes. Each ROS node contains specific functions and uses a ROS client library to communicate with other nodes. For example, we will run [mavros](http://wiki.ros.org/mavros) which makes it easy to access sensor data from ArduPilot. Moreover according to the scheme from the overview, mavros will become a udp bridge to Ground Control Station we've launched on previous step.
 
 Run this command in a third pane:
 
@@ -147,7 +147,7 @@ Make sure that:
 - **14650**  is the same port we specified in ```/etc/default/ardupilot```
 - **192.168.1.189:14550** is IP and port of the computer where GCS is launched.
 
-If you feel enthusiastic in future you can create a custom [.launch](http://wiki.ros.org/mavros#Usage) file to launch it quicker. 
+If you feel enthusiastic in future you can create a custom [.launch](http://wiki.ros.org/mavros#Usage) file to launch it quicker.
 
 ```
 pi@navio: ~ $ roslaunch mavros custom.launch
@@ -182,6 +182,4 @@ After typing *rostopic echo /mavros/* you can press TAB to see the list of exist
 Continue <a href="https://asciinema.org/a/1i915k6h2b0i9sf02mwom7qu8?t=4:01" target="_blank">watching the tutorial</a> for this step.
 
 
-You always can look more thoroughly on [ROS wiki](http://wiki.ros.org/) to get a better understanding of its concepts. 
-
-
+You always can look more thoroughly on [ROS wiki](http://wiki.ros.org/) to get a better understanding of its concepts.
