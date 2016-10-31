@@ -33,4 +33,4 @@ Temperature(C): 34.3018652344 Pressure(millibar): 1030.46921925
 
 For further information see source code, which is mostly self-explanatory. As it takes some time for the sensor to perform conversion delays are added between calls to methods that start the conversion and read the resulting data. After reading both pressure and temperature values temperature compensation can be performed to get resulting pressure value.  
 
-More information about the chip is available in the [MS5611 datasheet](http://www.meas-spec.com/downloads/MS5611-01BA03.pdf).
+More information about the chip is available in the [MS5611 datasheet](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FMS5611-01BA03%7FB%7Fpdf%7FEnglish%7FENG_DS_MS5611-01BA03_B.pdf%7FCAT-BLPS0036).
