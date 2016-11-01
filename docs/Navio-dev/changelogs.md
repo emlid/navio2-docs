@@ -18,6 +18,11 @@
 
 ##Navio ArduPilot changelog
 
+*3.4.0*
+
+- First stable release with support for Navio 2
+- EKF2 is used by default
+
 *3.4-rc4:*
 
 - Miscellaneous EKF improvements
