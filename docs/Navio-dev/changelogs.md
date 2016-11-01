@@ -1,5 +1,15 @@
 ##Navio Raspbian changelog
 
+*2016-10-31:*
+
+- Added ROS and mavros support
+- Included navio-config utility
+- ArduPilot with ArduCopter 3.4.0 preinstalled by default
+- Added new start-up scripts for ArduPilot to ease launching on boot
+- Versioning in /etc/rpi-issue
+- Miscellaneous minor fixes
+
+
 *2016-07-18:*
 
 - Added driver for rtl8812-based Wi-Fi dongles
