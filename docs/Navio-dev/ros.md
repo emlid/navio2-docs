@@ -14,14 +14,14 @@ Here we will look at general scheme of ROS incorporated in Emlid Raspbian. First
 Emlid image includes pre-installed ROS, so all we have to do is to start it after a little setup (we will cover this step [below](#ros-setup)). After [running ROS](#running-roscore) we will find ourselves at ROS Master, the place containing all services, kind of a meeting point for *nodes*.
 From this place we now are able to find *nodes* and make them communicate to each other on your Raspberry Pi. For this moment we can imagine a node, for instance, as an IMU-sensor which gives us some data. There might be different set of drivers within one node.
 
-////SCHEME 1
+![Scheme 1](img/ros/scheme1.png)
 
 
 Now we are going just a little bit deeper. nodes can find each other and share data. This data shared between nodes is called "Messages". nodes can [publish messages](#running-rostopic) to the topics  and may subscribe to topics to receive messages.
 
 Let's take into consideration that we usually run ROS alongside ardupilot. For your convenience Emlid image contains [mavros node](#running-mavros-node) pre-installed. This node provides a lot of sensor drivers, communication driver for [ardupilot](#running-ardupilot) and proxy to [GCS](#running-a-gcs).
 
-///SCHEME2
+![Scheme 2](img/ros/scheme2.png)
 
 To make things clear let's proceed to step-by-step ROS running practical instructions which will help to perceive acquired knowledge.
 
