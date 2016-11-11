@@ -25,10 +25,6 @@ user@ubuntu: ~ $ sudo apt-get update
 user@ubuntu: ~ $ sudo apt-get install gstreamer1.0-tools gstreamer1.0-plugins-good gstreamer1.0-plugins-bad
 ```
 
-```bash
-user@ubuntu: ~ $ sudo apt-get install gstreamer1.0-tools gstreamer1.0-plugins-good gstreamer1.0-plugins-bad
-```
-
 #### Android
 
 Download and install QtGStreamerHUD:
