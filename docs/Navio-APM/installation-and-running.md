@@ -94,7 +94,7 @@ APM Planner listens on UDP port 14550, so it should catch telemetry from the dro
 
 MAVProxy is a console-oriented ground station software written in Python that can be used standalone or together with APM Planner. It’s well suited for advanced users and developers.
 
-To install MAVProxy use [Download and Installation](http://dronecode.github.io/MAVProxy/html/getting_started/download_and_installation.html) instructions.
+To install MAVProxy use [Download and Installation](http://ardupilot.github.io/MAVProxy/html/getting_started/download_and_installation.html) instructions.
 
 
 To run it specify the --master port, which can be serial, TCP or UDP. It also can perform data passthrough using --out option.
