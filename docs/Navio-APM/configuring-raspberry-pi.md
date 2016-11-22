@@ -27,6 +27,7 @@ Wi-Fi networks can be configured by editing the /boot/wpa_supplicant.conf file l
 network={
   ssid="yourssid"
   psk="yourpasskey"
+  key_mgmt=WPA-PSK
 }
 ```
 
@@ -61,6 +62,12 @@ nmap -sn 192.168.1.*
 You can use it with a GUI such as Zenmap or Fing application on your phone.
 
 Look for the hostname ”navio”.
+
+**wpa_passphrase on Linux**
+
+If you edit the file on a Raspberry or on a Linux computer you can populate **wpa_supplicant.conf** with a utility called **wpa_passphrase** like this:
+
+```sudo bash -c "wpa_passphrase SSID password >> /boot/wpa_supplicant.conf```
 
 #### Upgrading
 
