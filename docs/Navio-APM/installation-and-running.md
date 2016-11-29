@@ -15,6 +15,16 @@ pi@navio: ~ $ sudo apt-get update && sudo apt-get install apm-navio2
 ```
 Navio2 is supported in ArduPilot upstream and if you'd like to build the binary yourself please proceed to the [Building from sources](building-from-sources.md).
 
+#### Downloading stable binary
+
+Also you can download the latest stable binary files from ardupilot buildserver. To download arducopter-quad binary:
+
+```bash
+pi@navio: ~ $ wget http://firmware.eu.ardupilot.org/Copter/stable/navio2-quad/arducopter-quad
+pi@navio: ~ $ chmod +x arducopter-quad
+```
+In case of use another frame type, change tail of the link. For example `/navio2-hexa/arducopter-hexa`. Supported vehicle types are listed below.
+
 #### Running ArduPilot
 
 Supported vehicle types are:
@@ -35,7 +45,7 @@ To run ArduPilot binary type the following in your RPi's console (change ArduCop
 ```bash
 pi@navio: ~ $ sudo ArduCopter-quad -A udp:192.168.1.2:14550
 ```
-If you build ArduPilot from sources launch obtained binary file:
+If you downloaded binary or build ArduPilot from sources launch obtained binary file:
 ```bash
 pi@navio: ~ $ sudo ./arducopter -A udp:192.168.1.2:14550
 ```
