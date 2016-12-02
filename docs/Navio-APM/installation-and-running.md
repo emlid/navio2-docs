@@ -79,11 +79,50 @@ pi@navio: ~ $ sudo ArduCopter-quad -A udp:192.168.1.2:14550 -C /dev/ttyAMA0
 
 #### Autostarting ArduPilot on boot
 
-To automatically start ArduPilot on boot add the following (change -A and -C options to suit your setup) to /etc/rc.local file on your Raspberry Pi:
+To automatically start Ardupilot on boot you should make some preparations.  
+First you need to edit `ardupilot.service` file, where you choose APM for your vehicle type.
+
+Open the file:
 
 ```bash
-pi@navio: ~ $ sudo nohup ArduCopter-quad -A udp:192.168.1.2:14550 -C /dev/ttyAMA0 > /home/pi/startup_log &
+pi@navio: ~ $ sudo nano /lib/systemd/system/ardupilot.service 
 ```
+
+All lines marked '#' are comments and have no effect on ardupilot service. So you need to uncomment one line to launch quadcopter/plane or rover on Navio 2.  
+For example if you want `arducopter-octa` to autostart on boot, you should remove '#' symbol from corresponding line in ardupilot.service file:
+
+```bash
+### Uncomment one of these to launch quadcopter/plane or rover on Navio 2 #####
+
+#ExecStart=/opt/ardupilot/navio2/arducopter/bin/arducopter-quad $ARDUPILOT_OPTS
+#ExecStart=/opt/ardupilot/navio2/arducopter/bin/arducopter-hexa $ARDUPILOT_OPTS
+ExecStart=/opt/ardupilot/navio2/arducopter/bin/arducopter-octa $ARDUPILOT_OPTS
+#ExecStart=/opt/ardupilot/navio2/arducopter/bin/arducopter-single $ARDUPILOT_OPTS
+#ExecStart=/opt/ardupilot/navio2/arduplane/bin/arduplane $ARDUPILOT_OPTS
+```
+
+Next you should change options which ArduPilot will get on start up. Open `/etc/default/ardupilot` file:
+
+```bash
+pi@navio: ~ $ sudo nano /etc/default/ardupilot
+```
+
+Here you can specify ip of your ground station and another ArduPilot's standard arguments:
+
+```bash
+# Options to pass to ArduPilot
+ARDUPILOT_OPTS="-A udp:192.168.1.2:14550 -C /dev/ttyAMA0"
+```
+
+To reload configurations:
+
+```bash
+pi@navio: ~ $ sudo systemctl daemon-reload
+pi@navio: ~ $ sudo systemctl enable ardupilot
+pi@navio: ~ $ sudo systemctl restart ardupilot.service
+```
+
+
 
 #### Connecting to the GCS
 
