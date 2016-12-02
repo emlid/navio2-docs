@@ -21,17 +21,32 @@ Otherwise, you might get ```Compass Variance``` errors.
 
 #### Voltage and current sensing
 
-If you have original power module connected to Navio2, you can get battery voltage and curent readings from it. Simply press on the "Pixhawk Power Module 90A" in APM Planner to setup voltage and current measurement for APM:
+If you have original power module connected to Navio2, you can get battery voltage and curent readings from it.
+
 ![PM](img/navio2-power-module.png)
 
-After that you can check in full parameter list that:
+To setup voltage and current measurement for APM:
+
+- switch to Initial Setup tab in Mission Planner
+- navigate to Optional Hardware - Battery Monitor section
+- set Monitor, Sensor and APM Ver options as shown below
+
+![BatteryMonitor](img/mp-battery-monitor.png)
+
+Now you need restart both APM and connection between Mission Planner and APM:
+
+- use Ctrl-F shortcut to open Temp Screen
+- press 'reboot pixhawk' button
+- on main menu bar press 'DISCONNECT' and then 'CONNECT'
+
+When everything is done you should see voltage and current values on Flight Data screen. 
+
+Also you can check in full parameter list that:
 
 ```bash
 BATT_CURR_PIN 3
 BATT_VOLT_PIN 2
 ```
-
-You should see voltage and current values after a reboot.
 
 #### Auxiliary function switches
 
