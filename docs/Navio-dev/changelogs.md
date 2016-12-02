@@ -1,5 +1,10 @@
 ##Navio Raspbian changelog
 
+*2016-12-01:*
+
+- ArduPilot with ArduCopter 3.4.3-rc1 is the new default
+- Various minor ad-hoc fixes
+
 *2016-10-31:*
 
 - Added ROS and mavros support
@@ -17,6 +22,14 @@
 - Updated rcio-dkms to 0.6
 
 ##Navio ArduPilot changelog
+
+ArduCopter release cycle is used as a reference because it's the most popular and actively supported one
+
+*3.4.3-rc1*
+
+- LSM9DS1 magnetometer is the new default rendering 'Inconsistent Compasses' error obsolete
+- AK8963 is disabled by default
+- Power module definitions are updated to ease configuration
 
 *3.4.0*
 
