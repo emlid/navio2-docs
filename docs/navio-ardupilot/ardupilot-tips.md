@@ -27,15 +27,15 @@ If you have original power module connected to Navio2, you can get battery volta
 
 ![PM](img/navio2-power-module.png)
 
-To setup voltage and current measurement for APM:
+To setup voltage and current measurement for ArduPilot:
 
 - switch to Initial Setup tab in Mission Planner
 - navigate to Optional Hardware - Battery Monitor section
-- set Monitor, Sensor and APM Ver options as shown below
+- set Monitor, Sensor and ArduPilot Ver options as shown below
 
 ![BatteryMonitor](img/mp-battery-monitor.png)
 
-Now you need restart both APM and connection between Mission Planner and APM:
+Now you need restart both ArduPilot and connection between Mission Planner and ArduPilot:
 
 - use Ctrl-F shortcut to open Temp Screen
 - press 'reboot pixhawk' button
@@ -57,7 +57,7 @@ We do ask to ***NOT SET AUXILIARY FUNCTION SWITCHES TO RC5..8***.
 
 #### Further configuration
 
-As other ArduPilot configuration procedures are very similar for most APM-running autopilot hardware, please use the APM documentation.
+As other ArduPilot configuration procedures are very similar for most ArduPilot-running autopilot hardware, please use the ArduPilot documentation.
 
 [Hardware configuration](http://ardupilot.org/copter/docs/configuring-hardware.html)
 
