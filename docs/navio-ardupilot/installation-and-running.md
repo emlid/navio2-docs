@@ -154,7 +154,7 @@ To disable the autostart:
 pi@navio: ~ $ sudo systemctl disnable ardupilot.service
 ```
 
-You can check is ardupilot already nabled or not:
+You can check is ardupilot already enabled or not:
 ```bash
 pi@navio: ~ $ systemctl is-enabled ardupilot.service
 ```
