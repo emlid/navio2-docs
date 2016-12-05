@@ -36,8 +36,11 @@ In case of use another frame type, change tail of the link. For example `/navio2
 
 #### Systemd
 
-For launching ArduPilot we are using `systemd` init system which provide manager for all services and processes. 
-The main command used to introspect and control systemd is `systemctl`. Some of its uses are examining the system state and managing the system and services. 
+For launching ArduPilot we are using `systemd` init system which provides manager for all services and processes. 
+The main command used to control systemd is `systemctl`. Some of its uses are:
+- examining the system state 
+- managing the system and services. 
+
 See `man systemctl` for more details.
 
 #### Running ArduPilot
@@ -151,7 +154,7 @@ pi@navio: ~ $ sudo systemctl enable ardupilot.service
 
 To disable the autostart:
 ```bash
-pi@navio: ~ $ sudo systemctl disnable ardupilot.service
+pi@navio: ~ $ sudo systemctl disable ardupilot.service
 ```
 
 You can check is ardupilot already enabled or not:
