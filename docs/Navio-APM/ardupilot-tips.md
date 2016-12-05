@@ -1,12 +1,14 @@
 #### Second compass configuration
 
-Navio2 contains two 9DOF IMU - MPU9250 and LSM9DS1. The latter has lower offsets. In order to use it, you need to enable and calibrate it.
-Some of our users had better results with the second compass due to lower offsets. You can try it yourself by setting it as primary. 
-We're walking you through the steps requeired to perform the onboard compass calibration. It's a newer and a faster method to calibrate compasses. 
-Although, it's not fully supported by all GCS at the moment, due to an issue in Mission Planner we strongly suggest using this method. 
-Otherwise, you might get ```Compass Variance``` errors.
+Navio2 contains two 9DOF IMU - MPU9250 and LSM9DS1. The latter has lower offsets and set as primary.
+MPU9250 is disabled by default.
+
+We're walking you through the steps requeired to perform the onboard compass calibration. It's a newer and a faster method to calibrate compasses.
+Although, it's not fully supported by all GCS at the moment, due to an issue in Mission Planner we strongly suggest using this method. Otherwise, you might get Compass Variance errors.
 
 ## Onboard calibraton
+
+Navigate to Initial Setup - Mandatory Hardwawre - Compass
 
 - Tick **Use this compass** in **Compass #2** tab
 - Click on **Start** button in **Onboard Mag Calibration** tab
