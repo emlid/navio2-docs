@@ -5,15 +5,15 @@ repo_url: https://github.com/emlid/navio2-docs
 
 pages:
 - Introduction : 'index.md'
-- Navio2 with APM autopilot:
-  - 'Hardware setup': 'Navio-APM/hardware-setup.md'
-  - 'Typical setup schemes': 'Navio-APM/typical-setup-schemes.md'
-  - 'Raspberry Pi configuration': 'Navio-APM/configuring-raspberry-pi.md'
-  - 'APM installation and running' : 'Navio-APM/installation-and-running.md'
-  - 'Ardupilot upgrade' : 'Navio-APM/ardupilot-upgrade.md'
-  - 'Ardupilot configuration' : 'Navio-APM/ardupilot-tips.md'
-  - 'Video streaming': 'Navio-APM/video-streaming.md'
-  - 'Building APM from sources': 'Navio-APM/building-from-sources.md'
+- Navio2 with ArduPilot:
+  - 'Hardware setup': 'navio-ardupilot/hardware-setup.md'
+  - 'Typical setup schemes': 'navio-ardupilot/typical-setup-schemes.md'
+  - 'Raspberry Pi configuration': 'navio-ardupilot/configuring-raspberry-pi.md'
+  - 'ArduPilot installation and running' : 'navio-ardupilot/installation-and-running.md'
+  - 'Ardupilot upgrade' : 'navio-ardupilot/ardupilot-upgrade.md'
+  - 'Ardupilot configuration' : 'navio-ardupilot/ardupilot-tips.md'
+  - 'Video streaming': 'navio-ardupilot/video-streaming.md'
+  - 'Building ArduPilot from sources': 'navio-ardupilot/building-from-sources.md'
 - Navio2 for developers:
   - 'Navio2 examples setup': 'Navio-dev/navio-repository-cloning.md'
   - 'Pinout': 'Navio-dev/pinout.md'

@@ -103,7 +103,7 @@ Continue <a href="https://asciinema.org/a/1i915k6h2b0i9sf02mwom7qu8?t=59" target
 
 #### Running ardupilot
 
-Let's run ArduPilot in another pane as stated in [here](../Navio-APM/installation-and-running/#autostarting-ardupilot-on-boot) pointing telemetry to **127.0.0.1:14650**
+Let's run ArduPilot in another pane as stated in [here](../navio-ardupilot/installation-and-running/#autostarting-ardupilot-on-boot) pointing telemetry to **127.0.0.1:14650**
 by modifying ```/etc/default/ardupilot```:
 
 ```no-highlight
@@ -130,7 +130,7 @@ Continue <a href="https://asciinema.org/a/1i915k6h2b0i9sf02mwom7qu8?t=1:14" targ
 
 #### Running a GCS
 
-[Launch](../Navio-APM/installation-and-running/#connecting-to-the-gcs) your GCS (Ground Control Station) of choice. On the next step you'll understand why.
+[Launch](../navio-ardupilot/installation-and-running/#connecting-to-the-gcs) your GCS (Ground Control Station) of choice. On the next step you'll understand why.
 
 #### Running mavros node
 
