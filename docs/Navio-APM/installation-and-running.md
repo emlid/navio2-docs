@@ -52,16 +52,18 @@ pi@navio: ~ $ sudo ./arducopter -A udp:192.168.1.2:14550
 
 Where 192.168.1.2 is the IP address of the device with the Ground Control Station - your laptop, smartphone etc.
 
-Arguments specify serial ports (TCP or UDP can be used instead of serial ports) :
+Mapping between switches and serial ports (TCP or UDP can be used instead of serial ports):
 
-* -A is for primary telemetry
-* -B is for external GPS
-* -C is for secondary telemetry (it can be used without primary telemetry)
-* -E is for secondary external GPS
+* -A - serial 0 (always console; default baud rate 115200)  
+* -C - serial 1 (normally telemetry 1; default baud rate 57600)  
+* -D - serial 2 (normally telemetry 2; default baud rate 57600)  
+* -B - serial 3 (normally 1st GPS; default baud rate 38400)  
+* -E - serial 4 (normally 2st GPS; default baud rate 38400)  
+* -F - serial 5  
 
-When using UART for telemetry please note that default baud rates are:
-115200 for primary (-A)
-57600 for secondary (-C)
+Additionally take a look at [list of serial parameters](http://ardupilot.org/copter/docs/parameters.html?highlight=serial#serial-parameters) for Mission Planner.
+
+When using UART for telemetry please keep in mind that serial ports have default baud rates.   
 3DR Radios are configured for 57600 by default, so te simplest way to connect over them is to run with -C option.
 If you would like to transfer telemetry over the UART port on Navio you can specify it like this:
 
