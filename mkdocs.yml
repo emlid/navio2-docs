@@ -25,6 +25,7 @@ pages:
   - 'RGB LED' : 'Navio-dev/rgb-led.md'
   - 'PWM output' : 'Navio-dev/pwm-output.md'
   - 'RC input' : 'Navio-dev/rc-input.md'
+  - 'RCIO' : 'Navio-dev/rcio.md'
   - 'ADC' : 'Navio-dev/adc.md'
   - 'Changelogs': 'Navio-dev/changelogs.md'
 - Community projects:
