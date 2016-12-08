@@ -167,6 +167,10 @@ To learn sub-commands for ``rostopic`` you can use help option:
 ```
 $ rostopic -h
 ```
+If you don't use GCS, but want to get data from rostopic then you need to enter the following command for setting the stream rate:
+```
+pi@navio: ~ $ rosservice call /mavros/set_stream_rate 0 10 1
+```
 
 For mavros we will run *echo* command in the last pane to show the data published on topic.
 
