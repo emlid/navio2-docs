@@ -15,7 +15,7 @@ Navio2 is supported in ArduPilot upstream and if you'd like to build the binary 
 
 #### Downloading stable binary
 
-Also you can download the latest stable binary files from ardupilot buildserver. To download arducopter-quad binary:
+Also you can download the latest stable binary files from ArduPilot buildserver. To download arducopter-quad binary:
 
 ```bash
 pi@navio: ~ $ wget http://firmware.eu.ardupilot.org/Copter/stable/navio2-quad/arducopter-quad
@@ -54,7 +54,7 @@ Open the file:
 pi@navio: ~ $ sudo nano /lib/systemd/system/ardupilot.service 
 ```
 
-All lines marked '#' are comments and have no effect on ardupilot service. So you need to uncomment one line to launch quadcopter/plane or rover on Navio 2.  
+All lines marked '#' are comments and have no effect on ArduPilot service. So you need to uncomment one line to launch quadcopter/plane or rover on Navio 2.  
 For example if you want to run `arducopter-octa`, you should remove '#' symbol from corresponding line in ardupilot.service file:
 
 ```bash
@@ -157,7 +157,7 @@ To disable the autostart:
 pi@navio: ~ $ sudo systemctl disable ardupilot.service
 ```
 
-You can check is ardupilot already enabled or not:
+You can check is ArduPilot already enabled or not:
 ```bash
 pi@navio: ~ $ systemctl is-enabled ardupilot.service
 ```
