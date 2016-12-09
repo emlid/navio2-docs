@@ -45,8 +45,8 @@ See `man systemctl` for more details.
 
 #### Running ArduPilot
 
-If you run Ardupilot for the first time you should make some preparations.  
-First you need to edit `ardupilot.service` file, where you choose APM for your vehicle type.
+If you run ArduPilot for the first time you should make some preparations.  
+First you need to edit `ardupilot.service` file, where you choose ArduPilot for your vehicle type.
 
 Open the file:
 
@@ -175,7 +175,7 @@ A crossplatform ground station for Mavlink-based flight stacks (like Ardupilot).
 
 **APM Planner**
 
-APM Planner is a ground station software for APM. It can be downloaded from the
+APM Planner is a ground station software for ArduPilot. It can be downloaded from the
 [ardupilot.com](http://ardupilot.com/downloads/?category=35)
 
 APM Planner listens on UDP port 14550, so it should catch telemetry from the drone automatically.
