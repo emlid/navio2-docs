@@ -29,7 +29,15 @@ A0: 4.7980V A1: 0.1040V A2: 0.0100V A3: 0.0200V A4: 0.0080V A5: 0.0300V
 A0: 4.7960V A1: 0.0900V A2: 0.0220V A3: 0.0080V A4: 0.0300V A5: 0.0140V 
 A0: 4.7960V A1: 0.0860V A2: 0.0100V A3: 0.0220V A4: 0.0080V A5: 0.0320V
 ```
+Mapping between A0 - A5 and ADC:  
 
-Here A0 - board voltage(shows 5V), A1 - servo rail voltage, A2 - power module voltage, A3 - power module current, A4 - ADC3, A5 - ADC2.
+* A0 - board voltage (shows 5V)  
+* A1 - servo rail voltage  
+* A2 - power module voltage (ADC0, POWER port)  
+* A3 - power module current (ADC1, POWER port)  
+* A4 - ADC2  (ADC port)  
+* A5 - ADC3  (ADC port)
+
+Numbers of A0 - A5 channels correspond to ArduPilot's ADC channels.
 
 For further information see source code. Pay attention to ```adc.init()``` and ```adc.read()``` functions. ```adc.init()``` function initialize 6 ADC channels. After that it's possible to read value of channels 0-5 with ```adc.read()``` function. It takes channel number as an argument. 
