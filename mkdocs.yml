@@ -28,6 +28,7 @@ pages:
   - 'RCIO' : 'Navio-dev/rcio.md'
   - 'ADC' : 'Navio-dev/adc.md'
   - 'ROS' : 'Navio-dev/ros.md'
+  - 'Wi-Fi Broadcast' : 'Navio-dev/wbc.md'
   - 'Changelogs': 'Navio-dev/changelogs.md'
 - Community projects:
   - 'Windows IoT': 'Community-projects/Windows-IoT.md'
