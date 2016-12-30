@@ -1,5 +1,11 @@
 ##Navio Raspbian changelog
 
+*2016-12-29:*
+
+- ArduPilot with ArduCopter 3.4.4-rc1 is the new default
+- Wi-Fi broadcast support
+- Misc minor bugfixes
+
 *2016-12-01:*
 
 - ArduPilot with ArduCopter 3.4.3-rc1 is the new default
@@ -24,6 +30,10 @@
 ##Navio ArduPilot changelog
 
 ArduCopter release cycle is used as a reference because it's the most popular and actively supported one
+
+*3.4.4-rc1*
+
+- Miscalleneous EKF fixes
 
 *3.4.3-rc1*
 
