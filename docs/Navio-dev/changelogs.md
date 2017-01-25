@@ -1,5 +1,9 @@
 ##Navio Raspbian changelog
 
+*2017-01-19:*
+
+- fixed /boot/wpa_supplicant.conf issue that made it dissapear after the first boot
+
 *2016-12-29:*
 
 - ArduPilot with ArduCopter 3.4.4-rc1 is the new default
@@ -30,6 +34,10 @@
 ##Navio ArduPilot changelog
 
 ArduCopter release cycle is used as a reference because it's the most popular and actively supported one
+
+*3.4.4*
+
+- Minor EKF updates
 
 *3.4.4-rc1*
 
