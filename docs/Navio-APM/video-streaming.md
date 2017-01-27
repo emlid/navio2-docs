@@ -27,16 +27,20 @@ user@ubuntu: ~ $ sudo apt-get install gstreamer1.0-tools gstreamer1.0-plugins-go
 
 #### Android
 
-Download and install QtGStreamerHUD:
-[QtGStreamerHUD.apk](https://files.emlid.com/QtGStreamerHUD.apk). Find out your IP address in the Preferences. You'll need it in order to connect to the phone from your RPi2. Please ensure Unknown sources is enabled in settings before installing. After completing the installation , hit the gears icon on the top right and set the pipeline to "udpscrc port=9000 buffer-size=600....." the second option in the pipeline dropdown menu.
+* Download and install [QGroundControl](https://play.google.com/store/apps/details?id=org.mavlink.qgroundcontrol) for Android.
 
-Use our [our](http://docs.emlid.com/Navio-APM/installation-and-running/) tutorial to run APM using the IP you just found out.
+* Find IP address of your device in preferences. You'll need it in order to connect to the phone from your RPi.
+
+* Use [our tutorial](http://docs.emlid.com/Navio-APM/installation-and-running/) to run ArduPilot using the IP you just found out.
+
+* Run QGroundControl and it will automatically detect your vehicle.
+
+* [Launch](#launching) video streaming on your Raspberry and the pictute will appear in left bottom corner of application screen. Tap it to run fullscreen mode.
+
+*Note: default port for video in QGC application is 5600*
 
 Here's the app in action
-
-![selfie](img/gstreamer-selfie.jpg)
-
-Unfortunately, the cable length was not enough to make a selfie but at least we'd tried.
+![capture](img/qgc-app-video.jpg)
 
 #### Mac OS X
 
