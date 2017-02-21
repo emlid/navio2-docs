@@ -72,6 +72,10 @@ ArduCopter release cycle is used as a reference because it's the most popular an
 
 ##RCIO kernel module
 
+*0.6.4:*
+
+- fixed erratic PWM output on first 8 channels
+
 *0.6.1:*
 
 - fixed a potential alt/default PWM rate misconfiguration that could lead to problems on octo/octo-quads
