@@ -4,8 +4,6 @@ Navio2 requires a preconfigured Raspbian to run. We provide a unified SD card im
 
 [Emlid Raspbian Image](https://files.emlid.com/images/emlid-raspbian-20160718.img.xz), [(md5)](https://files.emlid.com/images/MD5SUMS)
 
-[Emlid Raspbian Beta Image with ROS and WBC support](https://files.emlid.com/images/emlid-raspbian-20170119.img.xz), [(md5)](https://files.emlid.com/images/MD5SUMS)
-
 #### Writing image to SD card
 
 * Get the latest Emlid Raspbian Image.
