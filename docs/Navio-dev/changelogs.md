@@ -70,6 +70,12 @@ ArduCopter release cycle is used as a reference because it's the most popular an
 - 16 RC Input channels are supported
 - ADC channels work as expected
 
+#ardupilot.service
+
+*0.9.0*
+
+- Include all supported frames
+
 ##RCIO kernel module
 
 *0.6.4:*
