@@ -33,7 +33,7 @@
 
 ##Navio ArduPilot changelog
 
-ArduCopter release cycle is used as a reference because it's the most popular and actively supported one
+#ArduCopter
 
 *3.4.4*
 
