@@ -1,5 +1,34 @@
 ##Navio Raspbian changelog
 
+*2017-03-11:*
+
+- fix Beta v4's upgrade issue:
+
+This happened due to a fact that some of the packages are implicitely dependent on libraspberrypi0
+
+- make Emlid distribution fully compliant with official Raspbian
+
+This means that all packages that depend on libraspberrypi0 and raspberrypi-bootloader will work as expected.
+For example ```sudo apt-get install python-picamera``` will work
+
+- add python3, python3-pip, mavproxy, droneapi, tmux
+- emlitool: 0.8.4
+
+- ```apt-mark hold  ros-indigo-mavros``` to discourage updates.
+
+Indigo depends on 0.17.x versions of mavros which doesn't handle properly some Boost error handling. Hence some monkey patching is needed.
+
+- fix rcio-dkms updates:
+
+rcio.dtbo could get not regenerated for newer kernels. The latter is now part of ```raspberrypi-kernel-emlid``` package.
+
+- update ArduPilot-related stuff:
+    Arducopter: 3.4.5
+    ArduPlane: 3.7.1
+    APMrover2: 3.1.0
+    ardupilot.service: 0.9.0
+
+
 *2017-01-19:*
 
 - fixed /boot/wpa_supplicant.conf issue that made it dissapear after the first boot
