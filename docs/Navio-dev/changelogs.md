@@ -85,3 +85,9 @@
 *0.6.1:*
 
 - fixed a potential alt/default PWM rate misconfiguration that could lead to problems on octo/octo-quads
+
+## emlitool
+
+*0.8.4*
+
+- Initial release with board information and sensor testing one-click utility
