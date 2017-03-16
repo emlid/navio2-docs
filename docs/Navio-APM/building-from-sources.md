@@ -51,6 +51,17 @@ git clone https://github.com/ArduPilot/ardupilot.git
 cd ardupilot
 git submodule update --init
 ```  
+
+Checkout to a specific tag in order not to fly off master.
+<sub> `git tag` to get a list of tags </sub>
+
+For example, to build a copter binary:
+```bash
+git checkout ArduCopter-stable
+or
+git checkout ArduCopter-beta
+```
+
 Note that Waf should always be called from the ardupilot's root directory.
 
 To keep access to Waf convenient, use the following alias from the root ardupilot directory:  
@@ -62,15 +73,11 @@ Differently from the make-based build, with Waf there's a configure step to choo
 waf configure --board=navio2
 ```
 
-Now you can build arducopter. For quadcopter use the following command:
+Now you can build arducopter. For a copter use the following command:
 ```bash
-waf --targets bin/arducopter-quad
+waf copter
 ```  
-To build for other frame types replace quad with one of the following options:
-```bash
-coax heli hexa octa octa-quad single tri y6
-```
-In the end of compilation binary file with the name ```arducopter-quad``` will be placed in ```ardupilot/build/navio2/bin/``` directory.
+In the end of compilation binaries with the name like ```arducopter-quad``` will be placed in ```ardupilot/build/navio2/bin/``` directory.
 
 If you're using cross-compiler transfer the binary to your Raspberry Pi:
 
