@@ -23,7 +23,7 @@ pages:
   - 'Examples setup': 'common/navio-dev/navio-repository-cloning.md'
   - '9DOF IMU' : 'common/navio-dev/imu-mpu9250_lsm9ds1.md'
   - 'AHRS' : 'common/navio-dev/ahrs.md'
-  - 'Barometer' : 'common/navio-dev/barometer-ms5611.md'
+  - 'Barometer' : 'common/navio-dev/barometer.md'
   - 'GPS' : 'common/navio-dev/gps-ublox.md'
   - 'GPS via u-center' : 'common/navio-dev/gps-ublox-ucenter.md'
   - 'RGB LED' : 'common/navio-dev/rgb-led.md'
