@@ -9,10 +9,10 @@ pages:
 - Raspberry Pi configuration: 'common/ardupilot/configuring-raspberry-pi.md'
 - ArduPilot:
   - 'Typical setup schemes': 'navio2/ardupilot/typical-setup-schemes.md'
-  - 'ArduPilot installation and running' : 'common/ardupilot/installation-and-running.md'
-  - 'Ardupilot configuration' : 'navio2/ardupilot/ardupilot-tips.md'
-  - 'Ardupilot upgrade' : 'common/ardupilot/ardupilot-upgrade.md'
-  - 'Building ArduPilot from sources': 'common/ardupilot/building-from-sources.md'
+  - 'Installation and running' : 'common/ardupilot/installation-and-running.md'
+  - 'Configuration' : 'navio2/ardupilot/ardupilot-tips.md'
+  - 'Upgrading' : 'common/ardupilot/ardupilot-upgrade.md'
+  - 'Building from sources': 'common/ardupilot/building-from-sources.md'
 - ROS : 'common/dev/ros.md'
 - Navio2 for developers:
   - 'Pinout': 'navio2/dev/pinout.md'
