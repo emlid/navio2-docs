@@ -10,8 +10,8 @@ pages:
 - ArduPilot:
   - 'Typical setup schemes': 'ardupilot/typical-setup-schemes.md'
   - 'Installation and running' : 'common/ardupilot/installation-and-running.md'
-  - 'Configuration' : 'ardupilot/ardupilot-tips.md'
-  - 'Upgrading' : 'common/ardupilot/ardupilot-upgrade.md'
+  - 'Configuration' : 'ardupilot/tips.md'
+  - 'Upgrading' : 'common/ardupilot/upgrade.md'
   - 'Building from sources': 'common/ardupilot/building-from-sources.md'
 - ROS : 'common/dev/ros.md'
 - Navio2 for developers:
