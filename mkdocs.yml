@@ -1,7 +1,31 @@
 site_name: Navio2 docs
-theme_dir: mkdocs-material/material
+theme_dir: docstheme/material
 site_favicon: favicon.ico
 repo_url: https://github.com/emlid/navio2-docs
+
+extra:
+  palette:
+    primary: 'light blue'
+    accent: 'light blue'
+  logo: 'img/logo.png'
+  social:
+    - type: 'github'
+      link: 'https://github.com/emlid'
+    - type: 'twitter'
+      link: 'https://twitter.com/emlidtech'
+    - type: 'facebook'
+      link: 'https://facebook.com/emlidtech'
+  google_analytics:
+    - 'UA-49508097-6'
+    - 'auto'
+
+markdown_extensions:
+ - markdown.extensions.admonition
+ - markdown.extensions.codehilite(guess_lang=false)
+ - markdown.extensions.def_list
+ - markdown.extensions.footnotes
+ - markdown.extensions.meta
+ - markdown.extensions.toc(permalink=true)
 
 pages:
 - Introduction : 'index.md'
