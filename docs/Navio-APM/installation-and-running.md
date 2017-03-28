@@ -11,6 +11,7 @@ Log in to your Raspberry Pi using SSH and install the package. It includes all v
 * ArduCopter 3.4-rc1
 
 ```bash
+pi@navio: ~ wget -qO - https://files.emlid.com/emlid-autopilot-gpg.key | sudo apt-key add -
 pi@navio: ~ $ sudo apt-get update && sudo apt-get install apm-navio2
 ```
 Navio2 is supported in ArduPilot upstream and if you'd like to build the binary yourself please proceed to the [Building from sources](building-from-sources.md).
