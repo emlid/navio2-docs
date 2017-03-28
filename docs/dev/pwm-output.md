@@ -1,5 +1,4 @@
-**PWM output**
-
+## PWM output
 
 PWM 0-13 channels are available on 2.54mm header pins numbered 1-14 accordingly. Servos can be controlled by setting the correct frequency (50hz is a common frequency) and duty cycle corresponding to the length of a pulse (usually between 1 and 2 milliseconds).
 
@@ -7,7 +6,7 @@ To try to control servo connect the servo to the Navio’s output channel number
 
 If you haven't already done that, download Navio2 drivers and examples code [here](navio-repository-cloning/).
 
-***C++***
+### C++
 
 Move to the folder with the source code, compile and run the example
 
@@ -17,7 +16,7 @@ make
 sudo ./Servo
 ```
 
-***Python***
+### Python
 
 Move to the folder with the code and run the example
 

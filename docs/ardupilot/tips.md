@@ -1,9 +1,11 @@
-#### Auxiliary function switches
+### Auxiliary function switches
 
 Auxiliary function switches on channels 5-8 are still not supported and could lead to erroneous PWM generation on motors' channels.
-We do ask to ***NOT SET AUXILIARY FUNCTION SWITCHES TO RC5..8***.
 
-#### Second compass configuration
+!!! danger " "
+    We do ask to NOT SET AUXILIARY FUNCTION SWITCHES TO RC5..8!
+
+### Second compass configuration
 
 Navio2 contains two compasses - AK8963 and LSM9DS1. The latter has lower offsets and set as primary.
 AK8963 is disabled by default.  
@@ -25,7 +27,7 @@ Navigate to Initial Setup - Mandatory Hardwawre - Compass
 - Swith to another view and get back to **Compass Calibration**
 - Verify that offsets that have been calculated in the previous steps have been saved
 
-#### Voltage and current sensing
+### Voltage and current sensing
 
 If you have original power module connected to Navio2, you can get battery voltage and curent readings from it.
 
@@ -53,7 +55,7 @@ Also you can check in full parameter list that:
 BATT_CURR_PIN 3
 BATT_VOLT_PIN 2
 ```
-#### Further configuration
+### Further configuration
 
 As other ArduPilot configuration procedures are very similar for most ArduPilot-running autopilot hardware, please use the ArduPilot documentation.
 

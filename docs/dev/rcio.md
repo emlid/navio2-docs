@@ -1,11 +1,11 @@
-#### SYSFS
+### SYSFS
 
 On Navio2 PWM, ADC, SBUS and PPM are integrated in Linux sysfs allowing for easy access from any programming language. 
 Sysfs is a virtual file system that exports info about kernel subsystem and hardware devices. 
 
 For instance, sysfs provides easy access to attributes of Navio's PWM (`/sys/class/pwm/pwmchip0/`) or RC input structures (`/sys/kernel/rcio/rcin/`).
 
-#### RCIO status
+### RCIO status
 
 If you face problem with PWM generating or RC input decoding check the status of Navio's onboard RCIO.
 
