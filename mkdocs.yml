@@ -1,5 +1,5 @@
 site_name: Navio2 docs
-theme_dir: docstheme
+theme_dir: mkdocs-material/material
 site_favicon: favicon.ico
 repo_url: https://github.com/emlid/navio2-docs
 

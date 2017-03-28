@@ -1,6 +1,6 @@
-[submodule "docstheme"]
-	path = docstheme
-	url = https://github.com/emlid/docstheme.git
 [submodule "docs/common"]
 	path = docs/common
 	url = git@github.com:emlid/navio-docs-common.git
+[submodule "mkdocs-material"]
+	path = mkdocs-material
+	url = https://github.com/squidfunk/mkdocs-material.git
