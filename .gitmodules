@@ -3,4 +3,4 @@
 	url = git@github.com:emlid/navio-docs-common.git
 [submodule "docstheme"]
 	path = docstheme
-	url = https://github.com/squidfunk/mkdocs-material.git
+	url = https://github.com/emlid/docstheme.git
