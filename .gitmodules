@@ -2,7 +2,3 @@
 	path = docstheme
 	url = https://github.com/emlid/docstheme.git
     branch = master
-[submodule "docs/common"]
-	path = docs/common
-	url = https://github.com/emlid/navio-docs-common.git
-    branch = master
