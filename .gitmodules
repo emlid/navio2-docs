@@ -1,4 +1,0 @@
-[submodule "docstheme"]
-	path = docstheme
-	url = https://github.com/emlid/docstheme.git
-    branch = master
