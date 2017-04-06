@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:emlid/docstheme.git
+	branch = master
+	commit = 2b7bb3ab8e1173ea5ac6f4c92ee29a5280d1c3d1
+	parent = 6361937ebe35f22ca6661b739f97487245334b3e
+	cmdver = 0.3.1
