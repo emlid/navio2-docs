@@ -25,6 +25,9 @@ python AccelGyroMag.py -i [sensor name]
 ```
 Argument [sensor name] allows you to choose inertial measurement unit: mpu is MPU9250, lsm is LSM9DS1.
 
+!!! tip
+    LSM9DS1 driver is currently not implemented. Use the C++ counterpart
+
 You should immediately see 9 values, updated in real time. Try to move the device around and see them change. They include Accelerometer, Gyroscope and Magnetometer data, three axis each.  
 ```bash
 Selected: MPU9250

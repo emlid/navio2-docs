@@ -2,9 +2,8 @@
 
 We use a conventional Debian scheme to upgrade software, i.e. using **APT**.
 
-## General warnings
-
-Please, backup your parameters before proceeding!
+!!! warning
+    Please, backup your parameters before proceeding!
 
 ## Upgrade
 

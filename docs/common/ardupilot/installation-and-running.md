@@ -287,7 +287,7 @@ ExecStart=/bin/sh -c "/home/pi/arducopter-quad ${ARDUPILOT_OPTS}"
 ```
 Other than that the launching procedure is no different than the one described above with the only exception that you need to use systemctl utility with `ardupilot` service instead of `arducopter`/`arduplane`/`ardurover` and use `/etc/default/ardupilot` for `ARDUPILOT_OPTS` modifications.
 
-The command below  will start ArduPilot and then mark it to launch on boot:
+The command below  will start custom ArduPilot binary and then mark it to launch on boot:
 
 ```bash
 pi@navio: ~ sudo systemctl start ardupilot && sudo systemctl enable ardupilot
