@@ -132,7 +132,8 @@ For example, you'll need to modify TELEM1 to point to your IP like this:
 
 Where 192.168.1.2 is the IP address of the device with the Ground Control Station - your laptop, smartphone etc.
 
-You can add additional options to `ARDUPILOT_OPTS` that are then passed to ArduPilot.
+!!! tip
+    You can add additional options to `ARDUPILOT_OPTS` that are then passed to ArduPilot by adding new `TELEM` environment variables like this: `TELEM3`="-E /dev/ttyUSB1" `ARDUPILOT_OPTS`="$TELEM1 $TELEM2 $TELEM3"
 
 Mapping between switches and serial ports (TCP or UDP can be used instead of serial ports):
 
