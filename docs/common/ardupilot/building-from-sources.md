@@ -73,6 +73,9 @@ waf copter
 ```  
 In the end of compilation binaries with the name like ```arducopter-quad``` will be placed in ```ardupilot/build/navio2/bin/``` directory.
 
+!!! tip
+    We suggest checking out ArduPilot docs for further details [here](https://github.com/ArduPilot/ardupilot/blob/master/BUILD.md). This is the most up-to-date reference.
+
 If you're using cross-compiler transfer the binary to your Raspberry Pi:
 
 ```bash
@@ -80,8 +83,6 @@ rsync -avz ardupilot/build/navio2/bin/arducopter-quad pi@192.168.1.3:/home/pi/
 ```
 
 Where 192.168.1.3 is an IP address of your Raspberry Pi with a Navio.
-
-For further information read [ardupilot WAF Build](https://github.com/ArduPilot/ardupilot/blob/master/BUILD.md).
 
 
 Instructions how to run ArduPilot on Raspberry Pi and to connect GCS to it are available in  [Installation and running section](installation-and-running.md).
