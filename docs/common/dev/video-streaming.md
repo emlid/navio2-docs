@@ -82,4 +82,35 @@ where ```<remote_ip>``` is the IP of the device you're streaming to.
 
 Adjust bitrate with ***-b*** switch or ***-fps*** if your video lags behind.
 
+
+#### Autostarting on boot
+
+To automatically start videostreaming on boot you need to create systemd service:
+```bash
+sudo touch /etc/systemd/system/raspicam.service
+```
+Edit the service to make it look like this:
+```
+[Unit]
+Description=raspivid
+After=network.target
+
+[Service]
+ExecStart=/bin/sh -c "/usr/bin/raspivid -n -w 1280 -h 720 -b 1000000 -fps 15 -t 0 -o - | gst-launch-1.0 -v fdsrc ! h264parse ! rtph264pay config-interval=10 pt=96 ! udpsink host=<remote_ip> port=9000"
+
+[Install]
+WantedBy=default.target
+```
+Don't forget to set IP of the device you're streaming to. 
+
+After that run these commands:
+- `sudo systemctl daemon-reload` - to let systemd know of this service
+- `sudo systemctl enable raspicam` - to enable on boot
+- `sudo systemctl start raspicam` - to test it out
+
+From now on raspivid will start automatically on boot. To disable autostart run this command: 
+```bash
+sudo systemctl disable raspicam
+```
+
 Feel free to ask on our [forum](http://community.emlid.com) if you stumble upon any problems. We're always there at your convenience.  
