@@ -67,6 +67,11 @@ Differently from the make-based build, with Waf there's a configure step to choo
 waf configure --board=navio2
 ```
 
+If ```future``` isn't installed then you should install it:
+```bash
+pip install future
+```
+
 Now you can build arducopter. For a copter use the following command:
 ```bash
 waf copter
