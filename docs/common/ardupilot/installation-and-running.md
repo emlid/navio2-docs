@@ -196,18 +196,20 @@ pi@navio: ~ $ systemctl is-enabled arducopter
 ### Mission Planner
 
 A Windows only ground station. It is the most feature complete, though.
+It can be downloaded from the [ardupilot.com](http://firmware.ardupilot.org/Tools/MissionPlanner/)
 
 ### QGroundControl
 
 A crossplatform ground station for Mavlink-based flight stacks (like Ardupilot).
+It can be downloaded from the [qgroundcontrol.com](https://docs.qgroundcontrol.com/en/getting_started/download_and_install.html)
 
 ### APM Planner
 
 APM Planner is a ground station software for ArduPilot. It can be downloaded from the
-[ardupilot.com](http://ardupilot.com/downloads/?category=35)
+[ardupilot.com](http://firmware.ardupilot.org/Tools/APMPlanner/)
 
 APM Planner listens on UDP port 14550, so it should catch telemetry from the drone automatically.
-
+Also, if you are using linux, you have to add your user to dialout group '''sudo adduser $USER dialout'''
 ### MAVProxy
 
 MAVProxy is a console-oriented ground station software written in Python. It’s well suited for advanced users and developers.
