@@ -43,7 +43,7 @@ Download the ArduPilot code and update submodules:
 ```bash
 git clone https://github.com/ArduPilot/ardupilot.git
 cd ardupilot
-git submodule update --init
+git submodule update --init --recursive
 ```  
 
 Checkout to a specific tag in order not to fly off master.
