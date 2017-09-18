@@ -15,16 +15,22 @@ Emlid Raspbian has preinstalled ArduPilot. It includes all vehicles and is based
 Once you ssh into Raspberry Pi you'll be greated with a message that looks like this:
 
 ```
-To enable ArduPilot on boot:
-STEP 1:
-Choose your vehicle, board and ArduPilot version using update-alternatives
+                                                                
+                #     #    #    #     # ### ####### 
+                ##    #   # #   #     #  #  #     # 
+                # #   #  #   #  #     #  #  #     # 
+                #  #  # #     # #     #  #  #     # 
+                #   # # #######  #   #   #  #     # 
+                #    ## #     #   # #    #  #     # 
+                #     # #     #    #    ### ####### 
+                                                                
+STEP 1: 
+Choose your vehicle and ArduPilot version using emlidtool
 (Please, read carefully all options and select appropriate one for either Navio 2 or Navio+)
-        - sudo update-alternatives --config arducopter
-        - sudo update-alternatives --config arduplane
-        - sudo update-alternatives --config ardurover
+- sudo emlidtool ardupilot
 
 STEP 2:
-Set your GCS IP
+Set your GCS IP 
         - sudo nano /etc/default/arducopter
         - sudo nano /etc/default/arduplane
         - sudo nano /etc/default/ardurover
@@ -32,22 +38,15 @@ STEP 3:
 Reload configuration by issuing these commands
         - sudo systemctl daemon-reload
 
-To start ardupilot (this won't load ArduPilot on boot):
-        - sudo systemctl start arducopter
-        - sudo systemctl start arduplane
-        - sudo systemctl start ardurover
+Launch, and enable on boot
 
+- sudo emlidtool ardupilot
 
-STEP 4:
-Enable service on boot:
-        - sudo systemctl enable arducopter
-        - sudo systemctl enable arduplane
-        - sudo systemctl enable ardurover
+IMPORTANT:
 
-To disable ArduPilot on boot:
-        - sudo systemctl disable arducopter
-        - sudo systemctl disable arduplane
-        - sudo systemctl disable ardurover
+To show this message one more time type "sudo emlidtool ardupilot help"
+
+* Documentation: https://docs.emlid.com/
 ```
 
 We'll guide you through what's going on under the hood in the sections below.
@@ -64,39 +63,23 @@ See `man systemctl` for more details.
 
 ## Choosing a vehicle, version and board
 
-All of the ArduPilot binaries are installed to /opt/ardupilot/ardu[vehicle]-[ap_major_version]/bin
-We use `update-alternatives` utility for the binary selection. This utility maintains symlinks to /usr/bin/arducopter, /usr/bin/arduplane and /usr/bin/ardurover.
-
+To select the vehicle that would be launched by default you should configure it with emlidtool:
+```bash
+sudo emlidtool ardupilot
+```
 In the example below we'll use arducopter but it could've been just as well arduplane or ardurover.
+Once the command is running, it will produce the output like this:
 
-```bash
-pi@navio: ~ sudo update-alternatives --config arducopter
-```
+![emlidtool-ui](img/emlidtool.png)
 
-This will produce the output like this:
+At this point you should enter the right choices in the left menu corresponding to your vehicle and frame.
+Also, you need to decide whether you want to get ardupilot enabled on boot or not and start/stop it now.
+  
+Let's assume that we have arducopter-quad, and we've decided to enable it on boot and start.
 
-```bash
-There are 18 choices for the alternative arducopter
-(providing /usr/bin/arducopter).
+After clicking the 'Apply' button ArduPilot will be configured and you'll see the changes in the ArdupilotInfo widget:
 
-Selection Path                                               Priority  Status
------------------------------------------------------------------------------
-  0    /opt/ardupilot/navio2/arducopter-3.4/bin/arducopter-y6     50   auto
-  1    /opt/ardupilot/navio/arducopter-3.4/bin/arducopter-coax    50   manual
-  2    /opt/ardupilot/navio/arducopter-3.4/bin/arducopter-heli    50   manual
-  ...
-  15   /opt/ardupilot/navio2/arducopter-3.4/bin/arducopter-quad   50   manual
-  16   /opt/ardupilot/navio2/arducopter-3.4/bin/arducopter-single 50   manual
-  17   /opt/ardupilot/navio2/arducopter-3.4/bin/arducopter-tri    50   manual
-* 18   /opt/ardupilot/navio2/arducopter-3.4/bin/arducopter-y6     50   manual
-
-Press enter to keep the current choice[*], or type selection number:
-```
-
-The first line shows the vehicle that is launched by default. If you want to select another frame, board or version you need to select an appropriate one.
-
-For example, in case you build a quad on Navio 2 and want to use ArduCopter-3.4 you will need to type 15 and then press enter.
-
+![emlidtool-ui](img/emlidtool-after-configure.png)
 
 ## Specifying launching options
  
