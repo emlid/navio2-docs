@@ -53,6 +53,7 @@ pages:
   - 'GPS' : 'common/dev/gps-ublox.md'
   - 'GPS via u-center' : 'common/dev/gps-ublox-ucenter.md'
   - 'RGB LED' : 'common/dev/rgb-led.md'
+  - 'Emlidtool' : 'common/dev/emlidtool.md'
 - Changelogs: 'common/dev/changelogs.md'
 - Community projects:
   - 'Windows IoT': 'common/community-projects/Windows-IoT.md'
