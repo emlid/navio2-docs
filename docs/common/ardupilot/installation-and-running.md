@@ -6,9 +6,9 @@ You can run ArduPilot on Raspberry Pi 3 or 2 with Navio. The autopilot's code wo
 
 Emlid Raspbian has preinstalled ArduPilot. It includes all vehicles and is based on the most stable branch available. Currently these are:
 
-* ArduPlane: **3.7.1**
-* ArduRover: **3.1.2**
-* ArduCopter: **3.4.6**
+* ArduPlane: **3.8.1**
+* ArduRover: **3.5.2**
+* ArduCopter: **3.2-rc2**
 
 ## Greeting
 
