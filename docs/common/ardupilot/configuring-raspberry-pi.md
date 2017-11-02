@@ -82,3 +82,13 @@ If you edit the file on a Raspberry or on a Linux computer you can populate **wp
 If required you can now upgrade your system by running:
 
 ```sudo apt-get update && sudo apt-get dist-upgrade```
+
+## Expanding rootfs
+
+By default when Emlid Raspbian for the Rapsberry Pi is installed the file system
+will only expand to occupy 3GB of storage. If you don’t have space left on yor device,
+you should expand your file system. To do so, just type: 
+
+```sudo raspi-config --expand-rootfs```
+
+and reboot.
