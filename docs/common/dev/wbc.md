@@ -43,7 +43,7 @@ not fully supported by many wifi chipsets.
 
 Recommended dongles:
 
-* TP-LINK TL-WN722N
+* TP-LINK TL-WN722N V1
 * Alfa AWUS036NHA
 
 You can find a list of wifi cards using this chip [here](https://wikidevi.com/wiki/Atheros_AR9271).
