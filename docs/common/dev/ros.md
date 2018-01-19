@@ -105,10 +105,10 @@ Continue <a href="https://asciinema.org/a/1i915k6h2b0i9sf02mwom7qu8?t=59" target
 ### Running ardupilot
 
 Let's run ArduPilot in another pane as stated in [here](../ardupilot/installation-and-running/#launching-a-custom-ardupilot-binary) pointing telemetry to **127.0.0.1:14650**
-by modifying ```/etc/default/ardupilot```:
+by modifying ```/etc/default/ardu{copter, plane, rover}``` depending on which vehicle do you use. Let's say that we have copter. Then we need to enter:
 
 ```no-highlight
-sudo nano /etc/default/ardupilot
+sudo nano /etc/default/arducopter
 ```
 
 ![modyfying](img/ros/ardupilot-default-ip-port.png)
@@ -116,15 +116,15 @@ sudo nano /etc/default/ardupilot
 Then type:
 
 ```
-pi@navio: ~ $ sudo systemctl start ardupilot
+pi@navio: ~ $ sudo systemctl start arducopter
 ```
 
-This command launches ArduPilot (one-shot. <sub>```sudo systemctl enable ardupilot```</sub> to make it persistent). You'll see your LED blinking.
+This command launches ArduPilot (one-shot. <sub>```sudo systemctl enable arducopter```</sub> to make it persistent). You'll see your LED blinking.
 
-In case you make changes in ardupilot while it's working, you should then restart:
+In case you make changes in ArduPilot while it's working, you should then restart:
 
 ```
-pi@navio: ~ $ sudo systemctl restart ardupilot
+pi@navio: ~ $ sudo systemctl restart arducopter
 ```
 
 Continue <a href="https://asciinema.org/a/1i915k6h2b0i9sf02mwom7qu8?t=1:14" target="_blank">watching the tutorial</a> for this step.
