@@ -79,7 +79,7 @@ Look for the hostname ”navio”.
 
 If you edit the file on a Raspberry or on a Linux computer you can populate **wpa_supplicant.conf** with a utility called **wpa_passphrase** like this:
 
-```sudo bash -c "wpa_passphrase SSID password >> /boot/wpa_supplicant.conf```
+```sudo bash -c "wpa_passphrase SSID password" >> /boot/wpa_supplicant.conf```
 
 ## Upgrading
 
