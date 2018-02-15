@@ -149,11 +149,40 @@ Make sure that:
 - **14650**  is the same port we specified in ```/etc/default/ardupilot```
 - **192.168.1.189:14550** is IP and port of the computer where GCS is launched.
 
-If you feel enthusiastic in future you can create a custom [.launch](http://wiki.ros.org/mavros#Usage) file to launch it quicker.
+If you feel enthusiastic you can create a custom [.launch](http://wiki.ros.org/mavros#Usage) file or edit pre-installed to launch everything quicker.
+Roslaunch will automatically start a roscore if there isn’t already one running.
+Example launch files are available in the /opt/ros/kinetic/share/mavros/launch directory.
+
+You need to modify ```fcu_url``` and ```gcs_url``` in ```/opt/ros/kinetic/share/mavros/launch/apm.launch``` and run:
 
 ```
-pi@navio: ~ $ roslaunch mavros custom.launch
+roslaunch mavros apm.launch.
 ```
+
+To run this on boot you can create a simple systemd service. Create mavros.service file in /lib/systemd/system with the following contents:
+```
+[Unit]
+Description=mavros 
+
+[Service]
+Type=forking
+ExecStart=/bin/bash -c "source /opt/ros/kinetic/setup.bash; /usr/bin/python /opt/ros/kinetic/bin/roslaunch mavros apm.launch"
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Then run:
+```
+sudo systemctl daemon-reload
+```
+
+And enable it on boot:
+```
+sudo systemctl enable mavros.service
+```
+
 
 Finally after everything's set you'll see something like this:
 
