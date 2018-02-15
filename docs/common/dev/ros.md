@@ -30,10 +30,11 @@ To make things clear let's proceed to step-by-step ROS running practical instruc
 ## How to get your hands on: step by step
 ### ROS setup
 
-ROS needs a little setup before running. Namely, this boils down to [sourcing](http://superuser.com/questions/176783/what-is-the-difference-between-executing-a-bash-script-and-sourcing-a-bash-scrip) a special script provided in /opt/:
+ROS needs a little setup before running. Namely, this boils down to [sourcing](http://superuser.com/questions/176783/what-is-the-difference-between-executing-a-bash-script-and-sourcing-a-bash-scrip) a special script provided in /opt/ and installing GeographicLib:
 
 ```
 pi@navio: ~ $ echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
+pi@navio: ~ $ sudo /opt/ros/kinetic/lib/mavros/install_geographiclib_datasets.sh
 ```
 A command above will make bash execute a ROS setup on every log in by appending the line to the end of your ```bashrc```.
 
