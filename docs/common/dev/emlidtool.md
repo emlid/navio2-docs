@@ -48,10 +48,10 @@ Helps you to configure and enable ArduPilot on boot.
 Usage:
 
 ```
-emlidtool ardupilot {configure, info}
+emlidtool ardupilot {configure, help}
 ```
 
-You can choose either 'configure' or 'info'.
+You can choose either 'configure' or 'help'.
 
 
 'configure' helps you to choose an appropriate software for your device:
@@ -76,7 +76,7 @@ Let's say that we have copter. Then we need to enter '1'.
 Type selection number for your vehicle: 1
 ```
 
-Running ardupilot without arguments or with 'info' shows you a guide explainig how to enable ArduPilot on boot.
+Running ardupilot without arguments or with 'help' shows you a guide explainig how to enable ArduPilot on boot.
 
 ### RCIO 
 
