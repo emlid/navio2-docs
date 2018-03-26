@@ -210,25 +210,18 @@ Where 192.168.1.2 is the IP address of the GCS, not RPi.
 
 ## Launching a custom ArduPilot binary
 
-Navio is supported in ArduPilot upstream and if you'd like to build the binary yourself please proceed to the [Building from sources](building-from-sources.md). Also you can download the latest stable binary files from ArduPilot buildserver. To download arducopter-quad binary:
+Navio is supported in ArduPilot upstream and if you'd like to build the binary yourself please proceed to the [Building from sources](building-from-sources.md). Also you can download the latest stable binary files from ArduPilot buildserver. To download arducopter binary:
 
 ```bash
-pi@navio: ~ $ wget http://firmware.eu.ardupilot.org/Copter/stable/navio2-quad/arducopter-quad
-pi@navio: ~ $ chmod +x arducopter-quad
+pi@navio: ~ $ wget http://firmware.eu.ardupilot.org/Copter/stable/navio2/arducopter
+pi@navio: ~ $ chmod +x arducopter
 ```
-In case of use another frame type, change tail of the link. For example `/navio2-hexa/arducopter-hexa`. Supported vehicle types are listed below:
+In case of use helicopter, change tail of the link. For example `/navio2-heli/arducopter-heli`. Supported vehicle types are listed below:
 
 * ArduRover
 * ArduPlane
-* ArduPlane-tri
-* ArduCopter-quad
-* ArduCopter-tri
-* ArduCopter-hexa
-* ArduCopter-y6
-* ArduCopter-octa
-* ArduCopter-octa-quad
+* ArduCopter
 * ArduCopter-heli
-* ArduCopter-single
 
 If you want to launch a custom binary you're expected to modify and use /etc/systemd/system/ardupilot.service
 
