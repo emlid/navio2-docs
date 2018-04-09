@@ -75,7 +75,7 @@ Once the command is running, it will produce the output like this:
 At this point you should enter the right choices in the left menu corresponding to your vehicle and frame.
 Also, you need to decide whether you want to get ardupilot enabled on boot or not and start/stop it now.
   
-Let's assume that we have arducopter-quad, and we've decided to enable it on boot and start.
+Let's assume that we have arducopter, and we've decided to enable it on boot and start.
 
 After clicking the 'Apply' button ArduPilot will be configured and you'll see the changes in the ArdupilotInfo widget:
 
