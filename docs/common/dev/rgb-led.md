@@ -26,4 +26,4 @@ LED is cyan
 LED is blue
 ```
 
-For further information see source code. You can change LED color using ```led.setColor()``` function, which takes color name as an argument. List of colors defined in ```C++/Navio/RGBled.h```
+For further information see source code. You can change LED color using ```led.setColor()``` function, which takes color name as an argument. List of colors defined in ```C++/Navio/Navio2/RGBled.cpp```
