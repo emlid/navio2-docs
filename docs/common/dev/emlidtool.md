@@ -34,7 +34,7 @@ Run simple tests on the device.
 Usage:
 
 ```
-emlidtool tests [sensors]
+emlidtool test [sensors]
 ```
 
 You can specify which sensors you want to test.
