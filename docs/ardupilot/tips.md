@@ -5,6 +5,43 @@ Auxiliary function switches on channels 5-8 are still not supported and could le
 !!! danger " "
     We do ask to NOT SET AUXILIARY FUNCTION SWITCHES TO RC5..8!
 
+### Relay Switch
+
+A “Relay” is an digital output pin that can be switched between 0 volts and 3.3V. Similar to a servo it allows the flight controller to invoke some action from another device on the vehicle.
+
+!!! note " "
+    This feature available only on ArduCopter.
+
+[Relay Switch setup](http://ardupilot.org/copter/docs/common-relay.html)
+
+You need to specify **RELAY_PIN** parameter in `Full Parameter List` in Mission Planner or in `Parameters` in QGC. Use the following table for this:
+
+| Name | Digital Pin number |
+| ------- | :-------: |
+| PWM1 | 0 |
+| PWM2 | 1 |
+| PWM3 | 2 |
+| PWM4 | 3 |
+| PWM5 | 4 |
+| PWM6 | 5 |
+| PWM7 | 6 |
+| PWM8 | 7 |
+| PWM9 | 8 |
+| PWM10 | 9 |
+| PWM11 | 10 |
+| PWM12 | 11 |
+| PWM13 | 12 |
+| PWM14 | 13 |
+| IO17 | 14 |
+| IO18 | 15 |
+| LED RED | 16 |
+| LED GREEN | 17 |
+| LED BLUE | 18 |
+
+!!! danger " "
+    Don't set digital pin to PWM channel used for control servos!
+
+
 ### Second compass configuration
 
 Navio2 contains two compasses - AK8963 and LSM9DS1. The latter has lower offsets and set as primary.
