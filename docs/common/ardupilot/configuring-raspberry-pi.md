@@ -4,7 +4,7 @@ Navio requires a preconfigured Raspbian to run. We provide a unified SD card ima
 
 We recommend using our latest image with Stretch.
 
-[Download SD card image with the latest Raspbian release (Stretch)](http://files.emlid.com/images/emlid-raspbian-20170922.img.xz), [(md5)](https://files.emlid.com/images/MD5SUMS)
+[Download SD card image with the latest Raspbian release (Stretch)](http://files.emlid.com/images/emlid-raspbian-20180525.img.xz), [(md5)](https://files.emlid.com/images/MD5SUMS)
 
 But if you want, you can download the previous release with Jessie as well.
 
