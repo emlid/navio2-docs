@@ -6,6 +6,6 @@
 [subrepo]
 	remote = git@github.com:emlid/navio-docs-common.git
 	branch = master
-	commit = 41987fd5944e6e8809e261d6d8848f85601af440
-	parent = 9e07d6c63ce4bcdbfd92d03126a58577f01b18ab
+	commit = d6296cce3da9e4b692a0b864d6353b08b4435278
+	parent = 72562dd0f6a760f6a3b2c6abb64e1f54db30fe09
 	cmdver = 0.3.1
