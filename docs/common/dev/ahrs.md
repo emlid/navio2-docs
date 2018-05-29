@@ -25,7 +25,7 @@ Download [the archive with Navio utilities](https://github.com/emlid/Navio2/arch
 Extract the archive, enter the directory with 3DIMU utility and run it:
 
 ```bash
-cd Navio2/Utilities/3DIMU
+cd Navio2-master/Utilities/3DIMU
 python 3Dimu.py
 ```
 
