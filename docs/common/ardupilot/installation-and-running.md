@@ -67,6 +67,14 @@ To select the vehicle that would be launched by default you should configure it 
 ```bash
 sudo emlidtool ardupilot
 ```
+
+Before configuration emlidtool checks your [RCIO](https://docs.emlid.com/navio2/dev/rcio) firmware and will suggest to update it if you have the outdated one:
+
+!!! tip
+    Only for Navio2
+
+![emlidtool-ui](img/emlidtool-rcio-update-dialog.png)
+
 In the example below we'll use arducopter but it could've been just as well arduplane or ardurover.
 Once the command is running, it will produce the output like this:
 
