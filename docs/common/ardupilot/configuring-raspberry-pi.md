@@ -37,7 +37,12 @@ Simply plug an SD card in your computer. After getting access to SD card content
 
 ### Use monitor and keyboard
 
-Connect HDMI monitor and USB keyboard to your Raspberry, power it up and you will get access to the console, where you can use text editor to modify wpa_supplicant. After logging into the system, type:
+Connect HDMI monitor and USB keyboard to your Raspberry, power it up and you will get access to the console, where you can use text editor to modify wpa_supplicant.
+
+!!! note " "
+	Use the default username `pi` and the default password `raspberry` to get access to your RPi.
+
+After logging into the system, type:
 
 ```bash
 sudo nano /boot/wpa_supplicant.conf
