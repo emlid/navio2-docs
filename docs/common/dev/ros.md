@@ -1,6 +1,6 @@
 ## ROS
 
-Emlid Raspbian images comes with pre-installed ROS.
+Emlid Raspbian image comes with pre-installed ROS.
 
 ## Basic understanding
 
