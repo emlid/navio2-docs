@@ -31,3 +31,17 @@ To set the pulse range appropriate for your servo you can change the SERVO_MIN a
 
 !!! note " "
 	Kernel driver for Navio2 that generates PWM needs to be fed with data at least every 100 ms. So it’s necessary to update the value in ```set_duty_cycle``` every 100 ms or less to make PWM output works.
+
+## GPIO support
+
+The servo rail pins also might be operated as GPIOs.
+
+You can use `/sys/class/gpio/gpiochip500` to control pins on the servo rail by 
+
+```bash
+echo N > /sys/class/gpio/export
+```
+
+Where N equals `500 + header pin number - 1`. So in order to control the 2nd pin on the rail, you need to `echo 501`.
+
+Then you can [write and read values](https://elinux.org/RPi_GPIO_Code_Samples#Shell).
