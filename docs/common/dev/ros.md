@@ -165,7 +165,7 @@ To run this on boot you can create a simple systemd service. Create mavros.servi
 Description=mavros 
 
 [Service]
-Type=forking
+Type=simple
 ExecStart=/bin/bash -c "source /opt/ros/kinetic/setup.bash; /usr/bin/python /opt/ros/kinetic/bin/roslaunch mavros apm.launch"
 Restart=on-failure
 
