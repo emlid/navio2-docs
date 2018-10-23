@@ -7,5 +7,5 @@
 	remote = git@github.com:emlid/navio-docs-common.git
 	branch = master
 	commit = be7baa11d791b8e236bcbe46e9fa43e96b27a09c
-	parent = 9b3524aab82dcb9fdcd8a4e04f44acc3b7837bf9
+	parent = 18558eb4ffa8d4662860fd24b9928896a30cbbc6
 	cmdver = 0.3.1
