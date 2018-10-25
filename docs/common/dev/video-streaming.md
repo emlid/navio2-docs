@@ -24,6 +24,10 @@ If you're going to stream to a Ubuntu PC, install the some packages locally befo
 user@ubuntu: ~ $ sudo apt-get update
 user@ubuntu: ~ $ sudo apt-get install gstreamer1.0-tools gstreamer1.0-plugins-good gstreamer1.0-plugins-bad
 ```
+If you are missing the `avdec_h264` decoder, then also install:
+```bash
+user@ubuntu: ~ $ sudo apt-get install gstreamer1.0-libav
+```
 
 ## Android
 
