@@ -16,20 +16,25 @@ Wifibroadcast puts the wifi cards into monitor mode. This mode allows to send an
 without association between devices. Additionally, it is also possible to receive erroneous frames (where the checksum does not
 match).
 
+Wifibroadcast is presently not supported in the latest release image and not supported on the Raspberry Pi 3B+.
+
 ### Overview
 
 
 Transmitter hardware configuration:
 
-* Raspberry Pi
+* Raspberry Pi 2B or 3B, WBC on 3B+ is unsupported
 * Wi-Fi card *compatible with wifibroadcast*
 * Camera
 
 Receiver hardware configuration:
 
-* Raspberry Pi
+* Raspberry Pi 2B or 3B, WBC on 3B+ is unsupported
 * Wi-Fi card *compatible with wifibroadcast*
 * Display
+
+Software configuration:
+* Image with Wifibroadcast support. Recommended is 2017-03-23. Latest image, which is 2018-05-25 at the moment of writing, does not support Wifibroadcast. Please refer to the [changelog](https://docs.emlid.com/navio2/common/dev/changelogs/) for current status of WBC.
 
 ### Wi-Fi cards
 
